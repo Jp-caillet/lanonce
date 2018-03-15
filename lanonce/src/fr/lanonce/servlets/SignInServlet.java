@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.lannonce.dao.UserDao;
+import fr.lannonce.dao.AddUserDao;
 import fr.lanonce.beans.ConnexionBeans;
 import fr.lanonce.beans.UserBean;
 
@@ -18,7 +18,7 @@ import fr.lanonce.beans.UserBean;
 public class SignInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-    private UserDao userDao;
+    private AddUserDao userDao;
 
     public void init() throws ServletException {
     	ConnexionBeans daoFactory = ConnexionBeans.getInstance();

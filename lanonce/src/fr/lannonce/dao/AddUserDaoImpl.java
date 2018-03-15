@@ -8,10 +8,10 @@ import com.mysql.jdbc.Connection;
 import fr.lanonce.beans.ConnexionBeans;
 import fr.lanonce.beans.UserBean;
 
-public class UserDaoImpl implements UserDao {
+public class AddUserDaoImpl implements AddUserDao {
 		private ConnexionBeans connexionUser;
 
-	    public UserDaoImpl(ConnexionBeans connexionUser) {
+	    public AddUserDaoImpl(ConnexionBeans connexionUser) {
 	        this.connexionUser = connexionUser;
 	    }
 

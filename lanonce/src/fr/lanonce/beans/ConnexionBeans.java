@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import fr.lannonce.dao.UserDao;
-import fr.lannonce.dao.UserDaoImpl;
+import fr.lannonce.dao.AddUserDao;
+import fr.lannonce.dao.AddUserDaoImpl;
 
 public class ConnexionBeans {
 	
@@ -36,8 +36,8 @@ public class ConnexionBeans {
         return DriverManager.getConnection(url, username, password);
     }
     
-    public UserDao getUtilisateurDao() {
-        return new UserDaoImpl(this);
+    public AddUserDao getUtilisateurDao() {
+        return new AddUserDaoImpl(this);
     }
 
 

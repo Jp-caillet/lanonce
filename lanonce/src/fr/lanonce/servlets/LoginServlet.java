@@ -15,15 +15,15 @@ import fr.lannonce.dao.ConnexionUserDao;
 /**
  * Servlet implementation class ConnectionServlet
  */
-@WebServlet(name = "/ConnectionServlet", urlPatterns = {"/connectionServlet"})
-public class ConnectionServlet extends HttpServlet {
+@WebServlet(name = "/LoginServlet", urlPatterns = {"/loginServlet"})
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/WEB-INF/connection.jsp").forward(request, response);	
+		this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);	
 	}
 
 	/**
@@ -37,8 +37,10 @@ public class ConnectionServlet extends HttpServlet {
 		
 		try {
 			if(connexionDao.check(email, password)) {
+		        /* Récupération de la session depuis la requête */
 				HttpSession session = request.getSession();
 				session.setAttribute("email", email);
+				//System.out.println(session);
 				System.out.println("connexion reussi");
 			} else {
 				System.out.println("connexion rejetée");

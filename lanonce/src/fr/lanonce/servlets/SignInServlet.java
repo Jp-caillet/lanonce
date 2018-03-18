@@ -14,7 +14,7 @@ import fr.lanonce.beans.UserBean;
 /**
  * Servlet implementation class SignInServlet
  */
-@WebServlet(name = "/SignInServlet", urlPatterns = {"/signInServlet"})
+@WebServlet(name = "/SignInServlet")
 public class SignInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	

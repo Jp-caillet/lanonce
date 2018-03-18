@@ -15,7 +15,7 @@ import fr.lannonce.dao.ConnexionUserDao;
 /**
  * Servlet implementation class ConnectionServlet
  */
-@WebServlet(name = "/LoginServlet", urlPatterns = {"/loginServlet"})
+@WebServlet(name = "/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

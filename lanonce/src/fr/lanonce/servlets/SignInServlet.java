@@ -40,9 +40,13 @@ public class SignInServlet extends HttpServlet {
         
         /* Récupération des paramètres d'URL saisis par l'utilisateur */
         user.setPseudo(request.getParameter("pseudo"));
+        user.setNom(request.getParameter("nom"));
+        user.setPrenom(request.getParameter("prenom"));
+        user.setVille(request.getParameter("ville"));
         user.setEmail(request.getParameter("email"));
         user.setPassword(request.getParameter("password"));
         System.out.println("connexion");
+        
         userDao.ajouter(user);
 	}
 

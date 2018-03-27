@@ -10,7 +10,7 @@
 
 <%@ include file="menu.jsp" %>
 
-   <form method="post" action="signInServlet">
+  <form method="post" action="signInServlet">
    
 	<div class="container">
 	<div class="row">
@@ -18,36 +18,41 @@
 	<h1> Inscription <br/> <small> Merci de renseigner vos informations </small></h1>
 	</div>
 	</div>
+	</div>
 	
 	<div class="row">
-	<div class="col-md-offset-2 col-md-3">
+	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
 	<label for="Nom">Pseudo</label>
 	<input type="text" class="form-control" id="pseudo" placeholder="prenom" name="pseudo">
 	</div>
 	</div>
+	</div>
 	
 	<div class="row">
-	<div class="col-md-offset-2 col-md-3">
+	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
 	<label for="Nom">Nom</label>
 	<input type="text" class="form-control" id="nom" placeholder="Nom" name="nom">
 	</div>
 	</div>
+	</div>
 	
 	<div class="row">
-	<div class="col-md-offset-2 col-md-3">
+	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
 	<label for="Nom">Prénom</label>
 	<input type="text" class="form-control" id="prenom" placeholder=prenom" name="prenom">
 	</div>
 	</div>
+	</div>
 	
 	<div class="row">
-	<div class="col-md-offset-2 col-md-3">
+	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
 	<label for="Nom">Ville</label>
 	<input type="text" class="form-control" id="ville" placeholder="ville" name="ville">
+	</div>
 	</div>
 	</div>
 	
@@ -73,7 +78,6 @@
 	<div class="row">
 	<div class="col-md-offset-5 col-md-1">
 	<input type="submit" class="btn btn-primary"></input>
-	</div>
 	</div>
 	</div>
 	

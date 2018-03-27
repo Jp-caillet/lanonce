@@ -40,7 +40,6 @@ public class LoginServlet extends HttpServlet {
 		        /* Récupération de la session depuis la requête */
 				HttpSession session = request.getSession();
 				session.setAttribute("email", email);
-				//System.out.println(session);
 				System.out.println("connexion reussi");
 			} else {
 				System.out.println("connexion rejetée");

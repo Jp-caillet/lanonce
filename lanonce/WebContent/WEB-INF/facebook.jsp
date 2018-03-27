@@ -1,57 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <script src="https://apis.google.com/js/platform.js" async defer></script>
-   <meta name="google-signin-client_id" content="540503980237-9cq83hno437m58gog04dhlmcpt61q9os.apps.googleusercontent.com">
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
 </head>
 <body>
-
-<%@ include file="menu.jsp" %>
-
- <form method="post" action="loginServlet">
-    
-	<div class="container">
-	<div class="row">
-	<div class="col-md-offset-2 col-md-8">
-	<h1> Connexion <br/> <small> Merci de vous connecter </small></h1>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Email">Email address</label>
-	<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Email">Enter your password</label>
-	<input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
-	</div>
-	</div>
-	</div>
-	
-	<br/>
-	<div class="row">
-	<div class="col-md-offset-5 col-md-1">
-	<input type="submit" class="btn btn-primary" value="Connexion"></input>
-	</div>
-	</div>
-	</div>
-</form>
-
-<!------------------------------------------------------------------------> 
-<!---------------------------- Facebook login ---------------------------->  
-<!------------------------------------------------------------------------>
- 
- <script>
-// This is called with the results from from FB.getLoginStatus().
+<script>
+  // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -124,8 +81,9 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
-  </script>
-  <!--
+</script>
+
+<!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
@@ -135,41 +93,7 @@
 </fb:login-button>
 
 <div id="status">
-</div> 
+</div>
 
-<!------------------------------------------------------------------------> 
-<!----------------------------- Google login ----------------------------->  
-<!------------------------------------------------------------------------>
-  
- <div class="g-signin2" data-onsuccess="onSignIn" id="myP">
-  </div>
-   <img id="myImg"><br>
-   <p id="name"></p>
-  <div id="status">
- </div>
-   
- <script>
- function onSignIn(googleUser) {
-     // window.location.href='success.jsp';
-     var profile = googleUser.getBasicProfile();
-     var imagurl=profile.getImageUrl();
-     var name=profile.getName();
-     var email=profile.getEmail();
-     document.getElementById("myImg").src = imagurl;
-     document.getElementById("name").innerHTML = name;
-     document.getElementById("myP").style.visibility = "hidden";
-     document.getElementById("status").innerHTML = 'Welcome '+name+'!<a href=success.jsp?email='+email+'&name='+name+'/>Continue with Google login</a></p>'
-  }
-  </script>
-  
-  <button onclick="myFunction()">Sign Out</button>
-  
-  <script>
-     function myFunction() {
-     gapi.auth2.getAuthInstance().disconnect();
-     location.reload();
-  }	      
-</script>
- 
 </body>
 </html>

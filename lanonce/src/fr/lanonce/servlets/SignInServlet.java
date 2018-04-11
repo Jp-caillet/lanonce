@@ -7,18 +7,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.lannonce.dao.UserDao;
+import fr.lannonce.dao.AddUserDao;
 import fr.lanonce.beans.ConnexionBeans;
 import fr.lanonce.beans.UserBean;
 
 /**
  * Servlet implementation class SignInServlet
  */
-@WebServlet(name = "/SignInServlet", urlPatterns = {"/signInServlet"})
+@WebServlet(name = "/SignInServlet")
 public class SignInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-    private UserDao userDao;
+    private AddUserDao userDao;
 
     public void init() throws ServletException {
     	ConnexionBeans daoFactory = ConnexionBeans.getInstance();
@@ -40,9 +40,13 @@ public class SignInServlet extends HttpServlet {
         
         /* Récupération des paramètres d'URL saisis par l'utilisateur */
         user.setPseudo(request.getParameter("pseudo"));
+        user.setNom(request.getParameter("nom"));
+        user.setPrenom(request.getParameter("prenom"));
+        user.setVille(request.getParameter("ville"));
         user.setEmail(request.getParameter("email"));
         user.setPassword(request.getParameter("password"));
         System.out.println("connexion");
+        
         userDao.ajouter(user);
 	}
 

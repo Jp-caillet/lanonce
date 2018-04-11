@@ -2,6 +2,6 @@ package fr.lannonce.dao;
 
 import fr.lanonce.beans.UserBean;
 
-public interface UserDao {
+public interface AddUserDao {
     void ajouter(UserBean user);
 }

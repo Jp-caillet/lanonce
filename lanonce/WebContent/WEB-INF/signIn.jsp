@@ -74,6 +74,16 @@
 	</div>
 	</div>
 	
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label for="Email">Confirm motdepasse</label>
+	<input type="password" class="form-control" id="confirmation" placeholder="Enter password" name="confirmation">
+	</div>
+	</div>
+	</div>
+	
+	
 	<br/>
 	<div class="row">
 	<div class="col-md-offset-5 col-md-1">

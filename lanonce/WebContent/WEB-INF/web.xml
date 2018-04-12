@@ -8,6 +8,7 @@
     <filter-name>AuthenticateFilter</filter-name>
     <url-pattern>/auth/*</url-pattern>
   </filter-mapping>
+ 
   <servlet>
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>fr.lanonce.servlets.LoginServlet</servlet-class>
@@ -23,5 +24,13 @@
   <servlet-mapping>
     <servlet-name>SignInServlet</servlet-name>
     <url-pattern>/signInServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AccueilServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.AccueilServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AccueilServlet</servlet-name>
+    <url-pattern>/accueilServlet</url-pattern>
   </servlet-mapping>
 </web-app>

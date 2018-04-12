@@ -40,14 +40,14 @@ public class LoginServlet extends HttpServlet {
 		        /* Récupération de la session depuis la requête */
 				HttpSession session = request.getSession();
 				session.setAttribute("email", email);
+				session.setAttribute("id", session.getId());
+				System.out.println(session.getId());
 				System.out.println("connexion reussi");
 			} else {
 				System.out.println("connexion rejetée");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		
+		}	
 	}
-
 }

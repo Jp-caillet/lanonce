@@ -82,7 +82,7 @@
     FB.init({
       appId      : '182025445936083', 
       cookie     : true,  // enable cookies to allow the server to access 
-                          // the session
+      channelUrl : '//http://localhost:8080/',          // the session
       xfbml      : true,  // parse social plugins on this page
       version    : 'v2.8' // use graph api version 2.8
     });

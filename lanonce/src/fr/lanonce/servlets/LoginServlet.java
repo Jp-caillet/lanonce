@@ -15,7 +15,6 @@ import fr.lannonce.dao.ConnexionUserDao;
 /**
  * Servlet implementation class ConnectionServlet
  */
-@WebServlet(name = "/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -41,6 +40,7 @@ public class LoginServlet extends HttpServlet {
 				HttpSession session = request.getSession();
 				session.setAttribute("email", email);
 				System.out.println("connexion reussi");
+				this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);	
 			} else {
 				System.out.println("connexion rejetée");
 			}

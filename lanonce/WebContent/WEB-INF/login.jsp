@@ -10,7 +10,7 @@
 
 <%@ include file="menu.jsp" %>
 
- <form method="post" action="loginServlet">
+ <form method="post" action="login">
     
 	<div class="container">
 	<div class="row">

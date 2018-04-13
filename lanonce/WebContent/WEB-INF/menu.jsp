@@ -17,8 +17,9 @@
 		<li><a href="/lanonce/login">Connexion</a></li>
        	<li><a href="/lanonce/signin">Inscription</a></li>
 	<%}else{%>
-	<li><a href="">Lan</a></li>
+	<li><a href="/lanonce/lan">Lan</a></li>
 	<li class=""><a href="logout">Logout</a></li>
+	
 	<%	} %>
     </ul>
   </div>

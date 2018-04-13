@@ -12,15 +12,16 @@
       <a class="navbar-brand"></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/lanonce/accueilServlet">Accueil</a></li>
-      <li><a href="">Categories</a></li>
-      <li><a href="/lanonce/signInServlet">Inscription</a></li>
-      <li><a href="/lanonce/loginServlet">Connexion</a></li>
+      <li><a href="">Accueil</a></li>
+       <% if(request.getSession().getAttribute("email") == null){ %>
+		<li><a href="/lanonce/login">Connexion</a></li>
+       	<li><a href="/lanonce/signin">Inscription</a></li>
+	<%}else{%>
+	<li><a href="">Lan</a></li>
+	<li class=""><a href="logout">Logout</a></li>
+	<%	} %>
     </ul>
   </div>
 </nav>
 </body>
 </html>
-
-
-

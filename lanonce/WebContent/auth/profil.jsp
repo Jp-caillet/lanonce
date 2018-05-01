@@ -8,6 +8,7 @@
 </head>
 <% %>
 <body>
+<%@ include file="adminMenu.jsp" %>
 
 <form method="post" action="">
    

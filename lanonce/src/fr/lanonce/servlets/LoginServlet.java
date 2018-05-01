@@ -42,8 +42,8 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute("id", session.getId());
 				System.out.println(session.getId());
 				System.out.println("connexion reussi");
+				System.out.println(session);
 				this.getServletContext().getRequestDispatcher("/auth/home.jsp").forward(request, response);	
-				//response.sendRedirect("/auth/index.jsp");
 
 			} else {
 				System.out.println("connexion rejetée");

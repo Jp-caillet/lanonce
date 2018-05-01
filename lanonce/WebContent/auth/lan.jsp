@@ -7,8 +7,10 @@
 <title>Profil</title>
 </head>
 <body>
+  <%@ include file="adminMenu.jsp" %>
 
-  <form method="post" action="lan">
+
+  <form method="post" action="">
 	
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">

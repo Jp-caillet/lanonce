@@ -7,6 +7,6 @@
 <title>home</title>
 </head>
 <body>
-
+<%@ include file="adminMenu.jsp" %>
 </body>
 </html>

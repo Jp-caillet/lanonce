@@ -48,5 +48,4 @@ public class SignInServlet extends HttpServlet {
         
         userDao.ajouter(user);
 	}
-
 }

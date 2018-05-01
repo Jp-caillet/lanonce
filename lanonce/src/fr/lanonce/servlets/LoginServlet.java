@@ -42,9 +42,12 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute("id", session.getId());
 				System.out.println(session.getId());
 				System.out.println("connexion reussi");
-				this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);	
+				this.getServletContext().getRequestDispatcher("/auth/home.jsp").forward(request, response);	
+				//response.sendRedirect("/auth/index.jsp");
+
 			} else {
 				System.out.println("connexion rejetée");
+				this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);	
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

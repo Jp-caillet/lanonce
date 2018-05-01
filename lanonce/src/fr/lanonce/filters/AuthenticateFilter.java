@@ -17,9 +17,9 @@ public class AuthenticateFilter extends HttpFilter{
 				
 		if(request.getSession().getAttribute("email") == null) {
 			this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+			//response.sendRedirect("/WEB-INF/login.jsp");
 		} else {
-			chain.doFilter(request, response);
-			
+			chain.doFilter(request, response);		
 		}
 	}
 	

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Profil</title>
 </head>
 <body>
 
@@ -13,8 +13,8 @@
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
-	<label for="Nom">Pseudo</label>
-	<input type="text" class="form-control" id="pseudo" placeholder="prenom" name="pseudo">
+	<label for="Nom">Picture</label>
+	<input type="text" class="form-control" id="picture" placeholder="picture" name="picture">
 	</div>
 	</div>
 	</div>
@@ -22,8 +22,8 @@
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
-	<label for="Nom">Nom</label>
-	<input type="text" class="form-control" id="nom" placeholder="Nom" name="nom">
+	<label for="Nom">Title</label>
+	<input type="text" class="form-control" id="title" placeholder="title" name="title">
 	</div>
 	</div>
 	</div>
@@ -31,8 +31,8 @@
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
-	<label for="Nom">Prénom</label>
-	<input type="text" class="form-control" id="prenom" placeholder=prenom" name="prenom">
+	<label for="Nom">Lieux</label>
+	<input type="text" class="form-control" id="lieux" placeholder=lieux" name="lieux">
 	</div>
 	</div>
 	</div>
@@ -40,35 +40,8 @@
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
-	<label for="Nom">Ville</label>
-	<input type="text" class="form-control" id="ville" placeholder="ville" name="ville">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Email">Email address</label>
-	<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Email">Enter your password</label>
-	<input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Email">Confirm motdepasse</label>
-	<input type="password" class="form-control" id="confirmation" placeholder="Enter password" name="confirmation">
+	<label for="Nom">Descriptio,</label>
+	<input type="text" class="form-control" id="description" placeholder="description" name="description">
 	</div>
 	</div>
 	</div>

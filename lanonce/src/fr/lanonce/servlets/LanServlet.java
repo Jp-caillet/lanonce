@@ -7,25 +7,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.lannonce.dao.AddLanDao;
+import fr.lannonce.dao.AddUserDao;
+import fr.lanonce.beans.ConnexionBeans;
+import fr.lanonce.beans.LanBean;
+
 /**
  * Servlet implementation class LanServlet
  */
 public class LanServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LanServlet() {
-        super();
-        // TODO Auto-generated constructor stub
+	
+    private AddLanDao lanDao;
+
+    public void init() throws ServletException {
+    	ConnexionBeans daoFactory = ConnexionBeans.getInstance();
+        this.lanDao = daoFactory.getLanDao();
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		this.getServletContext().getRequestDispatcher("/auth/lan.jsp").forward(request, response);	
 	}
 
@@ -33,8 +36,15 @@ public class LanServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		LanBean lan = new LanBean();
+		
+        /* Récupération des paramètres d'URL saisis par l'utilisateur */
+		lan.setPicture(request.getParameter("picture"));
+		lan.setTitle(request.getParameter("Title"));
+		lan.setDate(request.getParameter("Date"));
+		lan.setLieux(request.getParameter("lieux"));
+		lan.setDescription(request.getParameter("description"));
+		
+		lanDao.ajouter(lan);
 	}
-
 }

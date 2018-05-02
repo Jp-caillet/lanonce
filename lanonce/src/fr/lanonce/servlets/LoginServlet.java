@@ -40,9 +40,7 @@ public class LoginServlet extends HttpServlet {
 				HttpSession session = request.getSession();
 				session.setAttribute("email", email);
 				session.setAttribute("id", session.getId());
-				System.out.println(session.getId());
 				System.out.println("connexion reussi");
-				System.out.println(session);
 				this.getServletContext().getRequestDispatcher("/auth/home.jsp").forward(request, response);	
 
 			} else {

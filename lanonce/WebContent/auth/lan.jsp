@@ -29,6 +29,15 @@
 	</div>
 	</div>
 	</div>
+
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label for="Nom">Date</label>
+	<input type="date" class="form-control" id="date" placeholder="date" name="date">
+	</div>
+	</div>
+	</div>
 	
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">

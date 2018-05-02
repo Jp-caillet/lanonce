@@ -5,9 +5,10 @@ import java.sql.Date;
 public class LanBean {
 	private String picture;
 	private String title;
-	private String date;
+	private Date date;
 	private String lieux;
 	private String description;
+	private String idUser;
 	
 	public String getPicture() {
 		return picture;
@@ -21,10 +22,10 @@ public class LanBean {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 	public String getLieux() {
@@ -38,5 +39,11 @@ public class LanBean {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getIdUser() {
+		return idUser;
+	}
+	public void setIdUser(String idUser) {
+		this.idUser = idUser;
 	}
 }

@@ -14,10 +14,11 @@
     <ul class="nav navbar-nav">
 	  <li><a href="">Accueil</a></li>
 	  <li><a href="/lanonce/auth/profil">profil</a></li>
-	  <li><a href="/lanonce/auth/lan">Lan</a></li>
+	  <li><a href="/lanonce/auth/lanStep">Create</a></li>
 	  <li><a href="logout">Logout</a></li>
     </ul>
   </div>
 </nav>
+
 </body>
 </html>

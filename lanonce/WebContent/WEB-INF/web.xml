@@ -33,12 +33,12 @@
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>LanServlet</servlet-name>
+    <servlet-name>Lan1Servlet</servlet-name>
     <servlet-class>fr.lanonce.servlets.LanServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LanServlet</servlet-name>
-    <url-pattern>/auth/lan</url-pattern>
+    <servlet-name>Lan1Servlet</servlet-name>
+    <url-pattern>/auth/lanStep1</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>ProfilServlet</servlet-name>
@@ -47,5 +47,13 @@
   <servlet-mapping>
     <servlet-name>ProfilServlet</servlet-name>
     <url-pattern>/auth/profil</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CreateServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.CreateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateServlet</servlet-name>
+    <url-pattern>/auth/create</url-pattern>
   </servlet-mapping>
 </web-app>

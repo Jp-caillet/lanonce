@@ -18,9 +18,9 @@ import fr.lanonce.beans.ConnexionBeans;
 import fr.lanonce.beans.LanBean;
 
 /**
- * Servlet implementation class LanServlet
+ * Servlet implementation class Lan1Servlet
  */
-public class LanServlet extends HttpServlet {
+public class Lan1Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
     private AddLanDao lanDao;
@@ -34,7 +34,7 @@ public class LanServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/auth/lan.jsp").forward(request, response);	
+		this.getServletContext().getRequestDispatcher("/auth/lanStep1.jsp").forward(request, response);	
 	}
 
 	/**
@@ -48,14 +48,15 @@ public class LanServlet extends HttpServlet {
 		try {
 	        /* Récupération des paramètres d'URL saisis par l'utilisateur */
 			lan.setPicture(request.getParameter("picture"));
-			lan.setTitle(request.getParameter("title"));
+			lan.setNameLan(request.getParameter("nameLan"));
+			lan.setLieux(request.getParameter("lieux"));
 			String date = request.getParameter("date");
 			Date fd = format.parse(date);
 			java.sql.Date sqlDate = new java.sql.Date(fd.getTime());
 			lan.setDate(sqlDate);
-			lan.setLieux(request.getParameter("lieux"));
-			lan.setDescription(request.getParameter("description"));
 			lan.setIdUser(session.getId());
+			lan.setDescription(request.getParameter("description"));
+			lan.setInfo(request.getParameter("info"));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}

@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Profil</title>
+<title>Lan étape 1</title>
 </head>
 <body>
   <%@ include file="adminMenu.jsp" %>
-
+  <%@ include file="adminMenuLan.jsp" %>
 
   <form method="post" action="">
 	
@@ -24,8 +24,8 @@
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
-	<label for="Nom">Title</label>
-	<input type="text" class="form-control" id="title" placeholder="title" name="title">
+	<label for="Nom">NOM DE LA LAN PARTY</label>
+	<input type="text" class="form-control" id="nameLan" placeholder="nameLan" name="nameLan">
 	</div>
 	</div>
 	</div>
@@ -33,26 +33,55 @@
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
-	<label for="Nom">Date</label>
+	<label for="Nom">ADRESSE</label>
+	<input type="text" class="form-control" id="lieux" placeholder="lieux" name="lieux">
+	</div>
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label for="Nom">DATE ET HEURE</label>
 	<input type="date" class="form-control" id="date" placeholder="date" name="date">
 	</div>
 	</div>
 	</div>
-	
+
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
-	<label for="Nom">Lieux</label>
-	<input type="text" class="form-control" id="lieux" placeholder=lieux" name="lieux">
+	<label class="checkbox-inline"><input type="checkbox" value="">Les joueurs peuvent inviter des amis</label>
+	</br>
+	<label class="checkbox-inline"><input type="checkbox" value="">Adresse visible qu'aux participants</label>
 	</div>
 	</div>
 	</div>
-	
+
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
-	<label for="Nom">Descriptio,</label>
+	<label for="Nom">Description</label>
 	<input type="text" class="form-control" id="description" placeholder="description" name="description">
+	</div>
+	</div>
+	</div> 
+	
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label for="Nom">INFORMATION COMPLEMENTAIRE? </label>
+	<input type="text" class="form-control" id="info" placeholder="info" name="info">
+	</div>
+	</div>
+	</div> 
+	
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label class="checkbox-inline"><input type="checkbox" value="">CIGARETTE? </label>
+	</br>
+	<label class="checkbox-inline"><input type="checkbox" value="">BIERE? </label>
 	</div>
 	</div>
 	</div>

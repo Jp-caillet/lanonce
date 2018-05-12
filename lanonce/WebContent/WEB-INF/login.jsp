@@ -18,7 +18,16 @@
 	<h1> Connexion <br/> <small> Merci de vous connecter </small></h1>
 	</div>
 	</div>
-	
+  
+  	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label for="Email">Pseudo</label>
+	<input type="text" class="form-control" id="pseudo" placeholder="Enter email" name="pseudo">
+	</div>
+	</div>
+	</div>
+
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">

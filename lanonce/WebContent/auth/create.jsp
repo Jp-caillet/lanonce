@@ -9,5 +9,15 @@
 <body>
   <%@ include file="adminMenu.jsp" %>
   <%@ include file="adminMenuLan.jsp" %>
+
+
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+    <button type="button" class="btn btn-warning"><a href="/lanonce/auth/lanStep1">Organiser une Lan PARTY</a></button>
+    <button type="button" class="btn btn-warning"><a href="/lanonce/auth/lanStep1">Organiser un tournois</a></button>
+	</div>
+	</div>
+	</div>
 </body>
 </html>

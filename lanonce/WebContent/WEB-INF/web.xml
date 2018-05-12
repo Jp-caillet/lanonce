@@ -34,7 +34,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Lan1Servlet</servlet-name>
-    <servlet-class>fr.lanonce.servlets.LanServlet</servlet-class>
+    <servlet-class>fr.lanonce.servlets.Lan1Servlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Lan1Servlet</servlet-name>

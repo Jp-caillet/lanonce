@@ -23,7 +23,7 @@
    try {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
-        Statement smt = con.createStatement(); //Create Statement to interact
+        Statement smt = con.createStatement();
         ResultSet r = smt.executeQuery("select * from users where(email='" + session.getAttribute("email") + "');");
         while (r.next()) {
           nom = r.getString("nom");
@@ -38,13 +38,12 @@
         e.printStackTrace();
    }
 %>
-
 <div class="divider" id="section1"></div>
     
     <div class="container">
     <h1>Edit Profile</h1>
-  	<hr>
-	<div class="row">
+    <hr>
+  <div class="row">
       <!-- left column -->
       <div class="col-md-3">
         <div class="text-center">
@@ -64,62 +63,58 @@
         </div>
         <h3>Personal info</h3>
         
-        <form class="form-horizontal" role="form">
+        <form method="post" action="profil">
           <div class="form-group">
             <label class="col-lg-3 control-label">First name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="<%out.println(nom);%>">
+              <input class="form-control" type="text" value="<%out.println(nom);%>" name="nom">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Last name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="<%out.println(prenom);%>">
+              <input class="form-control" type="text" value="<%out.println(prenom);%>" name="prenom">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Company:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="<%out.println(ville);%>">
+              <input class="form-control" type="text" value="<%out.println(ville);%>" name="ville">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="<%out.println(email);%>">
+              <input class="form-control" type="text" value="<%out.println(email);%>" name="email">
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Username:</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" value="<%out.println(pseudo);%>">
+              <input class="form-control" type="text" value="<%out.println(pseudo);%>" name="pseudo">
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Password:</label>
             <div class="col-md-8">
-              <input class="form-control" type="password" value="<%out.println(password);%>">
+              <input class="form-control" type="password" value="<%out.println(password);%>" name="password">
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Confirm password:</label>
             <div class="col-md-8">
-              <input class="form-control" type="password" value="<%out.println(password);%>">
+              <input class="form-control" type="password" value="<%out.println(password);%>" name="password">
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
-              <input type="button" class="btn btn-primary" value="Save Changes">
-              <span></span>
-              <input type="reset" class="btn btn-default" value="Cancel">
+              <input type="submit" class="btn btn-primary" value="Save Changes" name="send">
             </div>
           </div>
         </form>
       </div>
   </div>
 </div>
-<hr>
-
 </body>
 </html>

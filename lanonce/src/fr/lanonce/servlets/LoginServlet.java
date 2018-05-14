@@ -33,7 +33,6 @@ public class LoginServlet extends HttpServlet {
 		String pseudo = request.getParameter("pseudo");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		
 		ConnexionUserDao connexionDao = new ConnexionUserDao();
 		UserBean userbean = new UserBean();
 		

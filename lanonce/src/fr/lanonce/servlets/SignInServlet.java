@@ -1,6 +1,9 @@
 package fr.lanonce.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +19,7 @@ import fr.lanonce.beans.UserBean;
  */
 public class SignInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+    private static List<UserBean> users = new ArrayList<UserBean>();
     private AddUserDao userDao;
 
     public void init() throws ServletException {
@@ -47,5 +50,7 @@ public class SignInServlet extends HttpServlet {
         user.setPassword(request.getParameter("password"));
         
         userDao.ajouter(user);
+        users.add(user);
+        
 	}
 }

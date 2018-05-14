@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>home</title>
+<title>Insert title here</title>
 </head>
 <body>
-<%@ include file="adminMenu.jsp" %>
-  <%@ include file="adminMenuLan.jsp" %>
+<%
 
+%>
 </body>
 </html>

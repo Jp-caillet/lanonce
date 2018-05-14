@@ -13,10 +13,10 @@
       <a class="navbar-brand"></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="">Accueil</a></li>
+      <li><a href="/lanonce/auth/home">Home</a></li>
 	  <li><a href="/lanonce/auth/profil">profil</a></li>
 	  <li><a href="/lanonce/auth/create">Create</a></li>
-      <li><a href="logout">Logout</a></li>
+      <li><a href="/lanonce/auth/logout">Logout</a></li>
       <li><a><c:out value="${sessionScope.pseudo}"/></a></li>
     </ul>
   </div>

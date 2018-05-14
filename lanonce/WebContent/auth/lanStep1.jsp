@@ -16,7 +16,7 @@
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
 	<label for="Nom">Picture</label>
-	<input type="text" class="form-control" id="picture" placeholder="picture" name="picture">
+	<input type="file" name="picture" value="picture" id="picture"><label for="picture"> Select a file to upload</label>
 	</div>
 	</div>
 	</div>

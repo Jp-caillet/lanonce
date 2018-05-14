@@ -18,7 +18,7 @@
 	  <li><a href="">Créer une Lan</a></li>
 	  <li><a href="">Rejoindre une Lan</a></li>
       <li><a href="">Tournois</a></li>
-      <li><a href="">Contactez-nous</a></li>
+      <li><a href="/lanonce/contactus">Contactez-nous</a></li>
     </ul>
   </div>
 </nav>

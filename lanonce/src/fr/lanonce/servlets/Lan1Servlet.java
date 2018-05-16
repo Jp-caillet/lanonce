@@ -62,5 +62,7 @@ public class Lan1Servlet extends HttpServlet {
 		}
 		
 		lanDao.ajouter(lan);
+		this.getServletContext().getRequestDispatcher("/auth/confirmLan.jsp").forward(request, response);	
+
 	}
 }

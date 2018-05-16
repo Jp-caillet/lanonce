@@ -33,14 +33,16 @@
         e.printStackTrace();
    }
 %>
-
-<%out.println(description);%>
-<%out.println(info);%>
-<%out.println(date);%>
+Description:
+<%out.println(description);%></br>
+Information:
+<%out.println(info);%></br>
+Date:
+<%out.println(date);%></br>
 <div class="form-group">
 <label class="col-md-3 control-label"></label>
 <div class="col-md-8">
-    <input type="submit" class="btn btn-primary" value="Confirmer" name="send">
+    <input type="submit" class="btn btn-primary" value="JE CONFIRME" name="send">
 </div>
 </div>
 </body>

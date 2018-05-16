@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
   <title></title>
@@ -12,11 +13,14 @@
       <a class="navbar-brand"></a>
     </div>
     <ul class="nav navbar-nav">
-     <li><a href="">Accueil</a></li>
-     <li><a href="/lanonce/login">Connexion</a></li>
-     <li><a href="/lanonce/signin">Inscription</a></li>
+      <li><a href="/lanonce/auth/home">Home</a></li>
+	  <li><a href="/lanonce/auth/profil">profil</a></li>
+	  <li><a href="/lanonce/auth/create">Create</a></li>
+      <li><a href="/lanonce/auth/logout">Logout</a></li>
+      <li><a><c:out value="Bonjour ${sessionScope.pseudo}"/></a></li>
     </ul>
   </div>
 </nav>
+
 </body>
 </html>

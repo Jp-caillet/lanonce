@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import fr.lannonce.dao.ConnexionUserDao;
+import fr.lanonce.beans.UserBean;
 
 /**
  * Servlet implementation class ConnectionServlet
@@ -29,25 +30,26 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String pseudo = request.getParameter("pseudo");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		
 		ConnexionUserDao connexionDao = new ConnexionUserDao();
 		
 		try {
-			if(connexionDao.check(email, password)) {
+			if(connexionDao.check(pseudo, email, password)) {
 		        /* Récupération de la session depuis la requête */
 				HttpSession session = request.getSession();
 				session.setAttribute("email", email);
-				System.out.println("connexion reussi");
-				this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);	
+				session.setAttribute("id", session.getId());
+			    session.setAttribute("pseudo", pseudo);
+				this.getServletContext().getRequestDispatcher("/auth/home.jsp").forward(request, response);	
+
 			} else {
 				System.out.println("connexion rejetée");
+				this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);	
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		
+		}	
 	}
-
 }

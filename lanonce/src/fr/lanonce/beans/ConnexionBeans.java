@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import fr.lannonce.dao.AddLanDao;
+import fr.lannonce.dao.AddLanDaoImpl;
 import fr.lannonce.dao.AddUserDao;
 import fr.lannonce.dao.AddUserDaoImpl;
 
@@ -39,6 +41,9 @@ public class ConnexionBeans {
     public AddUserDao getUtilisateurDao() {
         return new AddUserDaoImpl(this);
     }
-
+    
+    public AddLanDao getLanDao() {
+    		return new AddLanDaoImpl(this);
+    }
 
 }

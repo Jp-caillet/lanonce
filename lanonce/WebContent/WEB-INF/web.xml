@@ -30,6 +30,46 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>LogoutServlet</servlet-name>
-    <url-pattern>/logout</url-pattern>
+    <url-pattern>/auth/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Lan1Servlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.Lan1Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Lan1Servlet</servlet-name>
+    <url-pattern>/auth/lanStep1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ProfilServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.ProfilServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfilServlet</servlet-name>
+    <url-pattern>/auth/profil</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/auth/home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CreateServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.CreateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateServlet</servlet-name>
+    <url-pattern>/auth/create</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ContactUsServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.ContactUsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactUsServlet</servlet-name>
+    <url-pattern>/auth/contactus</url-pattern>
   </servlet-mapping>
 </web-app>

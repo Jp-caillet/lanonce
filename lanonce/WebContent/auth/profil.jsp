@@ -25,6 +25,7 @@
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
         ResultSet r = smt.executeQuery("select * from users where(email='" + session.getAttribute("email") + "');");
+        
         while (r.next()) {
           nom = r.getString("nom");
           prenom = r.getString("prenom");

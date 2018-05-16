@@ -34,7 +34,6 @@ public class LoginServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		ConnexionUserDao connexionDao = new ConnexionUserDao();
-		UserBean userbean = new UserBean();
 		
 		try {
 			if(connexionDao.check(pseudo, email, password)) {

@@ -25,14 +25,6 @@
     <url-pattern>/signin</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>ContactUsServlet</servlet-name>
-    <servlet-class>fr.lanonce.servlets.ContactUsServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ContactUsServlet</servlet-name>
-    <url-pattern>/contactus</url-pattern>
-  </servlet-mapping>
-  <servlet>
     <servlet-name>LogoutServlet</servlet-name>
     <servlet-class>fr.lanonce.servlets.LogoutServlet</servlet-class>
   </servlet>
@@ -71,5 +63,13 @@
   <servlet-mapping>
     <servlet-name>CreateServlet</servlet-name>
     <url-pattern>/auth/create</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ContactUsServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.ContactUsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactUsServlet</servlet-name>
+    <url-pattern>/auth/contactus</url-pattern>
   </servlet-mapping>
 </web-app>

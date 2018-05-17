@@ -38,7 +38,7 @@ Description:
 Information:
 <%out.println(info);%></br>
 Date:
-<%out.println(date);%></br>
+<%out.println(date);%>
 <div class="form-group">
 <label class="col-md-3 control-label"></label>
 <div class="col-md-8">

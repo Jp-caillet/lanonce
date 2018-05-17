@@ -13,6 +13,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/benede.a/Downloads/javamail1_4_5.zip" sourcepath="/Users/benede.a/Downloads/javamail1_4_5.zip"/>
+	<classpathentry kind="lib" path="C:/Users/jp789/Downloads/javamail1_4_5.zip" sourcepath="/Users/benede.a/Downloads/javamail1_4_5.zip"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

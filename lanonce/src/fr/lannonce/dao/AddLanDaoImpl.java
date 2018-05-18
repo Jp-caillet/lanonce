@@ -3,8 +3,6 @@ package fr.lannonce.dao;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import javax.servlet.http.HttpSession;
-
 import com.mysql.jdbc.Connection;
 
 import fr.lanonce.beans.ConnexionBeans;

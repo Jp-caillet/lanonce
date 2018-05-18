@@ -33,6 +33,7 @@ public class Lan1Servlet extends HttpServlet {
     private String url = "jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd";
     private String username = "lanonce";
     private String pass = "fifou707";
+    
     public void init() throws ServletException {
     	ConnexionBeans daoFactory = ConnexionBeans.getInstance();
         this.lanDao = daoFactory.getLanDao();
@@ -87,10 +88,8 @@ public class Lan1Servlet extends HttpServlet {
 				    		test = false;
 				    }
 				} catch (ClassNotFoundException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}	
 			}

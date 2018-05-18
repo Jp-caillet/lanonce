@@ -5,14 +5,17 @@ import java.sql.Date;
 public class LanBean {
 	private String picture;
 	private String nameLan;
+	private String nameGame;
 	private Date date;
 	private String lieux;
 	private String invite;
 	private String visibleAdresse;
 	private String description;
 	private String info;
+	private int checkedRows;
+	private int nombreUser;
+	private String url;
 	private String idUser;
-	
 	
 	public String getPicture() {
 		return picture;
@@ -67,5 +70,29 @@ public class LanBean {
 	}
 	public void setInfo(String info) {
 		this.info = info;
+	}
+	public int getCheckedRows() {
+		return checkedRows;
+	}
+	public void setCheckedRows(int checkedRows) {
+		this.checkedRows = checkedRows;
+	}
+	public String getNameGame() {
+		return nameGame;
+	}
+	public void setNameGame(String nameGame) {
+		this.nameGame = nameGame;
+	}
+	public int getNombreUser() {
+		return nombreUser;
+	}
+	public void setNombreUser(int nombreUser) {
+		this.nombreUser = nombreUser;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
 	}
 }

@@ -7,8 +7,8 @@
 <title>home</title>
 </head>
 <body>
-<%@ include file="adminMenu.jsp" %>
-  <%@ include file="adminMenuLan.jsp" %>
 
+  <%@ include file="adminMenu.jsp" %>
+  <%@ include file="adminMenuLan.jsp" %>
 </body>
 </html>

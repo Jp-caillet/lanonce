@@ -15,7 +15,7 @@
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
     <button type="button" class="btn btn-warning"><a href="/lanonce/auth/lanStep1">Organiser une Lan PARTY</a></button>
-    <button type="button" class="btn btn-warning"><a href="/lanonce/auth/lanStep1">Organiser un tournois</a></button>
+    <button type="button" class="btn btn-warning"><a href="/lanonce/auth/tournois">Organiser un tournois</a></button>
 	</div>
 	</div>
 	</div>

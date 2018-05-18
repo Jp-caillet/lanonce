@@ -1,11 +1,18 @@
 package fr.lanonce.servlets;
 
 import java.io.IOException;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
 
 /**
  * Servlet implementation class ConfirmLanServlet
@@ -34,7 +41,29 @@ public class ConfirmLanServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//ajouter l'affichage dans la jsp
+		   HttpSession session = request.getSession();
+
+		   try {
+			    String description = "";
+			    String info = "";
+			    String date = "";
+		        Class.forName("com.mysql.jdbc.Driver");
+		        Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
+		        Statement smt = (Statement) con.createStatement();
+		        ResultSet r = smt.executeQuery("select * from lans where(id_user='" + session.getAttribute("id") + "');");
+
+		        while (r.next()) {
+		          request.setAttribute("description", description = r.getString("description"));
+		          request.setAttribute("info", description = r.getString("info"));
+		          request.setAttribute("date", description = r.getString("date"));
+		          request.getRequestDispatcher("/auth/confirmLan.jsp").forward(request, response);
+		          /*info = r.getString("info");
+		          date = r.getString("date");*/
+		        }
+		        con.close();
+		   } catch (Exception e) {
+		        e.printStackTrace();
+		   }
 	}
 
 }

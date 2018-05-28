@@ -88,4 +88,12 @@
     <servlet-name>TournoisServlet</servlet-name>
     <url-pattern>/auth/tournois</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>SearchLanServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.SearchLanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchLanServlet</servlet-name>
+    <url-pattern>/auth/searchLan</url-pattern>
+  </servlet-mapping>
 </web-app>

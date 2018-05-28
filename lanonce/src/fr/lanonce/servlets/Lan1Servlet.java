@@ -61,7 +61,6 @@ public class Lan1Servlet extends HttpServlet {
 			lan.setNameLan(request.getParameter("nameLan"));
 			lan.setNameGame(request.getParameter("game"));
 			int hasInteger= Integer.parseInt(request.getParameter("nombreUser"));
-			System.out.println(hasInteger);
 			lan.setNombreUser(hasInteger);
 			lan.setLieux(request.getParameter("lieux"));
 			String date = request.getParameter("date");
@@ -116,7 +115,6 @@ public class Lan1Servlet extends HttpServlet {
 		       int i = (int)Math.floor(Math.random() * 62); // Si tu supprimes des lettres tu diminues ce nb
 		       pass += chars.charAt(i);
 		    }
-		    System.out.println(pass);
 		    return pass;
 	}
 }

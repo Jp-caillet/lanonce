@@ -15,8 +15,8 @@
   <div class="container">
       <ul class="nav navbar-nav">
 	  <li><a href="">Comment ca marche ?</a></li>
-	  <li><a href="">Créer une Lan</a></li>
-	  <li><a href="">Rejoindre une Lan</a></li>
+	  <li><a href="/lanonce/auth/create">Créer une Lan</a></li>
+	  <li><a href="/lanonce/auth/searchLan">Rejoindre une Lan</a></li>
       <li><a href="">Tournois</a></li>
       <li><a href="/lanonce/auth/contactus">Contactez-nous</a></li>
     </ul>

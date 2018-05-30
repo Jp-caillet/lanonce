@@ -12,6 +12,8 @@ import fr.lannonce.dao.AddTournoisDao;
 import fr.lannonce.dao.AddTournoisDaoImpl;
 import fr.lannonce.dao.AddUserDao;
 import fr.lannonce.dao.AddUserDaoImpl;
+import fr.lannonce.dao.SearchGameDao;
+import fr.lannonce.dao.SearchGameDaoImpl;
 
 public class ConnexionBeans {
 	
@@ -50,5 +52,9 @@ public class ConnexionBeans {
     
     public AddTournoisDao getTournoisDao() {
 		return new AddTournoisDaoImpl(this);
+    }
+    
+    public SearchGameDao getAllNameGameCheck() {
+		return new SearchGameDaoImpl(this);
     }
 }

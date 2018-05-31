@@ -17,7 +17,6 @@ import com.mysql.jdbc.Statement;
 /**
  * Servlet implementation class ConfirmLanServlet
  */
-@WebServlet("/ConfirmLanServlet")
 public class ConfirmLanServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -33,37 +32,12 @@ public class ConfirmLanServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		this.getServletContext().getRequestDispatcher("/auth/confirmLan.jsp").forward(request, response);	
+		this.getServletContext().getRequestDispatcher("/auth/confirmLan.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		   HttpSession session = request.getSession();
-
-		   try {
-			    String description = "";
-			    String info = "";
-			    String date = "";
-		        Class.forName("com.mysql.jdbc.Driver");
-		        Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
-		        Statement smt = (Statement) con.createStatement();
-		        ResultSet r = smt.executeQuery("select * from lans where(id_user='" + session.getAttribute("id") + "');");
-
-		        while (r.next()) {
-		          request.setAttribute("description", description = r.getString("description"));
-		          request.setAttribute("info", description = r.getString("info"));
-		          request.setAttribute("date", description = r.getString("date"));
-		          request.getRequestDispatcher("/auth/confirmLan.jsp").forward(request, response);
-		          /*info = r.getString("info");
-		          date = r.getString("date");*/
-		        }
-		        con.close();
-		   } catch (Exception e) {
-		        e.printStackTrace();
-		   }
 	}
-
 }

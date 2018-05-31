@@ -25,7 +25,7 @@
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
 	<label for="Nom">NOM DU TOURNOI</label>
-	<input type="text" class="form-control" id="nameLan" placeholder="nameLan" name="nameLan">
+	<input type="text" class="form-control" id="nameLan" placeholder="nameLan" name="nameTournois">
 	</div>
 	</div>
 	</div>
@@ -51,7 +51,15 @@
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
-	<label class="checkbox-inline"><input type="checkbox" name="checkedRows" value="true">Party privé</label>
+	<label class="checkbox-inline"><input type="checkbox" name="checkedPriv" value="true">Party privé</label>
+	</div>
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label class="checkbox-inline"><input type="checkbox" name="checkedPay" value="true">Party payante</label>
 	</div>
 	</div>
 	</div>
@@ -64,7 +72,39 @@
 	</div>
 	</div>
 	</div> 
-	
+
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label for="Nom">SELECTIONNER UN NOMBRE DE PARTICIPANT</label>
+		<SELECT name="nombreUser" size="1">
+			<OPTION>1
+			<OPTION>2
+			<OPTION>3
+			<OPTION>4
+			<OPTION>5
+			<OPTION>6
+			<OPTION>7
+			<OPTION>8
+			<OPTION>9
+			<OPTION>10
+		</SELECT>
+	</div>
+	</div>
+	</div> 
+
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label for="Nom">SELECTIONNER UN TYPE DE TOURNOIS</label>
+		<SELECT name="typeTournois" size="1">
+			<OPTION>League
+			<OPTION>Coupe
+		</SELECT>
+	</div>
+	</div>
+	</div> 
+
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">
 	<div class="form-group">
@@ -73,16 +113,6 @@
 	</div>
 	</div>
 	</div> 
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label class="checkbox-inline"><input type="checkbox" value="">CIGARETTE? </label>
-	</br>
-	<label class="checkbox-inline"><input type="checkbox" value="">BIERE? </label>
-	</div>
-	</div>
-	</div>
 		
 	<br/>
 	<div class="row">

@@ -33,6 +33,7 @@ public class Lan1Servlet extends HttpServlet {
     private String url = "jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd";
     private String username = "lanonce";
     private String pass = "fifou707";
+    
     public void init() throws ServletException {
     	ConnexionBeans daoFactory = ConnexionBeans.getInstance();
         this.lanDao = daoFactory.getLanDao();
@@ -60,7 +61,6 @@ public class Lan1Servlet extends HttpServlet {
 			lan.setNameLan(request.getParameter("nameLan"));
 			lan.setNameGame(request.getParameter("game"));
 			int hasInteger= Integer.parseInt(request.getParameter("nombreUser"));
-			System.out.println(hasInteger);
 			lan.setNombreUser(hasInteger);
 			lan.setLieux(request.getParameter("lieux"));
 			String date = request.getParameter("date");
@@ -87,10 +87,8 @@ public class Lan1Servlet extends HttpServlet {
 				    		test = false;
 				    }
 				} catch (ClassNotFoundException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}	
 			}
@@ -117,7 +115,6 @@ public class Lan1Servlet extends HttpServlet {
 		       int i = (int)Math.floor(Math.random() * 62); // Si tu supprimes des lettres tu diminues ce nb
 		       pass += chars.charAt(i);
 		    }
-		    System.out.println(pass);
 		    return pass;
 	}
 }

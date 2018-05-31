@@ -11,11 +11,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form method="post" action="">
+    <div class="form-group">
+    <label class="col-md-3 control-label"></label>
+    <div class="col-md-8">
 <%
    String description = "";
    String info = "";
    String date = "";
+   String nameLan = "";
 
    try {
         Class.forName("com.mysql.jdbc.Driver");
@@ -27,23 +31,26 @@
           description = r.getString("description");
           info = r.getString("info");
           date = r.getString("date");
+          nameLan = r.getString("nameLan");
         }
         con.close();
    } catch (Exception e) {
         e.printStackTrace();
    }
 %>
+Nom de la lan:
+<%out.println(nameLan);%></br>
 Description:
 <%out.println(description);%></br>
 Information:
 <%out.println(info);%></br>
 Date:
 <%out.println(date);%>
-<div class="form-group">
-<label class="col-md-3 control-label"></label>
-<div class="col-md-8">
-    <input type="submit" class="btn btn-primary" value="JE CONFIRME" name="send">
-</div>
-</div>
+        <input type="submit" class="btn btn-primary" value="JE CONFIRME" name="send">
+    </div>
+    </div>
+</form>
+
+
 </body>
 </html>

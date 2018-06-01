@@ -31,21 +31,19 @@ public class SearchLanServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    this.getServletContext().getRequestDispatcher("/auth/searchLan.jsp").forward(request, response);
-	    String term = request.getParameter("term");
-	    ArrayList<String> list = nameGame.getAllNameGameCheck(term);
-	    String json = new Gson().toJson(list);
-	    System.out.println(json);
-	    
-	    PrintWriter writer = response.getWriter();
-	    writer.println(json);
-	    /*response.setContentType("application/json");
-	    response.setCharacterEncoding("UTF-8");
-	    response.getWriter().write(json); */ 
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    String term = request.getParameter("term");
+	    ArrayList<String> list = nameGame.getAllNameGameCheck(term);
+	    String json = new Gson().toJson(list);
+	    System.out.println(json);	    
+	    
+	    response.setContentType("application/json");
+	    response.setCharacterEncoding("UTF-8");
+	    response.getWriter().write(json);
 	}
 }

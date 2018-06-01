@@ -19,11 +19,11 @@ public class AuthenticateFilter extends HttpFilter{
 			this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
 		} else {
 			chain.doFilter(request, response);
+			
 		}
 	}
 	
 	@Override
 	public void destroy() {		
 	}
-
 }

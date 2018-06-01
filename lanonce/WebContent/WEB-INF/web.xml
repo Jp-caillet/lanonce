@@ -14,7 +14,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/loginServlet</url-pattern>
+    <url-pattern>/login</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>SignInServlet</servlet-name>
@@ -22,6 +22,78 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>SignInServlet</servlet-name>
-    <url-pattern>/signInServlet</url-pattern>
+    <url-pattern>/signin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/auth/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Lan1Servlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.Lan1Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Lan1Servlet</servlet-name>
+    <url-pattern>/auth/lanStep1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ProfilServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.ProfilServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfilServlet</servlet-name>
+    <url-pattern>/auth/profil</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/auth/home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CreateServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.CreateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateServlet</servlet-name>
+    <url-pattern>/auth/create</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ContactUsServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.ContactUsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactUsServlet</servlet-name>
+    <url-pattern>/auth/contactus</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ConfirmLanServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.ConfirmLanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConfirmLanServlet</servlet-name>
+    <url-pattern>/auth/confirmLan</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TournoisServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.TournoisServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TournoisServlet</servlet-name>
+    <url-pattern>/auth/tournois</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SearchLanServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.SearchLanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchLanServlet</servlet-name>
+    <url-pattern>/auth/searchLan</url-pattern>
   </servlet-mapping>
 </web-app>

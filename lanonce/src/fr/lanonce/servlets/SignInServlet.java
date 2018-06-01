@@ -1,6 +1,9 @@
 package fr.lanonce.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,10 +17,9 @@ import fr.lanonce.beans.UserBean;
 /**
  * Servlet implementation class SignInServlet
  */
-@WebServlet(name = "/SignInServlet")
 public class SignInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+    private static List<UserBean> users = new ArrayList<UserBean>();
     private AddUserDao userDao;
 
     public void init() throws ServletException {
@@ -29,6 +31,7 @@ public class SignInServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        /* Affichage de la page d'inscription */
 		this.getServletContext().getRequestDispatcher("/WEB-INF/signIn.jsp").forward(request, response);	
 	}
 
@@ -45,9 +48,10 @@ public class SignInServlet extends HttpServlet {
         user.setVille(request.getParameter("ville"));
         user.setEmail(request.getParameter("email"));
         user.setPassword(request.getParameter("password"));
-        System.out.println("connexion");
         
         userDao.ajouter(user);
+        users.add(user);
+        
+        this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
 	}
-
 }

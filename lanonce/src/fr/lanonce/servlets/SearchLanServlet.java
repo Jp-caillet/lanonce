@@ -40,7 +40,7 @@ public class SearchLanServlet extends HttpServlet {
 	    String term = request.getParameter("term");
 	    ArrayList<String> list = nameGame.getAllNameGameCheck(term);
 	    String json = new Gson().toJson(list);
-	    System.out.println(json);	    
+	    System.out.println(json);
 	    
 	    response.setContentType("application/json");
 	    response.setCharacterEncoding("UTF-8");

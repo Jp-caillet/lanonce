@@ -22,6 +22,7 @@
             Jeux:
             <input type="text" id="search" name="search" class="search" />
             <input type="button" id="bouton" value="Bouton à cliquer">
+            <div id="display"></div>
         </div>
     </div>
     
@@ -33,7 +34,8 @@
 	        	
 	        	function affichage(){  		 
 	            	var nameGame =  $("#search").val();
-	
+	            	var messageBox  = document.getElementById("display");
+
 	            	$.ajax({
 	            	    "type": "POST",
 	            	    "url": "../auth/searchLan",
@@ -41,10 +43,20 @@
 	                        term: nameGame
 	                },
 	            	    "success": function (r) {
-		            	    	$.map(r, function(item){
-		            	    		console.log(item);
-		            	    		return item;
-		            	    	});	 
+	            	    		console.log(r);
+		            	    	if (r.length == 0){
+		            	    	    $("<div id='a'>Ce jeux n'existe pas</div>").appendTo(document.body);
+		            	    	}							
+						var DOM="";
+						for(i = 0; i < r.length; i++) {
+
+							DOM += "<tr>";
+							DOM += "<td>" + r[i]+ "</td>";
+							DOM += "</tr>";
+							DOM += "</br>";
+							
+						}
+						messageBox.innerHTML = DOM;
 	            	    }
 	            	});  	
 	        	}

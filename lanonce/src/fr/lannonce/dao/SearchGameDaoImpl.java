@@ -18,7 +18,7 @@ public class SearchGameDaoImpl implements SearchGameDao{
 	public ArrayList<String> getAllNameGameCheck(String l) {
 	    ArrayList<String> list = new ArrayList<String>();
 	    PreparedStatement ps = null;
-	    String data;
+	    String data, date, lieux, picture;
 	    Connection connexion = null;
 	    
 	    try {
@@ -30,8 +30,16 @@ public class SearchGameDaoImpl implements SearchGameDao{
 	        ResultSet rs = ps.executeQuery();
 	        
 	        while (rs.next()) {
+	        		
 	            data = rs.getString("nameGame");
+	            date = rs.getString("date");
+	            lieux = rs.getString("lieux");
+	            picture = rs.getString("picture");
+	            
 	            list.add(data);
+	            list.add(date);
+	            list.add(lieux);
+	            list.add(picture);
 	        }
 	    } catch (Exception e) {
 	        System.out.println(e.getMessage());

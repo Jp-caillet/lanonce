@@ -66,5 +66,27 @@
 <p>nb user:</p>
 <%out.println(nb_user);%>
 <br/>
+
+<%
+if((boolean) request.getAttribute("already")){
+%>
+<form method="post" action="">
+<div class="row">
+<div class="col-md-offset-5 col-md-1">
+<input type="submit" class="btn btn-primary"></input>
+</div>
+</div>
+</form>
+<%
+}else{
+%>
+<div class="row">
+<div class="col-md-offset-5 col-md-1">
+Vous participez déja à cette lan
+</div>
+</div>
+<%
+}
+%>
 </body>
 </html>

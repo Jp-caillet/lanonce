@@ -67,7 +67,9 @@ public class TournoisServlet extends HttpServlet {
 			tournois.setDate(sqlDate);
 			tournois.setDescription(request.getParameter("description"));
 			tournois.setInfo(request.getParameter("info"));
-			tournois.setId_user(session.getId());
+			String Id_user =String.valueOf(session.getAttribute("id"));
+			System.out.println(Id_user);
+			tournois.setId_user(Id_user);
 			boolean hasCreatePermission= Boolean.parseBoolean(request.getParameter("checkedPriv"));
 			if (hasCreatePermission == true) {
 				privBox = 1;

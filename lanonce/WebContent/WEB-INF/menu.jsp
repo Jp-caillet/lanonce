@@ -12,15 +12,11 @@
       <a class="navbar-brand"></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="">Accueil</a></li>
-      <li><a href="">Categories</a></li>
-      <li><a href="/lanonce/signInServlet">Inscription</a></li>
-      <li><a href="/lanonce/loginServlet">Connexion</a></li>
+     <li><a href="">Accueil</a></li>
+     <li><a href="/lanonce/login">Connexion</a></li>
+     <li><a href="/lanonce/signin">Inscription</a></li>
     </ul>
   </div>
 </nav>
 </body>
 </html>
-
-
-

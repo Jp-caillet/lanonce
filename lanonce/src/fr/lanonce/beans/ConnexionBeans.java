@@ -58,3 +58,4 @@ public class ConnexionBeans {
 		return new SearchGameDaoImpl(this);
     }
 }
+

@@ -60,8 +60,10 @@ public class TournoisServlet extends HttpServlet {
 			tournois.setNameTournois(request.getParameter("nameTournois"));
 			tournois.setLieux(request.getParameter("lieux"));
 			String date = request.getParameter("date");
+			String nameGame = request.getParameter("nameGame");
 			Date fd = format.parse(date);
 			java.sql.Date sqlDate = new java.sql.Date(fd.getTime());
+			tournois.setnameGame(nameGame);
 			tournois.setDate(sqlDate);
 			tournois.setDescription(request.getParameter("description"));
 			tournois.setInfo(request.getParameter("info"));

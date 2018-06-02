@@ -29,6 +29,15 @@
 	</div>
 	</div>
 	</div>
+	
+	<div class="row">
+	<div class="col-md-offset-2 col-md-7">
+	<div class="form-group">
+	<label for="Nom">NOM DU JEUX</label>
+	<input type="text" class="form-control" id="nameGame" placeholder="nameGame" name="nameGame">
+	</div>
+	</div>
+	</div>
 
 	<div class="row">
 	<div class="col-md-offset-2 col-md-7">

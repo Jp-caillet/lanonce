@@ -18,14 +18,16 @@ public class SearchGameDaoImpl implements SearchGameDao{
 	public ArrayList<String> getAllNameGameCheck(String l) {
 	    ArrayList<String> list = new ArrayList<String>();
 	    PreparedStatement ps = null;
-	    String data, date, lieux, picture;
+
+	    String data, date, lieux, picture, idUrl;
+
 	    Connection connexion = null;
 	    
 	    try {
 	    		connexion = (Connection) connexionUser.getConnection();
 	        String ch=l+"%";
 	        
-	        /* Création de l'objet gérant les requêtes préparées */
+	        /* CrÃ©ation de l'objet gÃ©rant les requÃªtes prÃ©parÃ©es */
 	        ps = (PreparedStatement) connexion.prepareStatement("SELECT * FROM lans WHERE nameGame LIKE '"+ch+"'");
 	        ResultSet rs = ps.executeQuery();
 	        
@@ -35,6 +37,10 @@ public class SearchGameDaoImpl implements SearchGameDao{
 	            date = rs.getString("date");
 	            lieux = rs.getString("lieux");
 	            picture = rs.getString("picture");
+
+	            idUrl = rs.getString("id_url");
+	            System.out.println(idUrl);
+
 	            
 	            list.add(data);
 	            list.add(date);

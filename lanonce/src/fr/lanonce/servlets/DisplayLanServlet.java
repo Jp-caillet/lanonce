@@ -16,13 +16,16 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class DisplayLanServlet
  */
+
 @WebServlet("/DisplayLanServlet")
+
 public class DisplayLanServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String username = "lanonce";
 	 private String pass = "fifou707";
 	 private String url = "jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd";
 	 private String sql = "INSERT INTO participer_lans(id_lan, id_user) VALUES(?, ?);";
+
 	 private String sql2 = "select * from participer_lans	 where id_lan =? and id_user=?";
        
     /**
@@ -33,13 +36,14 @@ public class DisplayLanServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
-		 boolean already = true;
+ boolean already = true;
 		try{
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, username, pass);
@@ -48,7 +52,7 @@ public class DisplayLanServlet extends HttpServlet {
 	    st.setString(2, String.valueOf(session.getAttribute("id")));
 	    ResultSet rs = st.executeQuery();
 	    if(rs.next()) {
-	    	System.out.println("vous participé déja");
+	    	System.out.println("vous participÃ© dÃ©ja");
 	    	already = false;
 	    }
 	    request.setAttribute("already",already );
@@ -65,7 +69,9 @@ public class DisplayLanServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		// TODO Auto-generated method stub
+
 		HttpSession session = request.getSession();
 		System.out.println(request.getParameter("id"));
 		System.out.println(session.getAttribute("id"));

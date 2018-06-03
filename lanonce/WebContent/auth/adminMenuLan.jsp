@@ -4,6 +4,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<!-------------------------- JS -------------------------->
+<!-- lanStep1 -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- End lanStep1 -->
+<!-------------------------- CSS -------------------------->
+<!-- lanStep1 -->
+<link rel="stylesheet" type="text/css" href="../css/lanPage.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- End lanStep1 -->
+<!-- home -->
+<link rel="stylesheet" type="text/css" href="../css/homePage.css">
+<!-- End home -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>

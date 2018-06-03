@@ -27,10 +27,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
       <ul class="nav navbar-nav">
-	  <li><a href="">Comment ca marche ?</a></li>
-	  <li><a href="/lanonce/auth/create">Créer une Lan</a></li>
-	  <li><a href="/lanonce/auth/searchLan">Rejoindre une Lan</a></li>
-      <li><a href="">Tournois</a></li>
+	  <li><a href="#">Comment ca marche ?</a></li>
+	  <li><a href="/lanonce/auth/create">Créer une rencontre</a></li>
+	  <li><a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
+	  <li><a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>
+      <li><a href="#">Tournois</a></li>
       <li><a href="/lanonce/auth/contactus">Contactez-nous</a></li>
     </ul>
   </div>

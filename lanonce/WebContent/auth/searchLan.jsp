@@ -29,7 +29,6 @@
     <script>
     $(document).ready(function() {
         $(function() {
-        		
 	        	$("#bouton").click(affichage);
 	        	
 	        	function affichage(){  		 

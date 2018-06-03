@@ -23,7 +23,7 @@ public class DisplayLanServlet extends HttpServlet {
 	 private String pass = "fifou707";
 	 private String url = "jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd";
 	 private String sql = "INSERT INTO participer_lans(id_lan, id_user) VALUES(?, ?);";
-	 private String sql2 = "select * from participer_lans where id_lan =? and id_user=?";
+	 private String sql2 = "select * from participer_lans	 where id_lan =? and id_user=?";
        
     /**
      * @see HttpServlet#HttpServlet()

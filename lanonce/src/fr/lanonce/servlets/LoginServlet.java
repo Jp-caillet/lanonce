@@ -40,8 +40,8 @@ public class LoginServlet extends HttpServlet {
 		        /* Récupération de la session depuis la requête */
 				HttpSession session = request.getSession();
 				session.setAttribute("email", email);
-				session.setAttribute("id", session.getId());
 			    session.setAttribute("pseudo", pseudo);
+			    session.setAttribute("id", connexionDao.getid());
 				this.getServletContext().getRequestDispatcher("/auth/home.jsp").forward(request, response);	
 
 			} else {

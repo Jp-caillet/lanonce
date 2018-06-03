@@ -19,7 +19,7 @@
     
     <div class="search-container">
         <div class="ui-widget">
-            Jeux:
+            REJOINDRE UNE LAN:
             <input type="text" id="search" name="search" class="search" />
             <input type="button" id="bouton" value="Bouton à cliquer">
             <div id="display"></div>
@@ -29,7 +29,7 @@
     <script>
     $(document).ready(function() {
         $(function() {
-        	
+        		
 	        	$("#bouton").click(affichage);
 	        	
 	        	function affichage(){  		 

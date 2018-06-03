@@ -96,4 +96,20 @@
     <servlet-name>SearchLanServlet</servlet-name>
     <url-pattern>/auth/searchLan</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>DisplayLanServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.DisplayLanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayLanServlet</servlet-name>
+    <url-pattern>/auth/displayLan</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DisplayTournoisServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.DisplayTournoisServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayTournoisServlet</servlet-name>
+    <url-pattern>/auth/displayTournois</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -128,4 +128,12 @@
     <servlet-name>LanDoneServlet</servlet-name>
     <url-pattern>/auth/history/lan/done</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>TournoisHistoryServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.TournoisHistoryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TournoisHistoryServlet</servlet-name>
+    <url-pattern>/auth/history/tournois</url-pattern>
+  </servlet-mapping>
 </web-app>

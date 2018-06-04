@@ -52,7 +52,7 @@ ArrayList  id_game = new ArrayList();
         {
           
         Statement smt1 = con.createStatement();
-        ResultSet r1 = smt.executeQuery("select * from tournois where id_url='" + id_game.get(i) + "' and status='done';");
+        ResultSet r1 = smt.executeQuery("select * from tournois where id_url='" + id_game.get(i) + "' and status='current';");
         while (r1.next()) {
         
         	 
@@ -103,10 +103,11 @@ ArrayList  id_game = new ArrayList();
    }
    if(nolan){
 %>
-<h1>pas de tournois fini </h1>
+<h1>pas de tournois en cours </h1>
 	<%
 	
 }
 %>
+
 </body>
 </html>

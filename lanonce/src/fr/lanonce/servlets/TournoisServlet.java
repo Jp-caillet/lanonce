@@ -76,7 +76,7 @@ public class TournoisServlet extends HttpServlet {
 			} 
 			tournois.setPriv_checked(privBox);
 			tournois.setTypeTournois(request.getParameter("typeTournois"));
-			tournois.setStatus("test");
+			tournois.setStatus("open");
 			boolean hasCreatePermission1 = Boolean.parseBoolean(request.getParameter("checkedPay"));
 			if (hasCreatePermission1 == true) {
 				payBox = 1;

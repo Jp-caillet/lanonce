@@ -23,8 +23,8 @@
   <div class="container">
       <ul class="nav navbar-nav">
 	  <li ><a href="#">Mes tournois à venir</a></li>
-	  <li><a href="/lanonce/auth/history/history/done">Mes tournois en cours</a></li>
-	  <li><a href="/lanonce/auth/history/history/inProgress">Mes tournois terminés</a></li>
+	  <li><a href="/lanonce/auth/history/tournois?status=current">Mes tournois en cours</a></li>
+	  <li><a href="/lanonce/auth/history/tournois?status=done">Mes tournois terminés</a></li>
     </ul>
   </div>
 </nav>

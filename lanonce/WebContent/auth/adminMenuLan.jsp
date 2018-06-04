@@ -31,6 +31,7 @@
 	  <li><a href="/lanonce/auth/create">Créer une rencontre</a></li>
 	  <li><a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
 	  <li><a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>
+	  <li><a href="/lanonce/auth/history/tournois?status=open">Mes tournois</a></li>
       <li><a href="#">Tournois</a></li>
       <li><a href="/lanonce/auth/contactus">Contactez-nous</a></li>
     </ul>

@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class LanDoneServlet
  */
+<<<<<<< HEAD
+=======
+@WebServlet("/LanDoneServlet")
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
 public class LanDoneServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

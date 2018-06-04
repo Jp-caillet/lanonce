@@ -19,7 +19,11 @@
     
     <div class="search-container">
         <div class="ui-widget">
+<<<<<<< HEAD
             REJOINDRE UNE LAN OU UN TOURNOIS:
+=======
+            REJOINDRE UNE LAN:
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
             <input type="text" id="search" name="search" class="search" />
             <input type="button" id="bouton" value="Bouton à cliquer">
             <div id="display"></div>

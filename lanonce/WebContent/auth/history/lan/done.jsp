@@ -60,7 +60,12 @@ ArrayList  id_game = new ArrayList();
         		nolan= false;
         	%>
         	
+<<<<<<< HEAD
         	<H3>VOICI LES LANS PARTICIPÉ: </H3>
+=======
+        	<li>
+        	<a href="/lanonce/auth/displayLan?id=<%out.println(r1.getString("id_url"));%>">
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
         	<h1>lan :</h1>
         	<p>
         	<% 
@@ -83,7 +88,12 @@ ArrayList  id_game = new ArrayList();
         	out.println(r1.getString("date"));
         	%>
         	</p>
+<<<<<<< HEAD
         <a href="/lanonce/auth/displayLan?id=<%out.println(r1.getString("id_url"));%>">CLIQUEZ ICI POUR VOIR LA LAN</a>
+=======
+        	</a>
+        	</li>
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
         	<% 
         	}
         }

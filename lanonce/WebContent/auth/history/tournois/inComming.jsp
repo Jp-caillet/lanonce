@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@page import="java.util.Calendar"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.sql.ResultSet"%>
@@ -6,6 +7,8 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
 <%@page import="java.awt.print.Printable"%>
+=======
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -15,6 +18,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
 <%@ include file="/auth/adminMenu.jsp" %>
 <div class="row">
 <div class="col-md-offset-2 col-md-7">
@@ -108,6 +112,8 @@ ArrayList  id_game = new ArrayList();
 	
 }
 %>
+=======
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
 
 </body>
 </html>

@@ -8,18 +8,18 @@ import com.mysql.jdbc.PreparedStatement;
 
 import fr.lanonce.beans.ConnexionBeans;
 
-public class SearchGameDaoImpl implements SearchGameDao{
+public class SearchTournoisDaoImpl implements SearchTournoisDao {
 	private ConnexionBeans connexionUser;
 
-    public SearchGameDaoImpl(ConnexionBeans connexionUser) {
+    public SearchTournoisDaoImpl(ConnexionBeans connexionUser) {
         this.connexionUser = connexionUser;
     }
-	
-	public ArrayList<String> getAllNameGameCheck(String l) {
-	    ArrayList<String> list = new ArrayList<String>();
+    
+	public ArrayList<String> getAllNameGameTournois(String l) {
+	    ArrayList<String> list1 = new ArrayList<String>();
 	    PreparedStatement ps = null;
 
-	    String data, date, lieux, picture, idUrl;
+	    String data;
 
 	    Connection connexion = null;
 	    
@@ -28,26 +28,19 @@ public class SearchGameDaoImpl implements SearchGameDao{
 	        String ch=l+"%";
 	        
 	        /* Création de l'objet gérant les requêtes préparées */
-	        ps = (PreparedStatement) connexion.prepareStatement("SELECT * FROM lans WHERE nameGame LIKE '"+ch+"'");
+	        ps = (PreparedStatement) connexion.prepareStatement("SELECT * FROM tournois WHERE nameGame LIKE '"+ch+"'");
 	        ResultSet rs = ps.executeQuery();
 	        
 	        while (rs.next()) {
 	        		
 	            data = rs.getString("nameGame");
-	            date = rs.getString("date");
-	            lieux = rs.getString("lieux");
-	            picture = rs.getString("picture");
-	            idUrl = rs.getString("id_url");
-	            
-	            list.add(picture);
-	            list.add(data);
-	            list.add(date);
-	            list.add(lieux);
-	            list.add(idUrl);
+	           
+	            list1.add(data);
+
 	        }
 	    } catch (Exception e) {
 	        System.out.println(e.getMessage());
 	    }
-	    return list;
+	    return list1;	
 	}
 }

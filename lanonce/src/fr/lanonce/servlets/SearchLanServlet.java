@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import fr.lannonce.dao.SearchGameDao;
+import fr.lannonce.dao.SearchTournoisDao;
 import fr.lanonce.beans.ConnexionBeans;
 import com.google.gson.*;
 
@@ -20,6 +21,7 @@ import com.google.gson.*;
 public class SearchLanServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private SearchGameDao nameGame;
+    private SearchTournoisDao tournois;
 
     public void init() throws ServletException {
     	ConnexionBeans daoFactory = ConnexionBeans.getInstance();
@@ -38,8 +40,10 @@ public class SearchLanServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    String term = request.getParameter("term");
-	    ArrayList<String> list = nameGame.getAllNameGameCheck(term);
-	    String json = new Gson().toJson(list);
+	    //ArrayList<String> list = nameGame.getAllNameGameCheck(term);
+	    ArrayList<String> list1 = tournois.getAllNameGameTournois(term);
+	    System.out.println(list1);
+	    String json = new Gson().toJson(list1);
 	    System.out.println(json);
 	    
 	    response.setContentType("application/json");

@@ -30,7 +30,12 @@
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
+<<<<<<< HEAD
+        ResultSet r = smt.executeQuery("select * from tournois where id_url='" +  request.getParameter("id") + "';");
+
+=======
         ResultSet r = smt.executeQuery("select * from tournois where(id_url='" +  request.getParameter("id") + "');");
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
         while (r.next()) {
         	nameTournois = r.getString("nameTournois");
         	nameGame = r.getString("nameGame");

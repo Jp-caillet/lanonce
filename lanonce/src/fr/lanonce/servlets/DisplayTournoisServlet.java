@@ -23,6 +23,10 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class DisplayTournoisServlet
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
 @WebServlet("/DisplayTournoisServlet")
 public class DisplayTournoisServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -55,7 +59,11 @@ public class DisplayTournoisServlet extends HttpServlet {
 	    st.setString(2, String.valueOf(session.getAttribute("id")));
 	    ResultSet rs = st.executeQuery();
 	    if(rs.next()) {
-	    	System.out.println("vous participé déja");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
+	    	System.out.println("vous participÃ© dÃ©ja");
 	    	already = false;
 	    }
 	    request.setAttribute("already",already );

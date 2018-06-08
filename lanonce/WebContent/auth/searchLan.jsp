@@ -19,7 +19,11 @@
     
     <div class="search-container">
         <div class="ui-widget">
-            Jeux:
+<<<<<<< HEAD
+            REJOINDRE UNE LAN OU UN TOURNOIS:
+=======
+            REJOINDRE UNE LAN:
+>>>>>>> 1d96e728003f2fe7abdd05a2bc868f9f5db1ae41
             <input type="text" id="search" name="search" class="search" />
             <input type="button" id="bouton" value="Bouton à cliquer">
             <div id="display"></div>
@@ -29,7 +33,6 @@
     <script>
     $(document).ready(function() {
         $(function() {
-        	
 	        	$("#bouton").click(affichage);
 	        	
 	        	function affichage(){  		 
@@ -48,14 +51,20 @@
 		            	    	    $("<div id='a'>Ce jeux n'existe pas</div>").appendTo(document.body);
 		            	    	}							
 						var DOM="";
-						for(i = 0; i < r.length; i++) {
 
-							DOM += "<tr>";
-							DOM += "<td>" + r[i]+ "</td>";
-							DOM += "</tr>";
-							DOM += "</br>";
-							
-						}
+						DOM += "<tr>";
+						DOM += "<td>" + "picture:" + r[0]+ "</td>";
+						DOM += "</br>";
+						DOM += "<td>" + "nom du jeux:" + r[1]+ "</td>";
+						DOM += "</br>";
+						DOM += "<td>" + "date:" + r[2]+ "</td>";
+						DOM += "</br>";
+						DOM += "<td>" + "lieux:" + r[3]+ "</td>";
+						DOM += "</br>";
+						DOM += "<td>" + "id:" + r[4]+ "</td>";
+						DOM += "</tr>";
+						DOM += "</br>";
+						
 						messageBox.innerHTML = DOM;
 	            	    }
 	            	});  	

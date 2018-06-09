@@ -60,19 +60,23 @@ public class TournoisServlet extends HttpServlet {
 			tournois.setNameTournois(request.getParameter("nameTournois"));
 			tournois.setLieux(request.getParameter("lieux"));
 			String date = request.getParameter("date");
+			String nameGame = request.getParameter("nameGame");
 			Date fd = format.parse(date);
 			java.sql.Date sqlDate = new java.sql.Date(fd.getTime());
+			tournois.setnameGame(nameGame);
 			tournois.setDate(sqlDate);
 			tournois.setDescription(request.getParameter("description"));
 			tournois.setInfo(request.getParameter("info"));
-			tournois.setId_user(session.getId());
+			String Id_user =String.valueOf(session.getAttribute("id"));
+			System.out.println(Id_user);
+			tournois.setId_user(Id_user);
 			boolean hasCreatePermission= Boolean.parseBoolean(request.getParameter("checkedPriv"));
 			if (hasCreatePermission == true) {
 				privBox = 1;
 			} 
 			tournois.setPriv_checked(privBox);
 			tournois.setTypeTournois(request.getParameter("typeTournois"));
-			tournois.setStatus("test");
+			tournois.setStatus("open");
 			boolean hasCreatePermission1 = Boolean.parseBoolean(request.getParameter("checkedPay"));
 			if (hasCreatePermission1 == true) {
 				payBox = 1;

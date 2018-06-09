@@ -14,6 +14,8 @@ import fr.lannonce.dao.AddUserDao;
 import fr.lannonce.dao.AddUserDaoImpl;
 import fr.lannonce.dao.SearchGameDao;
 import fr.lannonce.dao.SearchGameDaoImpl;
+import fr.lannonce.dao.SearchTournoisDao;
+import fr.lannonce.dao.SearchTournoisDaoImpl;
 
 public class ConnexionBeans {
 	
@@ -57,4 +59,9 @@ public class ConnexionBeans {
     public SearchGameDao getAllNameGameCheck() {
 		return new SearchGameDaoImpl(this);
     }
+    
+    public SearchTournoisDao getAllTournoisCheck() {
+		return new SearchTournoisDaoImpl(this);
+    }
 }
+

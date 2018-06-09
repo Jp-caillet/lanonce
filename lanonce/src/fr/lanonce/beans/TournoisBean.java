@@ -16,7 +16,14 @@ public class TournoisBean {
 	private int pay;
 	private int nombreUser;
 	private String id_url;
+	private String nameGame;
 	
+	public String getnameGame() {
+		return nameGame;
+	}
+	public void setnameGame(String nameGame) {
+		this.nameGame = nameGame;
+	}
 	public String getPicture() {
 		return picture;
 	}

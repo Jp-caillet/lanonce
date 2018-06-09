@@ -26,7 +26,7 @@ public class AddTournoisDaoImpl implements AddTournoisDao{
             System.out.println("connexion");
             
             /* Création de l'objet gérant les requêtes préparées */
-            preparedStatement = connexion.prepareStatement("INSERT INTO tournois(picture, nameTournois, lieux, date, description, info, id_user, private, type, status, pay, nb_user, id_url) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+            preparedStatement = connexion.prepareStatement("INSERT INTO tournois(picture, nameTournois, lieux, date, description, info, id_user, private, type, status, pay, nb_user, id_url, nameGame) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);");
             
             /*
              * Remplissage des paramètres de la requête grâce aux méthodes
@@ -45,6 +45,7 @@ public class AddTournoisDaoImpl implements AddTournoisDao{
             preparedStatement.setInt(11, tournois.getPay());
             preparedStatement.setInt(12, tournois.getNombreUser());
             preparedStatement.setString(13, tournois.getId_url());
+            preparedStatement.setString(14, tournois.getnameGame());
   
             preparedStatement.executeUpdate();
 		} catch (SQLException e) {

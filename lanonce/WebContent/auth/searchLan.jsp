@@ -81,28 +81,6 @@
             					}
             					if(nbrTournoisTrouver > k){
             						if(j == 0){
-            							pictureLan = r[i];
-            							tabPicLan.push(pictureLan);
-                					}
-                					if(j == 1 ){
-                						gameLan = r[i];
-                						tabGameLan.push(gameLan);
-                					}
-                					if(j == 2){
-                						dateLan = r[i];
-                						tabDateLan.push(dateLan);
-                					}
-                					if(j == 3){
-                						lieuxLan = r[i];
-                						tabLieuxLan.push(lieuxLan);
-                						
-                					}
-                					if(j == 4){
-                						urlLan = r[i];
-                						tabUrlLan.push(urlLan);
-                					}
-            					} else {
-            						if(j == 0){
             							pictureTournois = r[i];
             							tabPicTournois.push(pictureTournois);
                 					}
@@ -121,8 +99,33 @@
                 					if(j == 4){
                 						urlTournois = r[i];
                 						tabUrlTournois.push(urlTournois);
-                						console.log(urlTournois);
-                					}		
+                						//console.log(urlTournois);
+                					}
+            					} else {	
+            						if(j == 0){
+            							pictureLan = r[i];
+            							tabPicLan.push(pictureLan);
+                					}
+                					if(j == 1 ){
+                						gameLan = r[i];
+                						tabGameLan.push(gameLan);
+                					}
+                					if(j == 2){
+                						dateLan = r[i];
+                						tabDateLan.push(dateLan);
+                					}
+                					if(j == 3){
+                						lieuxLan = r[i];
+                						tabLieuxLan.push(lieuxLan);
+                						
+                					}
+                					if(j == 4){
+                						urlLan = r[i];
+                						console.log("urlLan");
+                						console.log(urlLan);
+                						tabUrlLan.push(urlLan);
+                						console.log(urlLan);
+                					}
             					}          					
             					j++;	
 	            			}  

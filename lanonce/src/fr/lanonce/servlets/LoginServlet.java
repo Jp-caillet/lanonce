@@ -43,7 +43,9 @@ public class LoginServlet extends HttpServlet {
 			    session.setAttribute("pseudo", pseudo);
 			    session.setAttribute("id", connexionDao.getid());
 
+
 				response.sendRedirect("/lanonce/auth/home");	
+
 
 			} else {
 				System.out.println("connexion rejetée");

@@ -82,29 +82,7 @@
             						j=0;
             						k++;
             					}
-            					if(nbrTournoisTrouver > k){
-            						if(j == 0){
-            							pictureTournois = r[i];
-            							tabPicTournois.push(pictureTournois);
-                					}
-                					if(j == 1 ){
-                						gameTournois = r[i];
-                						tabGameTournois.push(gameTournois);
-                					}
-                					if(j == 2){
-                						dateTournois = r[i];
-                						tabDateTournois.push(dateTournois);
-                					}
-                					if(j == 3){
-                						lieuxTournois = r[i];
-                						tabLieuxTournois.push(lieuxTournois);
-                					}
-                					if(j == 4){
-                						urlTournois = r[i];
-                						tabUrlTournois.push(urlTournois);
-                						//console.log(urlTournois);
-                					}
-            					} else {	
+            					if(nbrTournoisTrouver >= k){
             						if(j == 0){
             							pictureLan = r[i];
             							tabPicLan.push(pictureLan);
@@ -129,6 +107,30 @@
                 						tabUrlLan.push(urlLan);
                 						console.log(urlLan);
                 					}
+            						
+            					} else {	
+            						
+                					if(j == 0){
+            							pictureTournois = r[i];
+            							tabPicTournois.push(pictureTournois);
+                					}
+                					if(j == 1 ){
+                						gameTournois = r[i];
+                						tabGameTournois.push(gameTournois);
+                					}
+                					if(j == 2){
+                						dateTournois = r[i];
+                						tabDateTournois.push(dateTournois);
+                					}
+                					if(j == 3){
+                						lieuxTournois = r[i];
+                						tabLieuxTournois.push(lieuxTournois);
+                					}
+                					if(j == 4){
+                						urlTournois = r[i];
+                						tabUrlTournois.push(urlTournois);
+                						//console.log(urlTournois);
+                					}
             					}          					
             					j++;	
 	            			}  
@@ -142,7 +144,7 @@
     							DOM += "<td><h4>Date:</h4>" + tabDateTournois[t] + "</td>";
     							DOM += "<td><h4>Lieux:</h4>" + tabLieuxTournois[t] + "</td>";
     							DOM += "</tr></br>";
-       						DOM += "<a href='/lanonce/displayTournois?id="+ tabUrlTournois[t] +"'";
+       						DOM += "<a href='/lanonce/auth/displayTournois?id="+ tabUrlTournois[t] +"'";
        						DOM += "<button type=submit>CLIQUEZ ICI POUR PARTICIPER</button>";
     							DOM += "</a>";
     							DOM += "</br>";
@@ -156,7 +158,7 @@
     							DOM += "<td><h4>Date:</h4>" + tabDateLan[g] + "</td>";
     							DOM += "<td><h4>Lieux:</h4>" + tabLieuxLan[g] + "</td>";
     							DOM += "</tr></br>";
-       						DOM += "<a href='/lanonce/displayLan?id="+ tabUrlLan[g] +"'";
+       						DOM += "<a href='/lanonce/auth/displayLan?id="+ tabUrlLan[g] +"'";
        						DOM += "<button type=submit>CLIQUEZ ICI POUR PARTICIPER</button>";
     							DOM += "</a>";
     							DOM += "</br>";

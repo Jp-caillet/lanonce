@@ -52,6 +52,7 @@ public class SignInServlet extends HttpServlet {
         userDao.ajouter(user);
         users.add(user);
         
-        this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+
+		response.sendRedirect("/lanonce/auth/home");	
 	}
 }

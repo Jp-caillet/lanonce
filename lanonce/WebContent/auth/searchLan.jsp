@@ -19,10 +19,12 @@
     
     <div class="search-container">
         <div class="ui-widget">
+
             <h1>REJOINDRE UNE LAN & TOURNOIS </h1>
             </br>
             </br>
             Search name game:
+
             <input type="text" id="search" name="search" class="search" />
             <input type="button" id="bouton" value="Bouton à cliquer">
             <div id="display"></div>

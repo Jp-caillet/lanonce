@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>home</title>
-<link rel="stylesheet" type="text/css" href="../css/homePage.css">
 </head>
 <body>
 

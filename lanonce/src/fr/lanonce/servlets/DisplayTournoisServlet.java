@@ -55,6 +55,7 @@ public class DisplayTournoisServlet extends HttpServlet {
 	    st.setString(2, String.valueOf(session.getAttribute("id")));
 	    ResultSet rs = st.executeQuery();
 	    if(rs.next()) {
+
 	    	System.out.println("vous participé déja");
 	    	already = false;
 	    }
@@ -88,6 +89,9 @@ public class DisplayTournoisServlet extends HttpServlet {
         e.printStackTrace();
        
    }
+
+		response.sendRedirect("/lanonce/auth/home");
+
 		doGet(request, response);
 		
 	}

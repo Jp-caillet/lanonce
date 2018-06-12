@@ -16,7 +16,7 @@ public class AuthenticateFilter extends HttpFilter{
 			throws IOException, ServletException {
 				
 		if(request.getSession().getAttribute("email") == null) {
-			this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+			response.sendRedirect("/lanonce/login");
 		} else {
 			chain.doFilter(request, response);
 			

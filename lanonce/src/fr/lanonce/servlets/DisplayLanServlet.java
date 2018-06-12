@@ -88,6 +88,8 @@ public class DisplayLanServlet extends HttpServlet {
         e.printStackTrace();
        
    }
+
+		response.sendRedirect("/lanonce/auth/home");
 		doGet(request, response);
 	}
 

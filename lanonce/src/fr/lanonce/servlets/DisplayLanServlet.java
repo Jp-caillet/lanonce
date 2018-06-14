@@ -16,9 +16,6 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class DisplayLanServlet
  */
-
-@WebServlet("/DisplayLanServlet")
-
 public class DisplayLanServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String username = "lanonce";
@@ -88,6 +85,9 @@ public class DisplayLanServlet extends HttpServlet {
         e.printStackTrace();
        
    }
+
+		response.sendRedirect("/lanonce/auth/home");
+
 		doGet(request, response);
 	}
 

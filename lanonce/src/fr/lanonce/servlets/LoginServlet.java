@@ -42,11 +42,15 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute("email", email);
 			    session.setAttribute("pseudo", pseudo);
 			    session.setAttribute("id", connexionDao.getid());
-				this.getServletContext().getRequestDispatcher("/auth/home.jsp").forward(request, response);	
+
+
+				response.sendRedirect("/lanonce/auth/home");	
+
 
 			} else {
 				System.out.println("connexion rejetée");
-				this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);	
+
+				response.sendRedirect("/lanonce/login");	
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

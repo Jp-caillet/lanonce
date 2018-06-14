@@ -23,7 +23,6 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class DisplayTournoisServlet
  */
-@WebServlet("/DisplayTournoisServlet")
 public class DisplayTournoisServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	 private String username = "lanonce";
@@ -55,6 +54,7 @@ public class DisplayTournoisServlet extends HttpServlet {
 	    st.setString(2, String.valueOf(session.getAttribute("id")));
 	    ResultSet rs = st.executeQuery();
 	    if(rs.next()) {
+
 	    	System.out.println("vous participé déja");
 	    	already = false;
 	    }
@@ -88,6 +88,9 @@ public class DisplayTournoisServlet extends HttpServlet {
         e.printStackTrace();
        
    }
+
+		response.sendRedirect("/lanonce/auth/home");
+
 		doGet(request, response);
 		
 	}

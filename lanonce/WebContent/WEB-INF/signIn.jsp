@@ -8,90 +8,96 @@
 </head>
 <body>
 
-<%@ include file="menu.jsp" %>
+<%@ include file="menuLogSign.jsp" %>
 
-  <form method="post" action="signin">
-   
-	<div class="container">
-	<div class="row">
-	<div class="col-md-offset-2 col-md-8">
-	<h1> Inscription <br/> <small> Merci de renseigner vos informations </small></h1>
+<form method="post" action="signin">
+   <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-55">
+						Sign in
+					</span>
+					
+					<div class="text-center w-full p-t-115">
+						<span class="txt1">
+							<h6> Merci de renseigner vos informations </h6>
+						</span>
+					</div>
+					
+					</br>
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "username">
+						<input class="input100" type="text" name="pseudo" placeholder="Username">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-user"></span>
+						</span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "prenom">
+						<input class="input100" type="text" name="prenom" placeholder="Prenom">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-user"></span>
+						</span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "nom">
+						<input class="input100" type="text" name="nom" placeholder="Nom">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-user"></span>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "ville">
+						<input class="input100" type="text" name="ville" placeholder="Ville">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-user"></span>
+						</span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-envelope"></span>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+						<input class="input100" type="password" name="confirmation" placeholder="Confirm password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
+					</div>
+					
+					<div class="contact100-form-checkbox m-l-4">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+						</label>
+					</div>
+					
+					<div class="container-login100-form-btn p-t-25">
+						<button type="submit" class="login100-form-btn">
+							Sign in
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Nom">Pseudo</label>
-	<input type="text" class="form-control" id="pseudo" placeholder="prenom" name="pseudo">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Nom">Nom</label>
-	<input type="text" class="form-control" id="nom" placeholder="Nom" name="nom">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Nom">Prénom</label>
-	<input type="text" class="form-control" id="prenom" placeholder=prenom" name="prenom">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Nom">Ville</label>
-	<input type="text" class="form-control" id="ville" placeholder="ville" name="ville">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Email">Email address</label>
-	<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Email">Enter your password</label>
-	<input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
-	</div>
-	</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-	<label for="Email">Confirm password</label>
-	<input type="password" class="form-control" id="confirmation" placeholder="Enter password" name="confirmation">
-	</div>
-	</div>
-	</div>
-	
-	
-	<br/>
-	<div class="row">
-	<div class="col-md-offset-5 col-md-1">
-	<input type="submit" class="btn btn-primary"></input>
-	</div>
-	</div>
-	
    </form>
-
 </body>
 </html>

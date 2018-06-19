@@ -50,45 +50,45 @@ ArrayList  id_game = new ArrayList();
         for(int i = 0; i < id_game.size(); i++)
         {
           
-        Statement smt1 = con.createStatement();
-        ResultSet r1 = smt.executeQuery("select * from lans where id_url='" + id_game.get(i) + "';");
-        while (r1.next()) {
-        
-        	 Calendar date = Calendar.getInstance() ;
-        	 date.setTime( r1.getDate("date"));
-        	if(date.getTime().before(today.getTime())){
-        		nolan= false;
-        	%>
-        	
-        	<li>
-        	<a href="/lanonce/auth/displayLan?id=<%out.println(r1.getString("id_url"));%>">
-        	<h1>lan :</h1>
-        	<p>
-        	<% 
-        	out.println(r1.getString("namelan"));
-        	%>
-        	</p>
-        	<div>
-        	sur le jeux: 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("nameGame"));
-        	%>
-        	</p>
-        	<div>
-        	le: 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("date"));
-        	%>
-        	</p>
-        	</a>
-        	</li>
-        	<% 
-        	}
-        }
+	        Statement smt1 = con.createStatement();
+	        ResultSet r1 = smt.executeQuery("select * from lans where id_url='" + id_game.get(i) + "';");
+	        while (r1.next()) {
+	        
+	        	 Calendar date = Calendar.getInstance() ;
+	        	 date.setTime( r1.getDate("date"));
+	        	if(date.getTime().before(today.getTime())){
+	        		nolan= false;
+	        	%>
+	        	
+	        	<li>
+	        	<a href="/lanonce/auth/displayLan?id=<%out.println(r1.getString("id_url"));%>">
+	        	<h1>lan :</h1>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("namelan"));
+	        	%>
+	        	</p>
+	        	<div>
+	        	sur le jeux: 
+	        	</div>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("nameGame"));
+	        	%>
+	        	</p>
+	        	<div>
+	        	le: 
+	        	</div>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("date"));
+	        	%>
+	        	</p>
+	        	</a>
+	        	</li>
+	        	<% 
+	        	}
+	        }
         
         } 
         con.close();

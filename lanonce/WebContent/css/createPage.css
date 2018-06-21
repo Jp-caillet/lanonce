@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.flex-container {
+	display: flex;	 
+}
+
+.flex-right {
+	width: 50%;
+	height: 70vh;
+	background: green;
+	color: white;
+}
+
+.flex-right a{
+	display: block;
+	height: 70vh;
+	width: 100%;
+}
+
+.flex-right p{
+    text-align: center;
+    z-index: 200;
+}
+
+.flex-left {
+	width: 50%;
+	height: 70vh;
+	background: black;
+}
+
+.flex-left a{
+	display: block;
+	height: 70vh;
+	width: 100%;
+}
+
+.flex-left p{
+    text-align: center;
+    z-index: 200;
+}
+
+.img1 {
+	width: 100%;
+	height: 70vh;
+}
+
+.img2 {
+	width: 100%;
+	height: 70vh;
+}

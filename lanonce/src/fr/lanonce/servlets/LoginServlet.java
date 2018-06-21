@@ -39,10 +39,10 @@ public class LoginServlet extends HttpServlet {
 			if(connexionDao.check(pseudo, email, password)) {
 		        /* Récupération de la session depuis la requête */
 				HttpSession session = request.getSession();
+				
 				session.setAttribute("email", email);
 			    session.setAttribute("pseudo", pseudo);
 			    session.setAttribute("id", connexionDao.getid());
-
 
 				response.sendRedirect("/lanonce/auth/home");	
 

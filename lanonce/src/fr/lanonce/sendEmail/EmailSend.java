@@ -7,14 +7,14 @@ import javax.mail.internet.MimeMessage;
 
 public class EmailSend {
 
-	public void sendEmail(String fromEmail, String username, String password, String toEmail, String subject, String message) {
+    public void sendEmail(String toEmail, String subject, String message) {
         try{
             String host ="smtp.gmail.com" ;
-            //String username = "benedearnaud@gmail.com";
-            //String password = "";
+            String username = "benedearnaud@gmail.com";
+            String password = "Latueusedu78500";
             //String toEmail = "arnaudbenede@hotmail.fr";
-            //String fromEmail = "";
-            //String subject = "This is confirmation number for your expertprogramming account. Please insert this number to activate your account.";
+            String fromEmail = "benedearnaud@gmail.com";
+            //String subject = "Testing API mail";
             //String message = "Your Is Test Email :";
             boolean sessionDebug = false;
 

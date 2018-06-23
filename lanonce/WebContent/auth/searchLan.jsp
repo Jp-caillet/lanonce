@@ -36,7 +36,8 @@
         $(function() {
 	        	$("#bouton").click(affichage);
 	        	
-	        	function affichage(){  		 
+	        	function affichage(){ 
+	        		var DOM = "";
 	            	var nameGame =  $("#search").val();
 	            	var messageBox  = document.getElementById("display");
 	            	var titre = ["picture:","game:","date:","lieux:","id_url:"];
@@ -55,13 +56,41 @@
 	            	    				
 	            	    				for(var key in obj) {
 	            	    					if(key == 1) {
-	            	    						console.log("1 ok");
+			            	    				var valueObj = Object.values(obj);
+			            	    				
+		        							DOM += "<tr>";
+		        							DOM += "<h1> LAN </h1>";
+		        							DOM += "<td><h4>Date:</h4>" + valueObj[0].date + "</td>";
+		           						DOM += "<a href='/lanonce/auth/displayTournois?id="+ valueObj[0].id_url +"'";
+		           						DOM += "<button type=submit>CLIQUEZ ICI POUR PARTICIPER</button>";
+		        							DOM += "</a>";
+	        								DOM += "</br>";
+		        							DOM += "<td><h4>Lieux:</h4>" + valueObj[0].lieux + "</td>";
+		        							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
+		        							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
+		        							DOM += "</tr></br>";
+		        							DOM += "</br>";
 	            	    					} else {
-	            	    						console.log(key + " sa mere ");
+	            	    						var valueObj = Object.values(obj);
+	            	    						
+		        							DOM += "<tr>";
+		        							DOM += "<h1> TOURNOIS </h1>";
+		        							DOM += "<td><h4>Date:</h4>" + valueObj[0].date + "</td>";
+		           						DOM += "<a href='/lanonce/auth/displayTournois?id="+ valueObj[0].id_url +"'";
+	        								DOM += "</br>";
+		           						DOM += "<button type=submit>CLIQUEZ ICI POUR PARTICIPER</button>";
+		        							DOM += "</a>";
+		        							DOM += "<td><h4>Lieux:</h4>" + valueObj[0].lieux + "</td>";
+		        							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
+		        							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
+		        							DOM += "</tr></br>";
+		        							DOM += "</br>";
 	            	    					}
+	            	    					messageBox.innerHTML = DOM;
 	            	    				}	
 	            	    			}
 	            	    		}
+	            	    		
 		            	}
 		        	});
 	        };

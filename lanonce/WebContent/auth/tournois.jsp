@@ -151,6 +151,7 @@
 	
    </form>
 
+
 <script>
 $(document).ready(function () {
 
@@ -196,6 +197,7 @@ $(document).ready(function () {
     $('div.setup-panel div a.btn-primary').trigger('click');
 });
 </script>
+
 
 </body>
 </html>

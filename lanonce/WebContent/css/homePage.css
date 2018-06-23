@@ -4,7 +4,7 @@
 	text-align: center;
 }
 
-section, footer  {
+section {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -13,6 +13,13 @@ section, footer  {
 	display: block;
 
 }
+
+body { 	
+	margin:0;
+	padding:0;
+}
+
+
 
 /* List */
 
@@ -934,35 +941,14 @@ align-items: stretch;
 
 /* Footer */
 
-#footer {
-	padding: 4rem 0 2rem 0 ;
-	background: #000;
-	text-align: center;
+#largebox {
+	width: 800px;
+	height: 350px;
+	background-color: #00F;
+	padding-top: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
-
-	#footer a {
-		color: rgba(255, 255, 255, 0.5);
-	}
-
-		#footer a:hover {
-			color: #FFF;
-		}
-
-	#footer .copyright {
-		color: #bbb;
-		font-size: 0.9rem;
-		margin: 0 0 2rem 0;
-		padding: 0;
-		text-align: center;
-	}
-
-	@media screen and (max-width: 736px) {
-
-		#footer {
-			padding: 3rem 0 1rem 0 ;
-		}
-
-	}
 
 /* Centered text */
 .centered {

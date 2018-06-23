@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>home</title>
 <link rel="stylesheet" type="text/css" href="../css/homePage.css">
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
 </head>
 <body>
 
@@ -96,19 +97,34 @@
 	</section>
 
 	<!-- Footer -->
-	<footer id="footer">
-		<div class="container">
-			<ul class="icons">
-				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-			</ul>
+	<a href="/lanonce/auth/lanStep1">
+		<div id="box1">				 
+			<p><font color="black">Aide et Information <br><br> contactez nous</p>
 		</div>
-		<div class="copyright">
-			&copy; Untitled. All rights reserved.
+	</a>
+	<a href="/lanonce/auth/lanStep1">
+		<div id="box2">
+			<img src="../images/Logo.png" width="180px" height="100px"/>
+			<p><font color="black">Conditions Générales<br><br>Mentions légales<br><br>Charte</p>
 		</div>
-	</footer>
+	</a>
+	<a href="/lanonce/auth/lanStep1">
+		<div id="box3">
+			   <a href="" >
+			        <img src="../images/facebook.png" alt="#" />
+			   </a>
+			   <a href="">
+			       <img src="../images/linkedin.png" alt="#" />
+			   </a>
+			   <a href="">
+			       <img src="../images/twitter.png" alt="#" />
+			   </a>
+			   <a href="">
+			       <img src="../images/google.png" alt="#" />
+			   </a>
+		</div>
+	</a>
+	
 
 <!-- Javascript -->
 <script language='Javascript' type='text/javascript'

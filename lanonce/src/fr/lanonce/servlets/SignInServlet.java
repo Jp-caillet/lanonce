@@ -11,15 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import fr.lannonce.dao.AddUserDao;
+import fr.lannonce.dao.ConnexionUserDao;
 import fr.lanonce.beans.ConnexionBeans;
 import fr.lanonce.beans.UserBean;
+import fr.lanonce.sendEmail.EmailSend;
 
 /**
  * Servlet implementation class SignInServlet
  */
-public class SignInServlet extends HttpServlet {
+public class SignInServlet extends HttpServlet {	
 	private static final long serialVersionUID = 1L;
-    private static List<UserBean> users = new ArrayList<UserBean>();
     private AddUserDao userDao;
 
     public void init() throws ServletException {
@@ -40,8 +41,15 @@ public class SignInServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserBean user = new UserBean();
+        EmailSend email = new EmailSend();
+        
+        String subject = "Votre inscription a l'AN'once";
+        String message = "Merci de votre inscription";
         
         /* Récupération des paramètres d'URL saisis par l'utilisateur */
+        
+        String toEmail = request.getParameter("email");
+        
         user.setPseudo(request.getParameter("pseudo"));
         user.setNom(request.getParameter("nom"));
         user.setPrenom(request.getParameter("prenom"));
@@ -49,9 +57,9 @@ public class SignInServlet extends HttpServlet {
         user.setEmail(request.getParameter("email"));
         user.setPassword(request.getParameter("password"));
         
+        email.sendEmail(toEmail, subject, message);
+
         userDao.ajouter(user);
-        users.add(user);
-        
 
 		response.sendRedirect("/lanonce/auth/home");	
 	}

@@ -5,6 +5,10 @@
 <html>
 <head>
 
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-------------------------- JS -------------------------->
 <!-- lanStep1 -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -13,6 +17,7 @@
 <!-------------------------- CSS -------------------------->
 <!-- lanStep1 -->
 <link rel="stylesheet" type="text/css" href="../css/lanPage.css">
+<link rel="stylesheet" type="text/css" href="../css/lanStep1.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <!-- End lanStep1 -->
 <!-- home -->
@@ -27,7 +32,7 @@
 <div class="form-group">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-      <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav">
 	  <li><a href="#">Comment ca marche ?</a></li>
 	  <li><a href="/lanonce/auth/create">Créer une rencontre</a></li>
 	  <li><a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>

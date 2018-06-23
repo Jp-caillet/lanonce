@@ -5,19 +5,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lan/Tournois</title>
+<link rel="stylesheet" type="text/css" href="../css/createPage.css">
 </head>
 <body>
   <%@ include file="adminMenu.jsp" %>
   <%@ include file="adminMenuLan.jsp" %>
-
-
-	<div class="row">
-	<div class="col-md-offset-2 col-md-7">
-	<div class="form-group">
-    <button type="button" class="btn btn-warning"><a href="/lanonce/auth/lanStep1">Organiser une Lan PARTY</a></button>
-    <button type="button" class="btn btn-warning"><a href="/lanonce/auth/tournois">Organiser un tournois</a></button>
+	
+	<div class="flex-container">
+		<div class="flex-right">
+			<a href="/lanonce/auth/lanStep1">
+				<img class="img1" src="../images/slide01.jpg"/>
+				 <p>ORGANISER UNE LAN PARTY</p>
+			</a>
+		</div>
+		<div class="flex-left">
+			<a href="/lanonce/auth/tournois">
+				<img class="img2" src="../images/slide02.jpg"/>
+				<p>ORGANISER UN TOURNOIS</p>
+			</a>
+		</div>
 	</div>
-	</div>
-	</div>
+	
 </body>
 </html>

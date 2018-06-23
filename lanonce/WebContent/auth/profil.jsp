@@ -7,10 +7,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <title>Profil</title>
+<style>
+/*Specific Cases*/
+
+.form-control {
+  border-radius: 0;
+  
+}
+
+</style>
 </head>
 <body>
 <%@ include file="adminMenu.jsp" %>
+<%@ include file="adminMenuLan.jsp" %>
+
 
 <%
    String nom = "";
@@ -115,6 +130,59 @@
         </form>
       </div>
   </div>
+</div>
+    <hr>
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+    </div>
+  </div>
+
+  <!-- End Page Container -->
+</div>
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+    </div>
+  </div>
+
+  <!-- End Page Container -->
+</div>
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+      	<input type="text" class="form-control">
+    </div>
+  </div>
+
+  <!-- End Page Container -->
 </div>
 </body>
 </html>

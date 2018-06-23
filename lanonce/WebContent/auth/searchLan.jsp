@@ -54,7 +54,7 @@
 		            	    	}							
 						
 		            	    	
-	            			var j = 0;
+	            	    var j = 0;
 						var DOM ="";
 						var nbrTournoisTrouver = parseInt(r[r.length-1]);
 						var k = 0;

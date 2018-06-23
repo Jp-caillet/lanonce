@@ -23,7 +23,6 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class DisplayTournoisServlet
  */
-@WebServlet("/DisplayTournoisServlet")
 public class DisplayTournoisServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	 private String username = "lanonce";

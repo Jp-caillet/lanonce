@@ -41,8 +41,8 @@ public class SearchLanServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    String term = request.getParameter("term");
-	    ArrayList<String> list1 = tournois.getAllTournoisCheck(term);
-	    ArrayList<String> list = nameGame.getAllNameGameCheck(term);
+	    ArrayList<String> list = tournois.getAllTournoisCheck(term);
+	    ArrayList<String> list1 = nameGame.getAllNameGameCheck(term);
 
 	    
 	    list.addAll(list1);

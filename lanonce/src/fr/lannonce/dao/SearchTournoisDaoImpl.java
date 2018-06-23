@@ -46,6 +46,7 @@ public class SearchTournoisDaoImpl implements SearchTournoisDao {
 	            list.add(idUrl);
 	            i ++;
 	        }
+	        System.out.println(i);
 	        
 	        list.add(String.valueOf(i));
 	        

@@ -57,6 +57,7 @@
 	            	    var j = 0;
 						var DOM ="";
 						var nbrTournoisTrouver = parseInt(r[r.length-1]);
+						$("<div id='a'>"+nbrTournoisTrouver+"</div>").appendTo(document.body);
 						var k = 0;
 						var pictureTournois, gameTournois, dateTournois, lieuxTournois, urlTournois;
 						var pictureLan, gameLan, dateLan, lieuxLan, urlLan;
@@ -82,7 +83,7 @@
             						j=0;
             						k++;
             					}
-            					if(nbrTournoisTrouver >= k){
+            					if(nbrTournoisTrouver <= k){
             						if(j == 0){
             							pictureLan = r[i];
             							tabPicLan.push(pictureLan);

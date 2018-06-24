@@ -14,13 +14,13 @@
 	<div class="flex-container">
 		<div class="flex-right">
 			<a href="/lanonce/auth/lanStep1">
-				<img class="img1" src="../images/slide01.jpg"/>
+				<img class="img1" src="../images/cree.jpg"/>
 				 <p>ORGANISER UNE LAN PARTY</p>
 			</a>
 		</div>
 		<div class="flex-left">
 			<a href="/lanonce/auth/tournois">
-				<img class="img2" src="../images/slide02.jpg"/>
+				<img class="img2" src="../images/cree1.jpg"/>
 				<p>ORGANISER UN TOURNOIS</p>
 			</a>
 		</div>

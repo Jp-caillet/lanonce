@@ -13,8 +13,11 @@
 <!-- lanStep1 -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!-- End lanStep1 -->
+<!-- tournois -->
+<script src="../js/tournoisPage.js"></script>
 <!-------------------------- CSS -------------------------->
+<!-- tournoisCreatedPage -->
+<link rel="stylesheet" type="text/css" href="../css/tournoisCreatedPage.css">
 <!-- lanCreatedPage -->
 <link rel="stylesheet" type="text/css" href="../css/lanCreatedPage.css">
 <!-- mailSentPage -->

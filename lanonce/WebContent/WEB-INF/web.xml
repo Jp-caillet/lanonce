@@ -73,14 +73,6 @@
     <url-pattern>/auth/contactus</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>ConfirmLanServlet</servlet-name>
-    <servlet-class>fr.lanonce.servlets.ConfirmLanServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ConfirmLanServlet</servlet-name>
-    <url-pattern>/auth/confirmLan</url-pattern>
-  </servlet-mapping>
-  <servlet>
     <servlet-name>TournoisServlet</servlet-name>
     <servlet-class>fr.lanonce.servlets.TournoisServlet</servlet-class>
   </servlet>

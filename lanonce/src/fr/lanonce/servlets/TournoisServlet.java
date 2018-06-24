@@ -88,8 +88,8 @@ public class TournoisServlet extends HttpServlet {
 			String id_url = "";
 			while(test) {
 				id_url = this.generate(7);
-				System.out.println("idurl");
-				System.out.println(id_url);
+				request.setAttribute("url", id_url);
+
 				 try {
 					Class.forName("com.mysql.jdbc.Driver");
 					Connection con = DriverManager.getConnection(url, username, pass);
@@ -110,7 +110,10 @@ public class TournoisServlet extends HttpServlet {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
+		
 		tournoisDao.ajouterTournois(tournois);
+		
+		this.getServletContext().getRequestDispatcher("/auth/tournoisCreated.jsp").forward(request, response);
 	}
 	
 	public String generate(int length)

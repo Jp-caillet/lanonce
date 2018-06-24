@@ -4,21 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>lan Crée</title>
+<title>Insert title here</title>
 </head>
 <body>
 
   <%@ include file="adminMenu.jsp" %>
   <%@ include file="adminMenuLan.jsp" %>
   
- <div class="lanFinished">
+  <div class="tournoisFinished">
  	<img class="v" src="../images/valider.png"/>
  	</br></br>
 	<h2><b>VOTRE LAN PARTY A BIEN ETE CRÉE</b></br>
 	POUR INVITER VOS AMIS, PARTAGER CE LIEN</h2>
 
     <center>
-    		<p style="border: 3px black solid">http://localhost:8080/lanonce/auth/displayLan?id=<%out.print(request.getAttribute("url"));%></p>
+    		<p style="border: 3px black solid">http://localhost:8080/lanonce/auth/displayTournois?id=<%out.print(request.getAttribute("url"));%></p>
        	</br>
     		<button><a href="/lanonce/auth/home"> Terminer</a></button>
     </center>

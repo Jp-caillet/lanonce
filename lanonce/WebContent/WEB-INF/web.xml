@@ -136,4 +136,20 @@
     <servlet-name>TournoisHistoryServlet</servlet-name>
     <url-pattern>/auth/history/tournois</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>MailSentServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.MailSentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MailSentServlet</servlet-name>
+    <url-pattern>/auth/mailSent</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LanCreatedServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.LanCreatedServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LanCreatedServlet</servlet-name>
+    <url-pattern>/auth/lanCreated</url-pattern>
+  </servlet-mapping>
 </web-app>

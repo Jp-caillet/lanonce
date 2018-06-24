@@ -1,29 +1,22 @@
 package fr.lanonce.servlets;
 
 import java.io.IOException;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
 
 /**
- * Servlet implementation class ConfirmLanServlet
+ * Servlet implementation class LanCreatedServlet
  */
-public class ConfirmLanServlet extends HttpServlet {
+public class LanCreatedServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ConfirmLanServlet() {
+    public LanCreatedServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,14 +25,16 @@ public class ConfirmLanServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/auth/confirmLan.jsp").forward(request, response);
+		// TODO Auto-generated method stub
+		this.getServletContext().getRequestDispatcher("/auth/lanCreated.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		response.sendRedirect("/lanonce/auth/lanCreated");
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
+
 }

@@ -42,6 +42,8 @@ public class ContactUsServlet extends HttpServlet {
 		String message = request.getParameter("message");
 
 		email.receiveEmail(fromEmail, subject, message);
+		
+		response.sendRedirect("/lanonce/auth/mailSent");
 
 	}
 

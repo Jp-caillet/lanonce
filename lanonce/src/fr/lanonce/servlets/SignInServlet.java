@@ -60,7 +60,7 @@ public class SignInServlet extends HttpServlet {
         email.sendEmail(toEmail, subject, message);
 
         userDao.ajouter(user);
-        
+
 		response.sendRedirect("/lanonce/auth/home");	
 	}
 }

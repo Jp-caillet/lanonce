@@ -95,7 +95,7 @@ public class DisplayLanServlet extends HttpServlet {
        
    }
 
-		response.sendRedirect("/lanonce/auth/home");
+		//response.sendRedirect("/lanonce/auth/home");
 
 		doGet(request, response);
 	}

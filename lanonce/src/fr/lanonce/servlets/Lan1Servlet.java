@@ -75,6 +75,7 @@ public class Lan1Servlet extends HttpServlet {
 			String idurl = "";
 			while(test) {
 				idurl = this.generate(7);
+				request.setAttribute("url", idurl);
 				System.out.println(idurl);
 				 try {
 					Class.forName("com.mysql.jdbc.Driver");
@@ -104,7 +105,8 @@ public class Lan1Servlet extends HttpServlet {
 		}
 		
 		lanDao.ajouter(lan);
-		response.sendRedirect("/lanonce/auth/confirmLan");	
+			
+		this.getServletContext().getRequestDispatcher("/auth/confirmLan.jsp").forward(request, response);	
 
 	}
 	

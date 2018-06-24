@@ -13,13 +13,16 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!-- End lanStep1 -->
 <!-------------------------- CSS -------------------------->
+<!-- lanCreatedPage -->
+<link rel="stylesheet" type="text/css" href="../css/lanCreatedPage.css">
+<!-- mailSentPage -->
+<link rel="stylesheet" type="text/css" href="../css/mailSentPage.css">
 <!-- homePage -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <!-- lanStep1 -->
 <link rel="stylesheet" type="text/css" href="../css/lanPage.css">
 <link rel="stylesheet" type="text/css" href="../css/lanStep1.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<!-- End lanStep1 -->
 <!-- home -->
 <link rel="stylesheet" type="text/css" href="../css/homePage.css">
 <!-- End home -->

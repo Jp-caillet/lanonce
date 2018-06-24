@@ -3,6 +3,8 @@ package fr.lanonce.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 import fr.lannonce.dao.SearchGameDao;
 import fr.lannonce.dao.SearchTournoisDao;
 import fr.lanonce.beans.ConnexionBeans;
+import fr.lanonce.beans.LanDto;
+import fr.lanonce.beans.TournoisDto;
+
 import com.google.gson.*;
 
 
@@ -41,17 +46,19 @@ public class SearchLanServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    String term = request.getParameter("term");
-	    ArrayList<String> list = tournois.getAllTournoisCheck(term);
-	    ArrayList<String> list1 = nameGame.getAllNameGameCheck(term);
 
-	    
-	    list.addAll(list1);
+	    List<HashMap<Integer, TournoisDto>> list1 = tournois.getAllTournoisCheck(term);
+	    List<HashMap<Integer, LanDto>>  list = nameGame.getAllNameGameCheck(term);
+
+
+	   
 	    System.out.println(list);
-	    
 	    String json = new Gson().toJson(list);
+	    String json1 = new Gson().toJson(list1);
 	    
 	    response.setContentType("application/json");
 	    response.setCharacterEncoding("UTF-8");
-	    response.getWriter().write(json);
+	    String bothJson = "["+json+","+json1+"]";
+	    response.getWriter().write(bothJson);
 	}
 }

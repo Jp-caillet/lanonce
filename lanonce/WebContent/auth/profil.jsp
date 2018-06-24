@@ -131,58 +131,7 @@
       </div>
   </div>
 </div>
-    <hr>
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-      <div class="w3-white w3-text-grey w3-card-4">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-    </div>
-  </div>
-
-  <!-- End Page Container -->
-</div>
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-      <div class="w3-white w3-text-grey w3-card-4">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-    </div>
-  </div>
-
-  <!-- End Page Container -->
-</div>
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-      <div class="w3-white w3-text-grey w3-card-4">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-      	<input type="text" class="form-control">
-    </div>
-  </div>
-
-  <!-- End Page Container -->
-</div>
+</br></br> </br></br>
+<%@ include file="adminFooter.jsp" %>
 </body>
 </html>

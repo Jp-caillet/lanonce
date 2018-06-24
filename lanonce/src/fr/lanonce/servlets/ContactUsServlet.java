@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.lanonce.sendEmail.EmailSend;
+
 /**
  * Servlet implementation class ContactUsServlet
  */
@@ -33,14 +35,13 @@ public class ContactUsServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String toEmail = request.getParameter("email");
+		EmailSend email = new EmailSend();
+		
+		String fromEmail = request.getParameter("fromEmail");
 		String subject = request.getParameter("subject");
 		String message = request.getParameter("message");
-		
-		String fromEmail = "arnaudbenede@hotmail.fr";
-		String username = "arnaud";
-		String password = "Latueusedu78500";
 
+		email.receiveEmail(fromEmail, subject, message);
 
 	}
 

@@ -10,7 +10,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Display tournois</title>
+<link rel="stylesheet" type="text/css" href="../css/displayTournoisPage.css">
 </head>
 <body>
 <%@ include file="adminMenu.jsp" %>
@@ -48,27 +49,34 @@
         out.println(e);
    }
 %>
-<h1><%out.println(nameTournois);%> </h1>
-<p>date : </p>
-<%out.println(date);%>
+<div class="tournois">
+	<h1>Nom du tournois:</h1>
+	<h1><%out.println(nameTournois);%></h1>
+	</br>
+	<p>date : </p>
+	<h5><%out.println(date);%></h5>
+	<br/>
+	<p>name game:</p>
+	<h5><%out.println(nameGame);%></h5>
+	<br/>
+	<p>lieux:</p>
+	<h5><%out.println(lieux);%></h5>
+	<br/>
+	<p>description:</p>
+	<h5><%out.println(description);%></h5>
+	<br/>
+	<p>info:</p>
+	<h5><%out.println(info);%></h5>
+	<br/>
+	<p>nb user:</p>
+	<h5><%out.println(nb_user);%></h5>
+	<br/>
+	<p>type de tournois:</p>
+	<h5><%out.println(type);%></h5>
+</div>
 <br/>
-<p>name game:</p>
-<%out.println(nameGame);%>
-<br/>
-<p>lieux:</p>
-<%out.println(lieux);%>
-<br/>
-<p>description:</p>
-<%out.println(description);%>
-<br/>
-<p>info:</p>
-<%out.println(info);%>
-<br/>
-<p>nb user:</p>
-<%out.println(nb_user);%>
-<p>type de tournois:</p>
-<%out.println(type);%>
-<br/>
+
+
 <%
 if((boolean) request.getAttribute("already")){
 %>

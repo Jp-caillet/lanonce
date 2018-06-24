@@ -12,6 +12,7 @@
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../css/searchLanPage.css">
 </head>
 <body>
     <%@ include file="adminMenu.jsp" %>
@@ -27,10 +28,12 @@
 
             <input type="text" id="search" name="search" class="search" />
             <input type="button" id="bouton" value="Bouton à cliquer">
+            </br>
             <div id="display"></div>
         </div>
     </div>
-    
+    </br></br>
+    <%@ include file="adminFooter.jsp" %>
     <script>
     $(document).ready(function() {
         $(function() {
@@ -58,6 +61,7 @@
 	            	    					if(key == 1) {
 			            	    				var valueObj = Object.values(obj);
 			            	    				
+			            	    				DOM += "<div class="+ "recherche" + ">";
 		        							DOM += "<tr>";
 		        							DOM += "<h1> LAN </h1>";
 		        							DOM += "<td><h4>Date:</h4>" + valueObj[0].date + "</td>";
@@ -69,10 +73,12 @@
 		        							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
 		        							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
 		        							DOM += "</tr></br>";
+		        							DOM += "</div>";
 		        							DOM += "</br>";
 	            	    					} else {
 	            	    						var valueObj = Object.values(obj);
 	            	    						
+			            	    				DOM += "<div class="+ "recherche" + ">";
 		        							DOM += "<tr>";
 		        							DOM += "<h1> TOURNOIS </h1>";
 		        							DOM += "<td><h4>Date:</h4>" + valueObj[0].date + "</td>";
@@ -84,6 +90,7 @@
 		        							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
 		        							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
 		        							DOM += "</tr></br>";
+		        							DOM += "</div>";
 		        							DOM += "</br>";
 	            	    					}
 	            	    					messageBox.innerHTML = DOM;

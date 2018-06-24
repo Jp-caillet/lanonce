@@ -56,7 +56,7 @@ public class Lan1Servlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		try {
-	        /* Récupération des paramètres d'URL saisis par l'utilisateur */
+	        /* RÃ©cupÃ©ration des paramÃ¨tres d'URL saisis par l'utilisateur */
 			lan.setPicture(request.getParameter("picture"));
 			lan.setNameLan(request.getParameter("nameLan"));
 			lan.setNameGame(request.getParameter("game"));
@@ -106,7 +106,7 @@ public class Lan1Servlet extends HttpServlet {
 		
 		lanDao.ajouter(lan);
 			
-		this.getServletContext().getRequestDispatcher("/auth/confirmLan.jsp").forward(request, response);	
+		this.getServletContext().getRequestDispatcher("/auth/lanCreated.jsp").forward(request, response);
 
 	}
 	

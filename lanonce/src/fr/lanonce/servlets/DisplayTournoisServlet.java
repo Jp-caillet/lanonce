@@ -73,8 +73,6 @@ public class DisplayTournoisServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
-		System.out.println(request.getParameter("id"));
-		System.out.println(session.getAttribute("id"));
 
 		try{
 		Class.forName("com.mysql.jdbc.Driver");

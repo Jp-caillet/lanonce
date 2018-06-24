@@ -52,7 +52,7 @@
 	                        term: nameGame
 	                },
 	            	    "success": function (r) {
-	            	    	
+
 	            	    		for(i=0;i<r.length;i++) {
 	            	    			for(j=0;j<r[i].length;j++) {
 	            	    				var obj = r[i][j];
@@ -102,6 +102,7 @@
 		        	});
 	        };
 	    });
+
     });
 </script>
 </body>

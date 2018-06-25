@@ -18,20 +18,23 @@
     <%@ include file="adminMenu.jsp" %>
     <%@ include file="adminMenuLan.jsp" %>
     
-    <div class="search-container">
-        <div class="ui-widget">
-
-            <h1>REJOINDRE UNE LAN & TOURNOIS </h1>
-            </br>
-            </br>
-            Search name game:
-
-            <input type="text" id="search" name="search" class="search" />
+    
+    <div id=baniere>
+		<div id=baniere_gauche> 
+		    <input type="text" id="search" name="search" class="search" />
             <input type="button" id="bouton" value="Bouton à cliquer">
+            
             </br>
-            <div id="display"></div>
-        </div>
-    </div>
+            
+            <div id="display"></div>  
+		</div>
+		<div id=baniere_droite> 
+			<input type="text" id="search" name="search" class="search" />
+            <input type="button" id="bouton" value="Bouton à cliquer">  
+		</div>
+	</div>
+
+    
     </br></br> </br></br> </br></br> </br></br> </br></br> </br></br> </br></br> </br></br>
     <%@ include file="adminFooter.jsp" %>
     <script>
@@ -65,7 +68,7 @@
 		        							DOM += "<tr>";
 		        							DOM += "<h1> LAN </h1>";
 		        							DOM += "<td><h4>Date:</h4>" + valueObj[0].date + "</td>";
-		           						DOM += "<a href='/lanonce/auth/displayTournois?id="+ valueObj[0].id_url +"'";
+		           						DOM += "<a href='/lanonce/auth/displayLan?id="+ valueObj[0].id_url +"'";
 		           						DOM += "<button type=submit>CLIQUEZ ICI POUR PARTICIPER</button>";
 		        							DOM += "</a>";
 	        								DOM += "</br>";

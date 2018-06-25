@@ -28,10 +28,11 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <!-- home -->
 <link rel="stylesheet" type="text/css" href="../css/homePage.css">
-<!-- End home -->
+<!-- adminMenuLanPage -->
+<link rel="stylesheet" type="text/css" href="../css/adminMenuLanPage.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../css/adminMenuLanPage.css">
+
 </head>
 <body>
 

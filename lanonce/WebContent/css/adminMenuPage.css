@@ -20,16 +20,10 @@ body {
   margin-top: 10px;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-  width: 80px;
-  height: 70px;
-}
-
 .topnav a.active {
-  background-color: #f5d70c;
+  padding-top: 21px;		
+  background-color: #d6d402;
+  height: 80px;
   color: white;
-  width: 80px;
-  height: 70px;
+  margin-top: 0;
 }

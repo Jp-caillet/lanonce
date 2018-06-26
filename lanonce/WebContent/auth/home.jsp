@@ -13,7 +13,7 @@
 
 <!-- Banner -->
   <div class='banniere'>
-	<img src='../images/slide01.jpg' alt='Image 1' style="width:100%;"/>
+	<img src='../images/home1.jpg' alt='Image 1' style="width:100%;"/>
     <img src='../images/slide02.jpg' title='Image 2' alt='Image 2' />
     <img src='../images/slide03.jpg' title='Image 3' alt='Image 3' />
 	<img src='../images/slide04.jpg' title='Image 4' alt='Image 4' />

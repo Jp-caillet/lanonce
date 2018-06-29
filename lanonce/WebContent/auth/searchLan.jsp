@@ -28,17 +28,14 @@
             
             </br>
             
-            <div id="display"></div>
-            
+            <div id="display"></div>            
                      
 		</div>
 		<div id=baniere_droite> 
-			<input type="text" id="search" name="search" class="search" />
-            <input type="button" id="bouton" value="Bouton à cliquer" >  
 		</div>
 	</div>
 	
-	<div id="map_canvas_00" ></div>
+	
     
     </br></br> </br></br> </br></br> </br></br> </br></br> </br></br> </br></br> </br></br>
     <%@ include file="adminFooter.jsp" %>
@@ -46,29 +43,24 @@
     
     $("#bouton").click(affichage);
     
-    //var geocoder;
-    //var map;
-    //var marker;
-
-    
-    function initialize(id, adressLieux) {
-    	console.log(adressLieux);
-        var mapOptions = {
-        	      zoom: 17,
-        	      mapTypeId: google.maps.MapTypeId.ROADMAP
-        	    }
-        
-    	    var map = new google.maps.Map(document.getElementById(id), mapOptions);
-    	    codeAddress(map, adressLieux);   
+    function initialize(id, adressLieux) {    	    
+    	    codeAddress(id, adressLieux);   
     }
     
-    function codeAddress(map, adressValue) {
-    	console.log(adressValue);
+    function codeAddress(id, adressValue) {
+    	
     	var geocoder = new google.maps.Geocoder();
     	var marker;
+    var mapOptions = {
+  	      zoom: 17,
+  	      mapTypeId: google.maps.MapTypeId.ROADMAP
+  	    }
+      
       geocoder.geocode( { 'address': adressValue}, function(results, status) {
     	  console.log(results);
         if (status == google.maps.GeocoderStatus.OK) {
+        	debugger;
+        	var map = new google.maps.Map(document.getElementById(id), mapOptions);
           map.setCenter(results[0].geometry.location);
           if(marker)
             marker.setMap(null);
@@ -78,6 +70,7 @@
               draggable: true
           });
         } else {
+        	debugger;
           alert('Geocode was not successful for the following reason: ' + status);
         }
       });
@@ -117,7 +110,7 @@
     							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
     							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
     							DOM += "</tr></br>";
-    							DOM += "<div id=\"map_canvas_"+ i + j +"\" style=\"height:30%;width:30%;top:30px\"></div>";
+    							DOM += "<div id=\"map_canvas_"+ i + j +"\" style=\"height:100px;width:300px\"></div>";
     							DOM += "</div>";
     							DOM += "</br>";
     	    					} else {
@@ -135,7 +128,7 @@
     							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
     							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
     							DOM += "</tr></br>";
-    							DOM += "<div id=\"map_canvas_"+ i + j +"\"></div>";
+    							DOM += "<div id=\"map_canvas_"+ i + j +"\" style=\"height:100px;width:300px\"></div>";
     							DOM += "</div>";
     							DOM += "</br>";
     	    					}

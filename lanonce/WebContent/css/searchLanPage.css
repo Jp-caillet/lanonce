@@ -1,18 +1,2 @@
 @charset "UTF-8";
 
-#baniere{
-	overflow:auto;
-}
-
-#baniere_gauche, #baniere_gauche {
-    display: inline-block;
-    vertical-align: top;
-}
-#baniere_gauche{
-   float:left;
-   width:60%;
-}
- 
-#baniere_gauche{
-	overflow:auto;
-}

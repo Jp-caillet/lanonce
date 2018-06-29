@@ -16,6 +16,14 @@
 <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZP8IN8kZ1PsZko2hlbHCyOckwDvcAuaY"></script>
 </head>
+<style>
+#map_canvas {
+  height: 100px;
+  width: 300px;
+  margin: 0px;
+  padding: 0px
+}
+</style>
 <body>
     <%@ include file="adminMenu.jsp" %>
     <%@ include file="adminMenuLan.jsp" %>
@@ -28,13 +36,13 @@
             
             </br>
             
-            <div id="display"></div>            
-                     
+            <div id="display"></div>
+                            
 		</div>
-		<div id=baniere_droite> 
+		<div id=baniere_droite>
 		</div>
+		<div id="map_canvas"></div>
 	</div>
-	
 	
     
     </br></br> </br></br> </br></br> </br></br> </br></br> </br></br> </br></br> </br></br>
@@ -42,45 +50,91 @@
     <script>
     
     $("#bouton").click(affichage);
-    
-    function initialize(id, adressLieux) {    	    
-    	    codeAddress(id, adressLieux);   
-    }
-    
-    function codeAddress(id, adressValue) {
-    	
-    	var geocoder = new google.maps.Geocoder();
-    	var marker;
-    var mapOptions = {
-  	      zoom: 17,
-  	      mapTypeId: google.maps.MapTypeId.ROADMAP
-  	    }
-      
-      geocoder.geocode( { 'address': adressValue}, function(results, status) {
-    	  console.log(results);
-        if (status == google.maps.GeocoderStatus.OK) {
-        	debugger;
-        	var map = new google.maps.Map(document.getElementById(id), mapOptions);
-          map.setCenter(results[0].geometry.location);
-          if(marker)
-            marker.setMap(null);
-          marker = new google.maps.Marker({
-              map: map,
-              position: results[0].geometry.location,
-              draggable: true
-          });
-        } else {
-        	debugger;
-          alert('Geocode was not successful for the following reason: ' + status);
-        }
-      });
-    }
+   
+    	var geocoder;
+    	var map;
+    	var bounds = new google.maps.LatLngBounds();
+
+    	function initialize(locations) {
+    	  map = new google.maps.Map(
+    	    document.getElementById("map_canvas"), {
+    	      center: new google.maps.LatLng(48.856614 , 2.352222),
+    	      zoom: 13,
+    	      mapTypeId: google.maps.MapTypeId.ROADMAP
+    	    });
+    	  geocoder = new google.maps.Geocoder();
+
+    	  for (i = 0; i < locations.length; i++) {
+
+    	    geocodeAddress(locations, i);
+    	  }
+    	}
+    //	google.maps.event.addDomListener(window, "load", initialize);
+
+    	function geocodeAddress(locations, i) {
+    		console.log(locations);
+    	  var title = locations[i][0];
+    	  var address = locations[i][1];
+  	  console.log(address);
+    	  var url = locations[i][2];
+    	  geocoder.geocode({
+    	      'address': locations[i][1]
+    	    },
+
+    	    function(results, status) {
+    	      if (status == google.maps.GeocoderStatus.OK) {
+    	        var marker = new google.maps.Marker({
+    	          icon: 'http://maps.google.com/mapfiles/ms/icons/blue.png',
+    	          map: map,
+    	          position: results[0].geometry.location,
+    	          title: title,
+    	          animation: google.maps.Animation.DROP,
+    	          address: address,
+    	          url: url
+    	        })
+    	        infoWindow(marker, map, title, address, url);
+    	        bounds.extend(marker.getPosition());
+    	        map.fitBounds(bounds);
+    	      } else {
+    	        alert("geocode of " + address + " failed:" + status);
+    	      }
+    	    });
+    	}
+
+    	function infoWindow(marker, map, title, address, url) {
+    	  google.maps.event.addListener(marker, 'click', function() {
+    	    var html = "<div><h3>" + title + "</h3><p>" + address + "<br></div><a href='" + url + "'>View location</a></p></div>";
+    	    iw = new google.maps.InfoWindow({
+    	      content: html,
+    	      maxWidth: 350
+    	    });
+    	    iw.open(map, marker);
+    	  });
+    	}
+
+    	function createMarker(results) {
+    	  var marker = new google.maps.Marker({
+    	    icon: 'http://maps.google.com/mapfiles/ms/icons/blue.png',
+    	    map: map,
+    	    position: results[0].geometry.location,
+    	    title: title,
+    	    animation: google.maps.Animation.DROP,
+    	    address: address,
+    	    url: url
+    	  })
+    	  bounds.extend(marker.getPosition());
+    	  map.fitBounds(bounds);
+    	  infoWindow(marker, map, title, address, url);
+    	  return marker;
+    	}
     
 	function affichage(){ 
 	var DOM = "";
     	var nameGame =  $("#search").val();
     	var messageBox  = document.getElementById("display");
     	var titre = ["picture:","game:","date:","lieux:","id_url:"];
+    var tab;
+    var tabVilles = [];
 
     	$.ajax({
     	    "type": "POST",
@@ -110,9 +164,11 @@
     							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
     							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
     							DOM += "</tr></br>";
-    							DOM += "<div id=\"map_canvas_"+ i + j +"\" style=\"height:100px;width:300px\"></div>";
     							DOM += "</div>";
     							DOM += "</br>";
+    							
+    							tab = ['Location Name: ' + valueObj[0].nameGame, valueObj[0].lieux, 'Location URL']
+    							tabVilles.push(tab);				
     	    					} else {
     	    						var valueObj = Object.values(obj);
     	    						
@@ -128,19 +184,21 @@
     							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
     							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
     							DOM += "</tr></br>";
-    							DOM += "<div id=\"map_canvas_"+ i + j +"\" style=\"height:100px;width:300px\"></div>";
     							DOM += "</div>";
     							DOM += "</br>";
+    							
+    							tab = ['Location Name: ' + valueObj[0].nameGame, valueObj[0].lieux, 'Location URL']
+    							tabVilles.push(tab);
     	    					}
     	    					messageBox.innerHTML = DOM;
-    	    					initialize("map_canvas_"+ i + j, valueObj[0].lieux);
-    	    					console.log("map_canvas_"+ i + j);
     	    				}	
-    	    			}
+    	    			}    	    			
     	    		}
-    	    		
+    	    		initialize(tabVilles);
         	}
     	});
+    	
+    	
 };
 
 </script>

@@ -13,6 +13,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!-- tournois -->
 <script src="../js/tournoisPage.js"></script>
+<!-- searchLan -->
 <!-------------------------- CSS -------------------------->
 <!-- tournoisCreatedPage -->
 <link rel="stylesheet" type="text/css" href="../css/tournoisCreatedPage.css">

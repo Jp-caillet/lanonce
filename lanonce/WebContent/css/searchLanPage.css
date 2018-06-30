@@ -1,2 +1,24 @@
 @charset "UTF-8";
 
+.recherche {
+	display: block;
+	border-radius: 10px;
+	background-color: #c4c4c4;
+	width: 600px;
+	heigth: 300px;
+}
+
+.recherche h1{
+	text-align: center;
+}
+
+.recherche button{
+	background-color: red;
+	margin-left: 170px;
+}
+
+#map_canvas {
+  height: 300px;
+  width: 900px;
+}
+

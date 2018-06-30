@@ -15,14 +15,10 @@
 <link rel="stylesheet" type="text/css" href="../css/searchLanPage.css">
 <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZP8IN8kZ1PsZko2hlbHCyOckwDvcAuaY"></script>
+<script src="../js/searchLanPage.js"></script>
 </head>
 <style>
-#map_canvas {
-  height: 100px;
-  width: 300px;
-  margin: 0px;
-  padding: 0px
-}
+
 </style>
 <body>
     <%@ include file="adminMenu.jsp" %>
@@ -40,8 +36,8 @@
                             
 		</div>
 		<div id=baniere_droite>
+			<div id="map_canvas"></div>
 		</div>
-		<div id="map_canvas"></div>
 	</div>
 	
     
@@ -156,14 +152,14 @@
     							DOM += "<tr>";
     							DOM += "<h1> LAN </h1>";
     							DOM += "<td><h4>Date:</h4>" + valueObj[0].date + "</td>";
-       						DOM += "<a href='/lanonce/auth/displayLan?id="+ valueObj[0].id_url +"'";
-       						DOM += "<button type=submit>CLIQUEZ ICI POUR PARTICIPER</button>";
-    							DOM += "</a>";
 							DOM += "</br>";
     							DOM += "<td><h4>Lieux:</h4>" + valueObj[0].lieux + "</td>";
     							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
     							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
     							DOM += "</tr></br>";
+           					DOM += "<a href='/lanonce/auth/displayLan?id="+ valueObj[0].id_url +"'";
+           					DOM += "<p><button type=submit>CLIQUEZ ICI POUR PARTICIPER</button></p>";
+    							DOM += "</a>";
     							DOM += "</div>";
     							DOM += "</br>";
     							
@@ -176,14 +172,13 @@
     							DOM += "<tr>";
     							DOM += "<h1> TOURNOIS </h1>";
     							DOM += "<td><h4>Date:</h4>" + valueObj[0].date + "</td>";
-       						DOM += "<a href='/lanonce/auth/displayTournois?id="+ valueObj[0].id_url +"'";
-							DOM += "</br>";
-       						DOM += "<button type=submit>CLIQUEZ ICI POUR PARTICIPER</button>";
-    							DOM += "</a>";
     							DOM += "<td><h4>Lieux:</h4>" + valueObj[0].lieux + "</td>";
     							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
     							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
     							DOM += "</tr></br>";
+            					DOM += "<a href='/lanonce/auth/displayLan?id="+ valueObj[0].id_url +"'";
+            					DOM += "<p><button type=submit>CLIQUEZ ICI POUR PARTICIPER</button></p>";
+     						DOM += "</a>";
     							DOM += "</div>";
     							DOM += "</br>";
     							

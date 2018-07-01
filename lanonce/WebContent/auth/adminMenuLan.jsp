@@ -15,6 +15,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!-- tournois -->
 <script src="../js/tournoisPage.js"></script>
+<!-- searchLan -->
 <!-------------------------- CSS -------------------------->
 <!-- tournoisCreatedPage -->
 <link rel="stylesheet" type="text/css" href="../css/tournoisCreatedPage.css">
@@ -38,27 +39,6 @@
 </head>
 <body>
 
-
-<!-- <div class="row">
-	<div class="col-md-offset-2 col-md-7">
-		<div class="form-group">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			  <div class="container">
-			    <ul class="nav navbar-nav">
-				  <li><a href="#">Comment ca marche ?</a></li>
-				  <li><a href="/lanonce/auth/create">Créer une rencontre</a></li>
-				  <li><a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
-				  <li><a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>
-				  <li><a href="/lanonce/auth/history/tournois?status=open">Mes tournois</a></li>
-			      <li><a href="#">Tournois</a></li>
-			      <li><a href="/lanonce/auth/contactus">Contactez-nous</a></li>
-			    </ul>
-			  </div>
-			</nav>
-		</div>
-	</div>
-</div> -->
-
 <div class="topnav2">
   <a href="#">Comment ca marche ?</a></li>
   <a href="/lanonce/auth/create">Créer une rencontre</a></li>
@@ -68,7 +48,6 @@
   <a href="#">Tournois</a></li>
   <a href="/lanonce/auth/contactus">Contactez-nous</a></li>
 </div>
-
 
 </body>
 </html>

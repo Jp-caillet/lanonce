@@ -1,18 +1,33 @@
 @charset "UTF-8";
 
-#baniere{
-	overflow:auto;
+.recherche {
+	display: block;
+	border-radius: 10px;
+	background-color: #e4e4e4;
+	width: 600px;
+	heigth: 300px;
 }
 
-#baniere_gauche, #baniere_gauche {
-    display: inline-block;
-    vertical-align: top;
+.recherche h1{
+	color: white;
+	text-align: center;
+	background-color: #4a7eba;
+	width: 100%;
+	border-radius: 10px;
 }
-#baniere_gauche{
-   float:left;
-   width:60%;
+
+.recherche h4{
+	margin-left: 25px;
 }
- 
-#baniere_gauche{
-	overflow:auto;
+
+.recherche button{
+	background-color: #e2e2e2;
+	margin-left: 170px;
+	
 }
+
+#map_canvas {
+  height: 500px;
+  width: 900px;
+}
+

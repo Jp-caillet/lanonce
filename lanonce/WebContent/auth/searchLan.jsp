@@ -24,6 +24,7 @@
     <%@ include file="adminMenu.jsp" %>
     <%@ include file="adminMenuLan.jsp" %>
     
+    </br>
     
     <div id=baniere>
 		<div id=baniere_gauche> 
@@ -41,7 +42,7 @@
 	</div>
 	
     
-    </br></br> </br></br> </br></br> </br></br> </br></br> </br></br> </br></br> </br></br>
+    </br></br> </br></br> </br></br> 
     <%@ include file="adminFooter.jsp" %>
     <script>
     
@@ -151,11 +152,10 @@
             	    				DOM += "<div class="+ "recherche" + ">";
     							DOM += "<tr>";
     							DOM += "<h1> LAN </h1>";
-    							DOM += "<td><h4>Date:</h4>" + valueObj[0].date + "</td>";
-							DOM += "</br>";
-    							DOM += "<td><h4>Lieux:</h4>" + valueObj[0].lieux + "</td>";
-    							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
-    							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
+    							DOM += "<td><h4>Date: " + valueObj[0].date + "</h4></td>";
+    							DOM += "<td><h4>Lieux: " + valueObj[0].lieux + "</h4></td>";
+    							DOM += "<td><h4>Nom du jeux: " + valueObj[0].nameGame + "</h4></td>";
+    							DOM += "<td><h4>Picture: " + valueObj[0].picture + "</h4></td>";
     							DOM += "</tr></br>";
            					DOM += "<a href='/lanonce/auth/displayLan?id="+ valueObj[0].id_url +"'";
            					DOM += "<p><button type=submit>CLIQUEZ ICI POUR PARTICIPER</button></p>";
@@ -171,10 +171,10 @@
             	    				DOM += "<div class="+ "recherche" + ">";
     							DOM += "<tr>";
     							DOM += "<h1> TOURNOIS </h1>";
-    							DOM += "<td><h4>Date:</h4>" + valueObj[0].date + "</td>";
-    							DOM += "<td><h4>Lieux:</h4>" + valueObj[0].lieux + "</td>";
-    							DOM += "<td><h4>nom du jeux:</h4>" + valueObj[0].nameGame + "</td>";
-    							DOM += "<td><h4>picture:</h4>" + valueObj[0].picture + "</td>";
+    							DOM += "<td><h4>Date: " + valueObj[0].date + "</h4></td>";
+    							DOM += "<td><h4>Lieux: " + valueObj[0].lieux + "</h4></td>";
+    							DOM += "<td><h4>Nom du jeux: " + valueObj[0].nameGame + "</h4></td>";
+    							DOM += "<td><h4>Picture: " + valueObj[0].picture + "</h4></td>";
     							DOM += "</tr></br>";
             					DOM += "<a href='/lanonce/auth/displayLan?id="+ valueObj[0].id_url +"'";
             					DOM += "<p><button type=submit>CLIQUEZ ICI POUR PARTICIPER</button></p>";

@@ -3,13 +3,14 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 .topnav2 {
   overflow: hidden;
-  background-color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .topnav2 a {

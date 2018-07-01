@@ -8,7 +8,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Lan étape 1</title>
+<title>Lan</title>
 </head>
 <body>
   <%@ include file="adminMenu.jsp" %>
@@ -30,47 +30,11 @@
           </div>
         </div>
         <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ex@mail.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p>
-          <hr>
-
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Adobe Photoshop</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-          </div>
-          <p>Photography</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-              <div class="w3-center w3-text-white">80%</div>
-            </div>
-          </div>
-          <p>Illustrator</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-          </div>
-          <p>Media</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-          </div>
-          <br>
-
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>Spanish</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
-          </div>
-          <p>German</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
-          </div>
-          <br>
+		<h1>SALUT</h1>
+		<h1>SALUT</h1>
+		<h1>SALUT</h1>
+		<h1>SALUT</h1>
+		<h1>SALUT</h1>
         </div>
       </div><br>
 
@@ -85,11 +49,11 @@
 			    <div class="stepwizard-row setup-panel">
 			        <div class="stepwizard-step">
 			            <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-			            <p>Step 1</p>
+			            <p>Etape 1</p>
 			        </div>
 			        <div class="stepwizard-step">
 			            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-			            <p>Step 2</p>
+			            <p>Etape 2</p>
 			        </div>
 			    </div>
 			</div>
@@ -97,7 +61,6 @@
 			    <div class="row setup-content" id="step-1">
 			        <div class="col-xs-12">
 			            <div class="col-md-12">
-			                <h3> Step 1</h3>
 			                <div class="form-group">
 				                <label for="Nom">Picture</label>
 				                <input type="file" name="picture" value="picture" id="picture"><label for="picture"> Select a file to upload</label>
@@ -125,7 +88,6 @@
 			    <div class="row setup-content" id="step-2">
 			        <div class="col-xs-12">
 			            <div class="col-md-12">
-			                <h3> Step 2</h3>
 			                <div class="form-group">
 				                <label for="Nom">ADRESSE</label>
 				                <input type="text" class="form-control" id="lieux" placeholder="lieux" name="lieux">
@@ -168,6 +130,7 @@
   
   <!-- End Page Container -->
 </div>
+<%@ include file="adminFooter.jsp" %>
 <script>
 $(document).ready(function () {
 

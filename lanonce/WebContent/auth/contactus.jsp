@@ -9,9 +9,7 @@
 
   <%@ include file="adminMenu.jsp" %>
   <%@ include file="adminMenuLan.jsp" %>
-
-<h3>NOUS CONTACTER</h3>
-
+</br></br></br>
 <div class="container">
 
 	<form action="contactus" method="post">

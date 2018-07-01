@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.contenaire {
+	background-color: #e1e1e1;
+	width:100%;
+	height: 700px;
+}
+
+h3 {
+	padding-top: 25px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.grille {	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 1fr;
+	grid-gap: 1rem;
+}
+
+section {
+	background-color:#FFFFFF;
+	height: 200px;
+}

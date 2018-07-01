@@ -11,13 +11,12 @@
   <%@ include file="adminMenuLan.jsp" %>
   
   
-  
- <div class="valide">
- 	<img class="v" src="../images/valider.png"/>
- 	</br></br>
-	<h2>VOTRE MESSAGE A BIEN ÉTÉ ENVOYÉ</br>
-	NOUS VOUS RE-CONTACTERONS TRES VITE</h2>
-</div>
+	 <div class="valide">
+	 	<img class="v" src="../images/valider.png"/>
+	 	</br></br>
+		<h2>VOTRE MESSAGE A BIEN ÉTÉ ENVOYÉ</br>
+		NOUS VOUS RE-CONTACTERONS TRES VITE</h2>
+	</div>
 
     <%@ include file="adminFooter.jsp" %>
 

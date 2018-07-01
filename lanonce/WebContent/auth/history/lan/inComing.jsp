@@ -14,8 +14,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title></title>
 <style>
-@charset "UTF-8";
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -76,7 +74,7 @@ body {
 
 <!-- adminMenuLan -->
 <div class="topnav2">
-  <a href="#">Comment ca marche ?</a></li>
+  <a href="/lanonce/auth/help">Comment ca marche ?</a></li>
   <a href="/lanonce/auth/create">Créer une rencontre</a></li>
   <a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
   <a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>

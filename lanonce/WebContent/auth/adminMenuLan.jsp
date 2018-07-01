@@ -38,7 +38,7 @@
 <body>
 
 <div class="topnav2">
-  <a href="#">Comment ca marche ?</a></li>
+  <a href="/lanonce/auth/help">Comment ca marche ?</a></li>
   <a href="/lanonce/auth/create">Créer une rencontre</a></li>
   <a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
   <a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>

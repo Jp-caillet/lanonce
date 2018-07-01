@@ -26,7 +26,7 @@
     
     </br>
     
-    <div id=baniere>
+    <div class=baniere>
 		<div id=baniere_gauche> 
 		    <input type="text" id="search" name="search" class="search" />
             <input type="button" id="bouton" value="Bouton à cliquer">

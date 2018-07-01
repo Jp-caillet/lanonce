@@ -144,4 +144,12 @@
     <servlet-name>LanCreatedServlet</servlet-name>
     <url-pattern>/auth/lanCreated</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>HelpServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.HelpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelpServlet</servlet-name>
+    <url-pattern>/auth/help</url-pattern>
+  </servlet-mapping>
 </web-app>

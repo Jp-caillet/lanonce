@@ -54,7 +54,7 @@ public class TournoisServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		int privBox = 0;
 		int payBox = 0;
-
+		String id_url = "";
 		try {
 			tournois.setPicture(request.getParameter("picture"));
 			tournois.setNameTournois(request.getParameter("nameTournois"));
@@ -85,7 +85,7 @@ public class TournoisServlet extends HttpServlet {
 			int hasInteger = Integer.parseInt(request.getParameter("nombreUser"));
 			tournois.setNombreUser(hasInteger);
 			boolean test = true;
-			String id_url = "";
+			
 			while(test) {
 				id_url = this.generate(7);
 				request.setAttribute("url", id_url);
@@ -112,6 +112,18 @@ public class TournoisServlet extends HttpServlet {
 		}
 		
 		tournoisDao.ajouterTournois(tournois);
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, username, pass);
+		    PreparedStatement st = (PreparedStatement) con.prepareStatement("INSERT INTO participer_tournois(id_tournois, id_user) VALUES(?, ?);");
+		    st.setString(1, id_url);
+		    st.setString(2, String.valueOf(session.getAttribute("id")));
+		    st.executeUpdate();
+		   con.close();
+	   } catch (Exception e) {
+	        e.printStackTrace();
+	       
+	   }
 		
 		this.getServletContext().getRequestDispatcher("/auth/tournoisCreated.jsp").forward(request, response);
 	}

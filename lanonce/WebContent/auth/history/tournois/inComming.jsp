@@ -60,7 +60,7 @@ ArrayList  id_game = new ArrayList();
         	%>
         	
         	<li>
-        	<a href="/lanonce/auth/displayTournois?id=<%out.println(r1.getString("id_url"));%>">
+        	<a href="/lanonce/auth/tournois/incoming?id=<%out.println(r1.getString("id_url"));%>">
         	<h1>lan :</h1>
         	<p>
         	<% 

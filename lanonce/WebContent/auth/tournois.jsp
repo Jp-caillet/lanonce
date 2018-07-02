@@ -106,16 +106,9 @@
 	<div class="form-group">
 	<label for="Nom">SELECTIONNER UN NOMBRE DE PARTICIPANT</label>
 		<SELECT name="nombreUser" size="1">
-			<OPTION>1
-			<OPTION>2
-			<OPTION>3
 			<OPTION>4
-			<OPTION>5
-			<OPTION>6
-			<OPTION>7
 			<OPTION>8
-			<OPTION>9
-			<OPTION>10
+			<OPTION>16
 		</SELECT>
 	</div>
 	</div>

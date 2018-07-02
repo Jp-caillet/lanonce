@@ -54,7 +54,7 @@ public class Lan1Servlet extends HttpServlet {
 		int box = 0;
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		HttpSession session = request.getSession();
-		
+		String idurl = "";
 		try {
 	        /* RÃ©cupÃ©ration des paramÃ¨tres d'URL saisis par l'utilisateur */
 			lan.setPicture(request.getParameter("picture"));
@@ -72,7 +72,6 @@ public class Lan1Servlet extends HttpServlet {
 				box = 1;
 			} 
 			boolean test = true;
-			String idurl = "";
 			while(test) {
 				idurl = this.generate(7);
 				request.setAttribute("url", idurl);
@@ -105,6 +104,18 @@ public class Lan1Servlet extends HttpServlet {
 		}
 		
 		lanDao.ajouter(lan);
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, username, pass);
+		    PreparedStatement st = (PreparedStatement) con.prepareStatement("INSERT INTO participer_lans(id_lan, id_user) VALUES(?, ?);");
+		    st.setString(1, idurl);
+		    st.setString(2, String.valueOf(session.getAttribute("id")));
+		    st.executeUpdate();
+		   con.close();
+	   } catch (Exception e) {
+	        e.printStackTrace();
+	       
+	   }
 			
 		this.getServletContext().getRequestDispatcher("/auth/lanCreated.jsp").forward(request, response);
 

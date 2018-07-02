@@ -144,4 +144,12 @@
     <servlet-name>LanCreatedServlet</servlet-name>
     <url-pattern>/auth/lanCreated</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>TournoisDisplayIncomingServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.TournoisDisplayIncomingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TournoisDisplayIncomingServlet</servlet-name>
+    <url-pattern>/auth/tournois/incoming</url-pattern>
+  </servlet-mapping>
 </web-app>

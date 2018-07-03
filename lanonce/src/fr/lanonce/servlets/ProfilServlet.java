@@ -43,11 +43,6 @@ public class ProfilServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
-        /*PrintWriter pw = response.getWriter();
-        String url = "jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd";
-        String username = "lanonce";
-        String pass = "fifou707";*/
         
         String nom1=request.getParameter("nom");
         String prenom1=request.getParameter("prenom");
@@ -57,30 +52,8 @@ public class ProfilServlet extends HttpServlet {
         String password1=request.getParameter("password");
         
         addModifUserDao.addModifUser(pseudo1, nom1, prenom1, ville1, email1, password1);
-        
-        /*try{
-
-		    Class.forName("com.mysql.jdbc.Driver");
-		    Connection con = (Connection) DriverManager.getConnection(url, username, pass);
-		    PreparedStatement pst = (PreparedStatement) con.prepareStatement("UPDATE users SET pseudo=?, nom=?, prenom=?, ville=?, email=?, password=? WHERE email=?"); 
-		    pst.setString(1,pseudo1);
-		    pst.setString(2,nom1);      
-		    pst.setString(3,prenom1);
-		    pst.setString(4,ville1);
-		    pst.setString(5,email1);
-		    pst.setString(6,password1);
-		    pst.setString(7, email1);
-		    int i = pst.executeUpdate();
-		    if(i!=0){
-		        pw.println("<br>Data has been inserted");
-		    }
-		    else{
-		       pw.println("failed!");
-		    }
-		 
-		    } catch (Exception e){
-		      pw.println(e);
-		  }*/
+                
+        this.getServletContext().getRequestDispatcher("/auth/profilChange.jsp").forward(request, response);
 	}
 }
 

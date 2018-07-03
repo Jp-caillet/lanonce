@@ -32,16 +32,18 @@ public class AddModifUserDaoImpl implements AddModifUserDao {
 		    preparedStatement.setString(5,email1);
 		    preparedStatement.setString(6,password1);
 		    preparedStatement.setString(7, email1);
+		    
 		    int i = preparedStatement.executeUpdate();
 		    if(i!=0){
-		    	System.out.println("<br>Data has been inserted");
+		    		System.out.println("<br>Data has been inserted");
+		    	
 		    }
 		    else{
-		    	System.out.println("failed!");
+		    		System.out.println("failed!");
 		    }
 		 
 		    } catch (Exception e){
-		    	System.out.println(e);
+		    		System.out.println(e);
 		  }
 	 }
 }

@@ -106,7 +106,7 @@ ArrayList  id_game = new ArrayList();
    boolean nolan = true;
 	
    try {
-	   
+	    // Vérification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
@@ -115,6 +115,7 @@ ArrayList  id_game = new ArrayList();
         	id_game.add(r.getString("id_tournois"));
         	
         }
+        // Si il participe, on accede au élément de la Lan ou il participe pour afficher les informations que l'on souhaite
         for(int i = 0; i < id_game.size(); i++)
         {
           
@@ -122,47 +123,50 @@ ArrayList  id_game = new ArrayList();
         ResultSet r1 = smt.executeQuery("select * from tournois where id_url='" + id_game.get(i) + "' and status='open';");
         while (r1.next()) {
         
-        	 
-        		nolan= false;
-        	%>
-        	
-        	<li>
-        	<a href="/lanonce/auth/displayTournois?id=<%out.println(r1.getString("id_url"));%>">
-        	<h1>lan :</h1>
-        	<p>
-        	<% 
-        	out.println(r1.getString("nameTournois"));
-        	%>
-        	</p>
-        	<div>
-        	sur le jeux: 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("nameGame"));
-        	%>
-        	</p>
-        	<div>
-        	le: 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("date"));
-        	%>
-        	</p>
-        	<div>
-        	à : 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("lieux"));
-        	%>
-        	</p>
-        	</a>
-        	</li>
-        	<% 
+       	 Calendar date = Calendar.getInstance();
+       	 date.setTime(r1.getDate("date"));
+       		if(date.getTime().after(today.getTime())){
+       		nolan= false;
+	        	%>
+	        	
+	        	<li>
+	        	<a href="/lanonce/auth/displayTournois?id=<%out.println(r1.getString("id_url"));%>">
+	        	<h1>tournois :</h1>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("nameTournois"));
+	        	%>
+	        	</p>
+	        	<div>
+	        	sur le jeux: 
+	        	</div>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("nameGame"));
+	        	%>
+	        	</p>
+	        	<div>
+	        	le: 
+	        	</div>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("date"));
+	        	%>
+	        	</p>
+	        	<div>
+	        	à : 
+	        	</div>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("lieux"));
+	        	%>
+	        	</p>
+	        	</a>
+	        	</li>
+	        	<% 
+       		}
         	}
-        }
+     }
         con.close();
    } catch (Exception e) {
         e.printStackTrace();

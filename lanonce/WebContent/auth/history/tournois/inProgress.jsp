@@ -119,47 +119,46 @@ ArrayList  id_game = new ArrayList();
         Statement smt1 = con.createStatement();
         ResultSet r1 = smt.executeQuery("select * from tournois where id_url='" + id_game.get(i) + "' and status='current';");
         while (r1.next()) {
-        
-        	 
+
         		nolan= false;
-        	%>
-        	
-        	<li>
-        	<a href="/lanonce/auth/displayTournois?id=<%out.println(r1.getString("id_url"));%>">
-        	<h1>lan :</h1>
-        	<p>
-        	<% 
-        	out.println(r1.getString("nameTournois"));
-        	%>
-        	</p>
-        	<div>
-        	sur le jeux: 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("nameGame"));
-        	%>
-        	</p>
-        	<div>
-        	le: 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("date"));
-        	%>
-        	</p>
-        	<div>
-        	à : 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("lieux"));
-        	%>
-        	</p>
-        	</a>
-        	</li>
-        	<% 
-        	}
+	        	%>
+	        	
+	        	<li>
+	        	<a href="/lanonce/auth/displayTournois?id=<%out.println(r1.getString("id_url"));%>">
+	        	<h1>tournois :</h1>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("nameTournois"));
+	        	%>
+	        	</p>
+	        	<div>
+	        	sur le jeux: 
+	        	</div>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("nameGame"));
+	        	%>
+	        	</p>
+	        	<div>
+	        	le: 
+	        	</div>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("date"));
+	        	%>
+	        	</p>
+	        	<div>
+	        	à : 
+	        	</div>
+	        	<p>
+	        	<% 
+	        	out.println(r1.getString("lieux"));
+	        	%>
+	        	</p>
+	        	</a>
+	        	</li>
+	        	<% 
+	        	}
         }
         con.close();
    } catch (Exception e) {

@@ -90,7 +90,7 @@ ArrayList  id_game = new ArrayList();
    boolean nolan = true;
 
    try {
-	   
+	    // Vérification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
@@ -99,55 +99,56 @@ ArrayList  id_game = new ArrayList();
         	id_game.add(r.getString("id_lan"));
         	
         }
+        // Si il participe, on accede au élément de la Lan ou il participe pour afficher les informations que l'on souhaite
         for(int i = 0; i < id_game.size(); i++)
         {
           
         Statement smt1 = con.createStatement();
         ResultSet r1 = smt.executeQuery("select * from lans where id_url='" + id_game.get(i) + "';");
         while (r1.next()) {
-        
-        	 Calendar date = Calendar.getInstance() ;
+
+        	 Calendar date = Calendar.getInstance();
         	 date.setTime( r1.getDate("date"));
-        	if(date.getTime().after(today.getTime())){
+        		if(date.getTime().after(today.getTime())){
         		nolan= false;
         	%>
         	
-        	<li>
-        	<a href="/lanonce/auth/displayLan?id=<%out.println(r1.getString("id_url"));%>">
-        	<h1>lan :</h1>
-        	<p>
-        	<% 
-        	out.println(r1.getString("namelan"));
-        	%>
-        	</p>
-        	<div>
-        	sur le jeux: 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("nameGame"));
-        	%>
-        	</p>
-        	<div>
-        	le: 
-        	</div>
-        	<p>
-        	<% 
-        	out.println(r1.getString("date"));
-        	%>
-        	</p>
-        	</a>
-        	</li>
-        	<% 
-        	}
-        }
+		        	<li>
+		        	<a href="/lanonce/auth/displayLan?id=<%out.println(r1.getString("id_url"));%>">
+		        	<h1>lan :</h1>
+		        	<p>
+		        	<% 
+		        	out.println(r1.getString("namelan"));
+		        	%>
+		        	</p>
+		        	<div>
+		        	sur le jeux: 
+		        	</div>
+		        	<p>
+		        	<% 
+		        	out.println(r1.getString("nameGame"));
+		        	%>
+		        	</p>
+		        	<div>
+		        	le: 
+		        	</div>
+		        	<p>
+		        	<% 
+		        	out.println(r1.getString("date"));
+		        	%>
+		        	</p>
+		        	</a>
+		        	</li>
+		        	<% 
+		        	}
+        		}
         
         } 
         con.close();
    } catch (Exception e) {
         e.printStackTrace();
         out.println(e);
-   }
+   }// sinon pas de lan trouvé
    if(nolan){
 %>
 <h1>pas de lan à venir </h1>

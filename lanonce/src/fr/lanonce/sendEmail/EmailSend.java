@@ -27,14 +27,18 @@ public class EmailSend {
             java.security.Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
             Session mailSession = Session.getDefaultInstance(props, null);
             mailSession.setDebug(sessionDebug);
+            // Création d'un message
             Message msg = new MimeMessage(mailSession);
             msg.setFrom(new InternetAddress(fromEmail));
+
             InternetAddress[] address = {new InternetAddress(toEmail)};
             msg.setRecipients(Message.RecipientType.TO, address);
             msg.setSubject(subject); msg.setSentDate(new Date());
             msg.setText(message);
-
-           Transport transport=mailSession.getTransport("smtp");
+            
+            // Envoie du message avec le transport adéquat
+            // Simple Mail Transport Protocol (SMTP): Envoi de mails vers un serveur de mails
+           Transport transport = mailSession.getTransport("smtp");
            transport.connect(host, username, password);
            transport.sendMessage(msg, msg.getAllRecipients());
            transport.close();

@@ -54,7 +54,7 @@
 						<input class="input100" type="text" name="ville" placeholder="Ville">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<span class="lnr lnr-user"></span>
+							<span class="lnr lnr-home"></span>
 						</span>
 					</div>
 					

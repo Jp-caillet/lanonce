@@ -30,11 +30,11 @@
           </div>
         </div>
         <div class="w3-container">
-		<h1>SALUT</h1>
-		<h1>SALUT</h1>
-		<h1>SALUT</h1>
-		<h1>SALUT</h1>
-		<h1>SALUT</h1>
+		<h4>LAN PARTY PRET DE CHEZ TOI ?</h4></br>
+		<h5><a href="">COUNTER STRIKE 1.6</a></h5></br>
+		<h5><a href="">HALO 1/2/3/4</a></h5></br>
+		<h5><a href="">QUAKE 3</a></h5></br>
+		<h5><a href="">NEED FOR SPEED UNDERGROUND</a></h5></br>
         </div>
       </div><br>
 

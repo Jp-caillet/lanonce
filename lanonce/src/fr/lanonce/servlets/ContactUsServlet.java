@@ -38,6 +38,7 @@ public class ContactUsServlet extends HttpServlet {
 		EmailSend email = new EmailSend();
 		
 		String fromEmail = request.getParameter("fromEmail");
+		System.out.println(fromEmail);
 		String subject = request.getParameter("subject");
 		String message = request.getParameter("message");
 

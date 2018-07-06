@@ -25,9 +25,10 @@ public class EmailSend {
             props.put("mail.smtp.starttls.required", "true");
 
             java.security.Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
+            //création d'une session
             Session mailSession = Session.getDefaultInstance(props, null);
             mailSession.setDebug(sessionDebug);
-            // Création d'un message
+            // Création d'un objet message auquel nous ajoutons les destinataires 
             Message msg = new MimeMessage(mailSession);
             msg.setFrom(new InternetAddress(fromEmail));
 
@@ -36,7 +37,7 @@ public class EmailSend {
             msg.setSubject(subject); msg.setSentDate(new Date());
             msg.setText(message);
             
-            // Envoie du message avec le transport adéquat
+            // Envoie du message avec l'objet transport 
             // Simple Mail Transport Protocol (SMTP): Envoi de mails vers un serveur de mails
            Transport transport = mailSession.getTransport("smtp");
            transport.connect(host, username, password);
@@ -53,6 +54,7 @@ public class EmailSend {
     
     public void receiveEmail(String fromEmail, String subject, String message) {
         try{
+        		System.out.println(fromEmail);
             String host ="smtp.gmail.com" ;
             String username = "lanoncemds@gmail.com";
             String password = "MDS1234567890";
@@ -72,10 +74,11 @@ public class EmailSend {
             Session mailSession = Session.getDefaultInstance(props, null);
             mailSession.setDebug(sessionDebug);
             Message msg = new MimeMessage(mailSession);
-            msg.setFrom(new InternetAddress(fromEmail));
-            InternetAddress[] address = {new InternetAddress(toEmail)};
-            msg.setRecipients(Message.RecipientType.TO, address);
-            msg.setSubject(subject); msg.setSentDate(new Date());
+            msg.setFrom(new InternetAddress(fromEmail, fromEmail));
+            //InternetAddress[] address = {new InternetAddress(toEmail)};
+            msg.setRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
+            msg.setSubject(subject); 
+            msg.setSentDate(new Date());
             msg.setText(message);
 
            Transport transport=mailSession.getTransport("smtp");

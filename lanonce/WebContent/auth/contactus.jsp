@@ -13,14 +13,14 @@
 <div class="container">
 
 	<form action="contactus" method="post">
-	    <label for="fname">Your email: </label>
-	    <input type="text" id="email" name="fromEmail" placeholder="Your email..">
+	    <label for="fname">Ton email: </label>
+	    <input type="text" id="email" name="fromEmail" placeholder="Ton email..">
 	
-	    <label for="lname">Your subject: </label>
-	    <input type="text" id="subject" name="subject" placeholder="Your subject..">
+	    <label for="lname">Ton objet: </label>
+	    <input type="text" id="subject" name="subject" placeholder="Ton objet..">
 	
-	    <label for="subject">Mail message</label>
-	    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+	    <label for="subject">Message</label>
+	    <textarea id="message" name="message" placeholder="Message.." style="height:200px"></textarea>
 	
 		<input type="submit"><span class="message">${message}</span>
    </form>

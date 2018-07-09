@@ -83,6 +83,22 @@ body {
   <a href="/lanonce/auth/contactus">Contactez-nous</a></li>
 </div>
 
+<div class="row">
+<div class="col-md-offset-2 col-md-7">
+<div class="form-group">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <ul class="nav navbar-nav">
+	  <li ><a href="#">Mes lans à venir</a></li>
+	  <li><a href="/lanonce/auth/history/lan/done">Mes lans passées</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+</br>
+
 <%
 ArrayList  id_game = new ArrayList();
   
@@ -157,20 +173,6 @@ ArrayList  id_game = new ArrayList();
 }
 %>
 
-<div class="row">
-<div class="col-md-offset-2 col-md-7">
-<div class="form-group">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-      <ul class="nav navbar-nav">
-	  <li ><a href="#">Mes lans à venir</a></li>
-	  <li><a href="/lanonce/auth/history/lan/done">Mes lans passées</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-</div>
-</div>
 <ul>
 </ul>
 </body>

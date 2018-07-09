@@ -51,10 +51,11 @@ public class DisplayTournoisServlet extends HttpServlet {
 		Connection con = DriverManager.getConnection(url, username, pass);
 	    PreparedStatement st = (PreparedStatement) con.prepareStatement(sql2);
 	    st.setString(1, request.getParameter("id"));
+		System.out.println(request.getParameter("id"));
+
 	    st.setString(2, String.valueOf(session.getAttribute("id")));
 	    ResultSet rs = st.executeQuery();
 	    if(rs.next()) {
-
 	    	System.out.println("vous participé déja");
 	    	already = false;
 	    }
@@ -73,6 +74,8 @@ public class DisplayTournoisServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
+		System.out.println(request.getParameter("id"));
+		System.out.println(session.getAttribute("id"));
 
 		try{
 		Class.forName("com.mysql.jdbc.Driver");
@@ -86,11 +89,9 @@ public class DisplayTournoisServlet extends HttpServlet {
         e.printStackTrace();
        
    }
-
-		response.sendRedirect("/lanonce/auth/home");
-
+		response.sendRedirect("/lanonce/home");	
 		doGet(request, response);
-		
+			
 	}
 
 }

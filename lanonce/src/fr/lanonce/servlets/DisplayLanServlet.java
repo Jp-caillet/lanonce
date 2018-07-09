@@ -13,11 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import fr.lanonce.sendEmail.EmailSend;
-
 /**
  * Servlet implementation class DisplayLanServlet
  */
+
 public class DisplayLanServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String username = "lanonce";
@@ -42,7 +41,7 @@ public class DisplayLanServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
-		boolean already = true;
+ boolean already = true;
 		try{
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, username, pass);
@@ -68,14 +67,10 @@ public class DisplayLanServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String subject = "Votre inscription a l'AN'once";
-        String message = "Merci de votre inscription";
-        
+
 		// TODO Auto-generated method stub
-	    EmailSend email = new EmailSend();
 
 		HttpSession session = request.getSession();
-		
 		System.out.println(request.getParameter("id"));
 		System.out.println(session.getAttribute("id"));
 
@@ -85,19 +80,15 @@ public class DisplayLanServlet extends HttpServlet {
 	    PreparedStatement st = (PreparedStatement) con.prepareStatement(sql);
 	    st.setString(1, request.getParameter("id"));
 	    st.setString(2, String.valueOf(session.getAttribute("id")));
-	    
 	    st.executeUpdate();
-	    
-	    //email.sendEmail(toEmail, subject, message);
-	    
+	   
    } catch (Exception e) {
         e.printStackTrace();
        
    }
-
-		response.sendRedirect("/lanonce/auth/home");
-
 		doGet(request, response);
+		response.sendRedirect("/lanonce/home");
+
 	}
 
 }

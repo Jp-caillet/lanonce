@@ -31,7 +31,7 @@
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
-        ResultSet r = smt.executeQuery("select * from tournois where id_url='" +  request.getParameter("id") + "';");
+        ResultSet r = smt.executeQuery("select * from tournois where(id_url='" +  request.getParameter("id") + "');");
 
         while (r.next()) {
         	nameTournois = r.getString("nameTournois");
@@ -50,29 +50,14 @@
    }
 %>
 <div class="tournois">
-	<h1>Nom du tournois:</h1>
-	<h1><%out.println(nameTournois);%></h1>
-	</br>
-	<p>date : </p>
-	<h5><%out.println(date);%></h5>
-	<br/>
-	<p>name game:</p>
-	<h5><%out.println(nameGame);%></h5>
-	<br/>
-	<p>lieux:</p>
-	<h5><%out.println(lieux);%></h5>
-	<br/>
-	<p>description:</p>
-	<h5><%out.println(description);%></h5>
-	<br/>
-	<p>info:</p>
-	<h5><%out.println(info);%></h5>
-	<br/>
-	<p>nb user:</p>
-	<h5><%out.println(nb_user);%></h5>
-	<br/>
-	<p>type de tournois:</p>
-	<h5><%out.println(type);%></h5>
+	<h1>Nom du tournois: <%out.println(nameTournois);%></h1>
+	<p>Date: <%out.println(date);%></p>
+	<p>Name game: <%out.println(nameGame);%></p>
+	<p>Lieux: <%out.println(lieux);%></p>
+	<p>Description: <%out.println(description);%></p>
+	<p>Info: <%out.println(info);%></p>
+	<p>Nombre user: <%out.println(nb_user);%></p>
+	<p>Type de tournois: <%out.println(type);%></p>
 </div>
 <br/>
 

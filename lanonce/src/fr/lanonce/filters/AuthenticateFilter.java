@@ -19,7 +19,6 @@ public class AuthenticateFilter extends HttpFilter{
 			response.sendRedirect("/lanonce/login");
 		} else {
 			chain.doFilter(request, response);
-			
 		}
 	}
 	

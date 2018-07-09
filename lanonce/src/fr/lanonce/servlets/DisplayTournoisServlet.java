@@ -89,7 +89,9 @@ public class DisplayTournoisServlet extends HttpServlet {
         e.printStackTrace();
        
    }
+
 		response.sendRedirect("/lanonce/home");	
+
 		doGet(request, response);
 			
 	}

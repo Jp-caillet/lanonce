@@ -75,7 +75,7 @@ body {
 <!-- adminMenuLan -->
 <div class="topnav2">
   <a href="/lanonce/auth/help">Comment ca marche ?</a></li>
-  <a href="/lanonce/auth/create">Créer une rencontre</a></li>
+  <a href="/lanonce/auth/create">CrÃ©er une rencontre</a></li>
   <a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
   <a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>
   <a href="/lanonce/auth/history/tournois?status=open">Mes tournois</a></li>
@@ -89,9 +89,9 @@ body {
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
       <ul class="nav navbar-nav">
-	  <li ><a href="#">Mes tournois à venir</a></li>
+	  <li ><a href="#">Mes tournois Ã  venir</a></li>
 	  <li><a href="/lanonce/auth/history/tournois?status=current">Mes tournois en cours</a></li>
-	  <li><a href="/lanonce/auth/history/tournois?status=done">Mes tournois terminés</a></li>
+	  <li><a href="/lanonce/auth/history/tournois?status=done">Mes tournois terminÃ©s</a></li>
     </ul>
   </div>
 </nav>
@@ -106,7 +106,7 @@ ArrayList  id_game = new ArrayList();
    boolean nolan = true;
 	
    try {
-	    // Vérification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
+	    // VÃ©rification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
@@ -115,14 +115,14 @@ ArrayList  id_game = new ArrayList();
         	id_game.add(r.getString("id_tournois"));
         	
         }
-        // Si il participe, on accede au élément de la Lan ou il participe pour afficher les informations que l'on souhaite
+        // Si il participe, on accede au Ã©lÃ©ment de la Lan ou il participe pour afficher les informations que l'on souhaite
         for(int i = 0; i < id_game.size(); i++)
         {
           
         Statement smt1 = con.createStatement();
         ResultSet r1 = smt.executeQuery("select * from tournois where id_url='" + id_game.get(i) + "' and status='open';");
         while (r1.next()) {
-        
+      
        	 Calendar date = Calendar.getInstance();
        	 date.setTime(r1.getDate("date"));
        		if(date.getTime().after(today.getTime())){
@@ -154,7 +154,7 @@ ArrayList  id_game = new ArrayList();
 	        	%>
 	        	</p>
 	        	<div>
-	        	à : 
+	        	Ã  : 
 	        	</div>
 	        	<p>
 	        	<% 
@@ -165,6 +165,7 @@ ArrayList  id_game = new ArrayList();
 	        	</li>
 	        	<% 
        		}
+
         	}
      }
         con.close();
@@ -174,7 +175,7 @@ ArrayList  id_game = new ArrayList();
    }
    if(nolan){
 %>
-<h1>pas de tournois à venir </h1>
+<h1>pas de tournois Ã  venir </h1>
 	<%
 	
 }

@@ -1,3 +1,7 @@
+<%@page import="java.util.concurrent.ThreadLocalRandom"%>
+<%@page import="java.util.PrimitiveIterator.OfInt"%>
+<%@page import="com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections"%>
+<%@page import="java.util.Random"%>
 <%@page import="java.util.Calendar"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.sql.ResultSet"%>
@@ -171,7 +175,9 @@ ArrayList  id_game = new ArrayList();
 	<%
 	
 }
+   
 %>
+
 
 </body>
 </html>

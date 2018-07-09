@@ -60,27 +60,22 @@ body {
   margin-left: 22px;
 }
 </style>
+
 </head>
 <body>
 
-<!-- adminMenu -->
-<div class="topnav">
-  <img src="images/logo_blanc.png" width="180px" height="80px"/>
-  <a class="active" href="/lanonce/auth/home">Home</a>
-  <a href="/lanonce/auth/profil">Profil</a>
-  <a href="/lanonce/auth/logout">Logout</a>
-  <a href=""><c:out value="Bonjour ${sessionScope.pseudo}"/></a>
-</div>
+<%@ include file="/auth/adminMenu.jsp" %>
+
 
 <!-- adminMenuLan -->
 <div class="topnav2">
   <a href="/lanonce/auth/help">Comment ca marche ?</a></li>
-  <a href="/lanonce/auth/create">CrÈer une rencontre</a></li>
+  <a href="/lanonce/auth/create">Cr√©er une rencontre</a></li>
   <a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
   <a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>
   <a href="/lanonce/auth/history/tournois?status=open">Mes tournois</a></li>
   <a href="#">Tournois</a></li>
-  <a href="/lanonce/auth/contactus">Contactez-nous</a></li>
+  <a href="/lanonce/auth/contactus">Contactez-nous</a></li>*
 </div>
 
 <div class="row">
@@ -89,8 +84,8 @@ body {
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
       <ul class="nav navbar-nav">
-	  <li ><a href="#">Mes lans ‡ venir</a></li>
-	  <li><a href="/lanonce/auth/history/lan/done">Mes lans passÈes</a></li>
+	  <li ><a href="#">Mes lans √† venir</a></li>
+	  <li><a href="/lanonce/auth/history/lan/done">Mes lans pass√©es</a></li>
     </ul>
   </div>
 </nav>
@@ -99,6 +94,22 @@ body {
 </div>
 </br>
 
+<!--
+<div class="row">
+<div class="col-md-offset-2 col-md-7">
+<div class="form-group">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <ul class="nav navbar-nav">
+	  <li ><a href="#">Mes lans √† venir</a></li>
+	  <li><a href="/lanonce/auth/history/lan/done">Mes lans pass√©es</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+-->
 <%
 ArrayList  id_game = new ArrayList();
   
@@ -106,7 +117,7 @@ ArrayList  id_game = new ArrayList();
    boolean nolan = true;
 
    try {
-	    // VÈrification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
+	    // V√©rification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
@@ -115,7 +126,7 @@ ArrayList  id_game = new ArrayList();
         	id_game.add(r.getString("id_lan"));
         	
         }
-        // Si il participe, on accede au ÈlÈment de la Lan ou il participe pour afficher les informations que l'on souhaite
+        // Si il participe, on accede au √©l√©ment de la Lan ou il participe pour afficher les informations que l'on souhaite
         for(int i = 0; i < id_game.size(); i++)
         {
           
@@ -164,14 +175,15 @@ ArrayList  id_game = new ArrayList();
    } catch (Exception e) {
         e.printStackTrace();
         out.println(e);
-   }// sinon pas de lan trouvÈ
+   }// sinon pas de lan trouv√©
    if(nolan){
 %>
-<h1>pas de lan ‡ venir </h1>
+<h1>pas de lan √† venir </h1>
 	<%
 	
 }
 %>
+
 
 <ul>
 </ul>

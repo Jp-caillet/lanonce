@@ -176,7 +176,7 @@
     							DOM += "<td><h4>Nom du jeux: " + valueObj[0].nameGame + "</h4></td>";
     							DOM += "<td><h4>Picture: " + valueObj[0].picture + "</h4></td>";
     							DOM += "</tr></br>";
-            					DOM += "<a href='/lanonce/auth/displayLan?id="+ valueObj[0].id_url +"'";
+            					DOM += "<a href='/lanonce/auth/displayTournois?id="+ valueObj[0].id_url +"'";
             					DOM += "<p><button type=submit>CLIQUEZ ICI POUR PARTICIPER</button></p>";
      						DOM += "</a>";
     							DOM += "</div>";

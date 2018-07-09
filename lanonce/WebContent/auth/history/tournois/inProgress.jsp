@@ -111,11 +111,7 @@ ArrayList  id_game = new ArrayList();
 	<%
 	
 }
-   OfInt iterator = ThreadLocalRandom.current().ints(0, 8).distinct().iterator();
    
-   for (int i = 0; i < 8; i++) {
-     out.println(iterator.next());
-   }
 %>
 
 

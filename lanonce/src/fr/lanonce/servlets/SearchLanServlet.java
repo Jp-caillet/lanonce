@@ -51,8 +51,6 @@ public class SearchLanServlet extends HttpServlet {
 	    List<HashMap<Integer, LanDto>>  list = nameGame.getAllNameGameCheck(term);
 
 
-	   
-	    System.out.println(list);
 	    String json = new Gson().toJson(list);
 	    String json1 = new Gson().toJson(list1);
 	    

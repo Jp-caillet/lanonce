@@ -75,7 +75,6 @@ public class Lan1Servlet extends HttpServlet {
 			while(test) {
 				idurl = this.generate(7);
 				request.setAttribute("url", idurl);
-				System.out.println(idurl);
 				 try {
 					Class.forName("com.mysql.jdbc.Driver");
 					Connection con = DriverManager.getConnection(url, username, pass);
@@ -95,7 +94,6 @@ public class Lan1Servlet extends HttpServlet {
 			lan.setUrl(idurl); 
 			lan.setCheckedRows(box);
 			String Id_user =String.valueOf(session.getAttribute("id"));
-			System.out.println(Id_user);
 			lan.setIdUser(Id_user);
 			lan.setDescription(request.getParameter("description"));
 			lan.setInfo(request.getParameter("info"));

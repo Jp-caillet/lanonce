@@ -145,6 +145,20 @@
     <url-pattern>/auth/lanCreated</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>HelpServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.HelpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelpServlet</servlet-name>
+    <url-pattern>/auth/help</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ProfilChangeServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.ProfilChangeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfilChangeServlet</servlet-name>
+    <url-pattern>/auth/profilChange</url-pattern>
     <servlet-name>TournoisDisplayIncomingServlet</servlet-name>
     <servlet-class>fr.lanonce.servlets.TournoisDisplayIncomingServlet</servlet-class>
   </servlet>

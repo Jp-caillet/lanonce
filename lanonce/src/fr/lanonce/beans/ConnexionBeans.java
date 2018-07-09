@@ -8,6 +8,8 @@ import java.sql.SQLException;
 
 import fr.lannonce.dao.AddLanDao;
 import fr.lannonce.dao.AddLanDaoImpl;
+import fr.lannonce.dao.AddModifUserDao;
+import fr.lannonce.dao.AddModifUserDaoImpl;
 import fr.lannonce.dao.AddTournoisDao;
 import fr.lannonce.dao.AddTournoisDaoImpl;
 import fr.lannonce.dao.AddUserDao;
@@ -63,5 +65,10 @@ public class ConnexionBeans {
     public SearchTournoisDao getAllTournoisCheck() {
 		return new SearchTournoisDaoImpl(this);
     }
+    
+    public AddModifUserDao getModifUserDao() {
+		return new AddModifUserDaoImpl(this);
+    }
+    
 }
 

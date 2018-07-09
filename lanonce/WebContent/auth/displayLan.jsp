@@ -25,13 +25,14 @@
    String info = "";
    Date date = null ;
    Integer nb_user = 0;
-
+   
    try {
 	   
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
         ResultSet r = smt.executeQuery("select * from lans where(id_url='" +  request.getParameter("id") + "');");
+        
         while (r.next()) {
         	nameLan = r.getString("nameLan");
         	nameGame = r.getString("nameGame");
@@ -47,26 +48,14 @@
         out.println(e);
    }
 %>
-<h1><%out.println(nameLan);%> </h1>
-<p>date : </p>
-<%out.println(date);%>
-<br/>
-<p>name game:</p>
-<%out.println(nameGame);%>
-<br/>
-<p>lieux:</p>
-<%out.println(lieux);%>
-<br/>
-<p>description:</p>
-<%out.println(description);%>
-<br/>
-<p>info:</p>
-<%out.println(info);%>
-<br/>
-<p>nb user:</p>
-<%out.println(nb_user);%>
-<br/>
-
+<h1>Nom: <%out.println(nameLan);%> </h1>
+<p>Date: <%out.println(date);%> </p> 
+<p>Name game: <%out.println(nameGame);%></p>
+<p>Lieux: <%out.println(lieux);%></p>
+<p>Description: <%out.println(description);%></p>
+<p>Info: <%out.println(info);%></p>
+<p>Nombre user: <%out.println(nb_user);%></p>
+</br>
 <%
 if((boolean) request.getAttribute("already")){
 %>

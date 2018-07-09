@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Merci</title>
+<title>Profil update</title>
 </head>
 <body>
   <%@ include file="adminMenu.jsp" %>
@@ -14,8 +14,7 @@
 	 <div class="valide">
 	 	<img class="v" src="../images/valider.png"/>
 	 	</br></br>
-		<h2>VOTRE MESSAGE A BIEN ÉTÉ ENVOYÉ</br>
-		NOUS VOUS RE-CONTACTERONS TRES VITE</h2>
+		<h2>VOTRE PROFIL A BIEN ETE CHANGÉ</br></h2>
 	</div>
 
     <%@ include file="adminFooter.jsp" %>

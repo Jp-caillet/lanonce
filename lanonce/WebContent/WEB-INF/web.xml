@@ -159,11 +159,21 @@
   <servlet-mapping>
     <servlet-name>ProfilChangeServlet</servlet-name>
     <url-pattern>/auth/profilChange</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>TournoisDisplayIncomingServlet</servlet-name>
     <servlet-class>fr.lanonce.servlets.TournoisDisplayIncomingServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>TournoisDisplayIncomingServlet</servlet-name>
     <url-pattern>/auth/tournois/incoming</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TournoisDisplayInprogressServlet</servlet-name>
+    <servlet-class>fr.lanonce.servlets.TournoisDisplayInprogressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TournoisDisplayInprogressServlet</servlet-name>
+    <url-pattern>/auth/tournois/progress</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -60,12 +60,19 @@ public class DisplayTournoisServlet extends HttpServlet {
 	    	already = false;
 	    }
 	    request.setAttribute("already",already );
+	    
 	   con.close();
    } catch (Exception e) {
         e.printStackTrace();
        
    }
-		this.getServletContext().getRequestDispatcher("/auth/displayTournois.jsp").forward(request, response);
+		if(request.getAttribute("charger")=="1") {
+			request.setAttribute("charger", "0");
+			response.sendRedirect("/lanonce/auth/history/tournois?status=open");
+		}else {
+
+			this.getServletContext().getRequestDispatcher("/auth/displayTournois.jsp").forward(request, response);
+		}
 	}
 
 	/**
@@ -85,12 +92,13 @@ public class DisplayTournoisServlet extends HttpServlet {
 	    st.setString(2, String.valueOf(session.getAttribute("id")));
 	    st.executeUpdate();
 	   con.close();
+	   	
    } catch (Exception e) {
         e.printStackTrace();
        
    }
-
-		response.sendRedirect("/lanonce/home");	
+		request.setAttribute("charger", "1");
+		
 
 		doGet(request, response);
 			

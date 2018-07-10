@@ -66,7 +66,7 @@ public class TournoisDisplayInprogressServlet extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url, username, pass);
 		    PreparedStatement st = (PreparedStatement) con.prepareStatement("UPDATE trees SET perdu = 1 WHERE pseudo_player=? and  id_tournois=?;");
-		    if(request.getParameter("versus")== request.getParameter("player1")){
+		    if(request.getParameter("versus").equals(request.getParameter("player1"))){
 		    	st.setString(1, request.getParameter("player2"));
 		    	st.setString(2,request.getParameter("url"));
 		    }
@@ -85,7 +85,7 @@ public class TournoisDisplayInprogressServlet extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url, username, pass);
 		    PreparedStatement st = (PreparedStatement) con.prepareStatement("UPDATE trees SET tour = ? WHERE pseudo_player=? and id_tournois=?;");
-		    if(request.getParameter("versus")== request.getParameter("player1")){
+		    if(request.getParameter("versus").equals(request.getParameter("player1"))){
 		    	st.setInt(1, nbtour);
 		    	st.setString(2, request.getParameter("player1"));
 		    	st.setString(3,request.getParameter("url"));

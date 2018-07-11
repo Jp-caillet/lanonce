@@ -4,6 +4,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../css/contactUsPage.css">
+<title>Nous contactez</title>
 </head>
 <body>
 

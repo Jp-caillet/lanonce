@@ -70,7 +70,7 @@
 			                    	<input type="text" class="form-control" required="required" id="nameLan" placeholder="nameLan" name="nameLan">
 			                </div>
 			                <div class="form-group">
-			                    <label class="control-label">JEUX</label>
+			                    <label class="control-label">JEU</label>
 			                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" name="game"/>
 			                </div>
 			                <div class="form-group">

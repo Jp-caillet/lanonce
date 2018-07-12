@@ -27,7 +27,19 @@
 }
 
 #map_canvas {
-  height: 500px;
-  width: 900px;
+  height: 100%;
+  width: 100%;
 }
 
+.toto{
+	height: 500px;
+	overflow-y: scroll;
+}
+
+.search{
+	margin-bottom: 12px;
+}
+
+.baniere{
+	    margin-bottom:20px;
+}

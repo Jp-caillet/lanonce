@@ -25,30 +25,36 @@
     <%@ include file="adminMenuLan.jsp" %>
     
     </br>
+    <h3>Recherchez un jeux: </h3>
+    <input type="text" id="search" name="search" class="search" />
+    <input type="button" id="bouton" value="Rechercher">
     
-    <div class=baniere>
-		<div id=baniere_gauche> 
-			<h3>Recherchez un jeux: </h3>
-		    <input type="text" id="search" name="search" class="search" />
-            <input type="button" id="bouton" value="Rechercher">
-            
-            </br>
-            
-            <div id="display"></div>
-                            
-		</div>
-		<div id=baniere_droite>
-			<div id="map_canvas"></div>
-		</div>
+    <div class="baniere row">
+    <div class="col-lg-6 toto">             
+      </br>
+      <div id="display"></div>
+    </div>
+    <div class="col-lg-6">
+    	<div id="map_canvas"></div>
+    </div>
+		
+		
 	</div>
+    
+    </div>
+    
 	
     
-    </br></br> </br></br> </br></br> 
     <%@ include file="adminFooter.jsp" %>
     <script>
-    
+    map = new google.maps.Map(
+    	    document.getElementById("map_canvas"), {
+    	      center: new google.maps.LatLng(48.856614 , 2.352222),
+    	      zoom: 13,
+    	      mapTypeId: google.maps.MapTypeId.ROADMAP
+    	    });
     $("#bouton").click(affichage);
-   
+   		
     	var geocoder;
     	var map;
     	var bounds = new google.maps.LatLngBounds();
@@ -94,7 +100,7 @@
     	        bounds.extend(marker.getPosition());
     	        map.fitBounds(bounds);
     	      } else {
-    	        alert("geocode of " + address + " failed:" + status);
+    	        
     	      }
     	    });
     	}

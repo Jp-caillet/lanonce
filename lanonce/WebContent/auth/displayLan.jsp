@@ -77,5 +77,6 @@ Vous participez déja à cette lan
 <%
 }
 %>
+<%@ include file="adminFooter.jsp" %>
 </body>
 </html>

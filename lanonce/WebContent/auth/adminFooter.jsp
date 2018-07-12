@@ -20,7 +20,7 @@
          <a href="/lanonce/auth/lanStep1">
 			
 				<img src="../images/Logo.png" width="180px" height="100px"/>
-				<p><font color="black">Conditions Générales<br><br>Mentions légales<br><br>Charte</font></p>
+				<p><font color="black">Conditions GÃ©nÃ©rales<br><br>Mentions lÃ©gales<br><br>Charte</font></p>
 			
 		</a>
         </div>
@@ -35,9 +35,6 @@
 		   	</a>
 		   	<a href="">
 		    	<img src="../images/twitter.png" alt="#" />
-		   	</a>
-		   	<a href="">
-		    	<img src="../images/google.png" alt="#" />
 		   	</a>
 		
         </div>
@@ -68,7 +65,7 @@
 <a href="/lanonce/auth/lanStep1">
 	<div id="box2">
 		<img src="../images/Logo.png" width="180px" height="100px"/>
-		<p><font color="black">Conditions Générales<br><br>Mentions légales<br><br>Charte</p>
+		<p><font color="black">Conditions GÃ©nÃ©rales<br><br>Mentions lÃ©gales<br><br>Charte</p>
 	</div>
 </a>
 <a href="/lanonce/auth/lanStep1">

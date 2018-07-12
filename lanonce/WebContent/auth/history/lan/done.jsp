@@ -11,6 +11,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../../../css/adminMenuLanPage.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
@@ -18,22 +19,12 @@
 <body>
 
 <%@ include file="/auth/adminMenu.jsp" %>
+<div class="topnav2">
+	  <a href="/lanonce/auth/history/lan/inComing">Mes lans à venir</a>
+	  <a href="/lanonce/auth/history/lan/done">Mes lans passées</a>
+</div>
 
 
-<div class="row">
-<div class="col-md-offset-2 col-md-7">
-<div class="form-group">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-      <ul class="nav navbar-nav">
-	  <li ><a href="/lanonce/auth/history/lan/inComing">Mes lans à venir</a></li>
-	  <li><a href="#">Mes lans passées</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-</div>
-</div>
 <ul>
 <%
 ArrayList  id_game = new ArrayList();

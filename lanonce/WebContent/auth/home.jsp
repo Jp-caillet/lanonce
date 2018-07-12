@@ -60,6 +60,23 @@
 						</div>
 					</div>
 				</div>
+				<div>
+					<div class="box">
+						<div class="image fit">
+							<img src="../images/homebloc3.jpg" alt="" />
+						</div>
+						<div class="content">
+							<header class="align-center">
+								<p>mattis elementum sapien pretium tellus</p>
+								<h2>Tester vos skill</h2>
+							</header>
+							<p> Cras aliquet urna ut sapien tincidunt. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+							<footer class="align-center">
+								<a href="/lanonce/auth/tournois" class="button alt">CLIQUEZ ICI</a>
+							</footer>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>

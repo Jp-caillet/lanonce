@@ -11,48 +11,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../../../css/adminMenuLanPage.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title></title>
-
-
 </head>
 <body>
 
 <%@ include file="/auth/adminMenu.jsp" %>
 
 
-<div class="row">
-<div class="col-md-offset-2 col-md-7">
-<div class="form-group">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-      <ul class="nav navbar-nav">
-	  <li ><a href="#">Mes lans à venir</a></li>
-	  <li><a href="/lanonce/auth/history/lan/done">Mes lans passées</a></li>
-    </ul>
-  </div>
-</nav>
+<div class="topnav2">
+	  <a href="#">Mes lans � venir</a>
+	  <a href="/lanonce/auth/history/lan/done">Mes lans pass�es</a>
 </div>
-</div>
-</div>
+
 </br>
 
-<!--
-<div class="row">
-<div class="col-md-offset-2 col-md-7">
-<div class="form-group">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-      <ul class="nav navbar-nav">
-	  <li ><a href="#">Mes lans à venir</a></li>
-	  <li><a href="/lanonce/auth/history/lan/done">Mes lans passées</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-</div>
-</div>
--->
+
 <%
 ArrayList  id_game = new ArrayList();
   

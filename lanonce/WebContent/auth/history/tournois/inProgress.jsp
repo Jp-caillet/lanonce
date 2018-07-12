@@ -15,6 +15,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../../css/adminMenuLanPage.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
@@ -23,20 +24,10 @@
 <%@ include file="/auth/adminMenu.jsp" %>
 
 
-<div class="row">
-<div class="col-md-offset-2 col-md-7">
-<div class="form-group">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-      <ul class="nav navbar-nav">
-	  <li ><a href="/lanonce/auth/history/tournois?status=open">Mes tournois à venir</a></li>
-	  <li><a href="#">Mes tournois en cours</a></li>
-	  <li><a href="/lanonce/auth/history/tournois?status=done">Mes tournois terminés</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-</div>
+<div class="topnav2">
+	  <a href="/lanonce/auth/history/tournois?status=open">Mes tournois à venir</a>
+	  <a href="/lanonce/auth/history/tournois?status=current">Mes tournois en cours</a>
+	  <a href="/lanonce/auth/history/tournois?status=done">Mes tournois terminés</a>
 </div>
 <ul>
 <%

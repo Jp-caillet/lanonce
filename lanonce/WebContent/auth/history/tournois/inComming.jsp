@@ -23,9 +23,9 @@
 <%@ include file="/auth/adminMenu.jsp" %>
 
 <div class="topnav2">
-	  <a href="/lanonce/auth/history/tournois?status=open">Mes tournois � venir</a>
+	  <a href="/lanonce/auth/history/tournois?status=open">Mes tournois à venir</a>
 	  <a href="/lanonce/auth/history/tournois?status=current">Mes tournois en cours</a>
-	  <a href="/lanonce/auth/history/tournois?status=done">Mes tournois termin�s</a>
+	  <a href="/lanonce/auth/history/tournois?status=done">Mes tournois terminés</a>
 </div>
 <ul>
 <%
@@ -35,7 +35,7 @@ ArrayList  id_game = new ArrayList();
    boolean nolan = true;
 	
    try {
-	    // Vérification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
+	    // VÃ©rification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
@@ -44,7 +44,7 @@ ArrayList  id_game = new ArrayList();
         	id_game.add(r.getString("id_tournois"));
         	
         }
-        // Si il participe, on accede au élément de la Lan ou il participe pour afficher les informations que l'on souhaite
+        // Si il participe, on accede au Ã©lÃ©ment de la Lan ou il participe pour afficher les informations que l'on souhaite
         for(int i = 0; i < id_game.size(); i++)
         {
           
@@ -80,8 +80,7 @@ ArrayList  id_game = new ArrayList();
 	        	out.println(r1.getString("date"));
 	        	%>
 	        	</p>
-	        	<div>
-	        	�  : 
+	        	<div>à :
 	        	</div>
 	        	<p>
 	        	<% 
@@ -92,6 +91,7 @@ ArrayList  id_game = new ArrayList();
 	        	</li>
 	        	<% 
        		}
+
         	}
      
         con.close();
@@ -101,7 +101,8 @@ ArrayList  id_game = new ArrayList();
    }
    if(nolan){
 %>
-<h1>pas de tournois �  venir </h1>
+<h1>pas de tournois à venir </h1>
+
 	<%
 	
 }

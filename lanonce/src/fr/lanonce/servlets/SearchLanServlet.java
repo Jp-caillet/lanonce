@@ -46,10 +46,11 @@ public class SearchLanServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    String term = request.getParameter("term");
+
 	    List<HashMap<Integer, TournoisDto>> list1 = tournois.getAllTournoisCheck(term);
 	    List<HashMap<Integer, LanDto>>  list = nameGame.getAllNameGameCheck(term);
 
-	    // Convertion d'un objet java en json
+
 	    String json = new Gson().toJson(list);
 	    String json1 = new Gson().toJson(list1);
 	    

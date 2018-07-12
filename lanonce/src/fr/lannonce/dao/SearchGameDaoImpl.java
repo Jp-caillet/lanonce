@@ -48,7 +48,9 @@ public class SearchGameDaoImpl implements SearchGameDao{
 	            date = rs.getString("date");
 	            lieux = rs.getString("lieux");
 	            picture = rs.getString("picture");
+
 	            idUrl = rs.getString("id_url");
+
 	            
 	            dto.setPicture(picture);
 	            dto.setNameGame(data);

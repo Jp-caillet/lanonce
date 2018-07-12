@@ -11,92 +11,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../../css/adminMenuLanPage.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  height: 85px;
-}
-
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  margin-top: 10px;
-}
-
-.topnav a.active {
-  padding-top: 21px;		
-  background-color: #d6d402;
-  height: 80px;
-  color: white;
-  margin-top: 0;
-}
-
-.topnav2 {
-  overflow: hidden;
-  background-color: #ffffff;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.topnav2 a {
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  margin-top: 10px;
-  margin-left: 22px;
-}
-</style>
 </head>
 <body>
 
-<!-- adminMenu -->
-<div class="topnav">
-  <img src="images/logo_blanc.png" width="180px" height="80px"/>
-  <a class="active" href="/lanonce/auth/home">Home</a>
-  <a href="/lanonce/auth/profil">Profil</a>
-  <a href="/lanonce/auth/logout">Logout</a>
-  <a href=""><c:out value="Bonjour ${sessionScope.pseudo}"/></a>
-</div>
 
-<!-- adminMenuLan -->
+
+<%@ include file="/auth/adminMenu.jsp" %>
+
 <div class="topnav2">
-  <a href="/lanonce/auth/help">Comment ca marche ?</a></li>
-  <a href="/lanonce/auth/create">Créer une rencontre</a></li>
-  <a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
-  <a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>
-  <a href="/lanonce/auth/history/tournois?status=open">Mes tournois</a></li>
-  <a href="#">Tournois</a></li>
-  <a href="/lanonce/auth/contactus">Contactez-nous</a></li>
-</div>
-
-<div class="row">
-<div class="col-md-offset-2 col-md-7">
-<div class="form-group">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-      <ul class="nav navbar-nav">
-	  <li ><a href="#">Mes tournois à venir</a></li>
-	  <li><a href="/lanonce/auth/history/tournois?status=current">Mes tournois en cours</a></li>
-	  <li><a href="/lanonce/auth/history/tournois?status=done">Mes tournois terminés</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-</div>
+	  <a href="/lanonce/auth/history/tournois?status=open">Mes tournois à venir</a>
+	  <a href="/lanonce/auth/history/tournois?status=current">Mes tournois en cours</a>
+	  <a href="/lanonce/auth/history/tournois?status=done">Mes tournois terminés</a>
 </div>
 <ul>
 <%
@@ -106,7 +35,7 @@ ArrayList  id_game = new ArrayList();
    boolean nolan = true;
 	
    try {
-	    // Vérification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
+	    // VÃ©rification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
@@ -115,22 +44,20 @@ ArrayList  id_game = new ArrayList();
         	id_game.add(r.getString("id_tournois"));
         	
         }
-        // Si il participe, on accede au élément de la Lan ou il participe pour afficher les informations que l'on souhaite
+        // Si il participe, on accede au Ã©lÃ©ment de la Lan ou il participe pour afficher les informations que l'on souhaite
         for(int i = 0; i < id_game.size(); i++)
         {
           
         Statement smt1 = con.createStatement();
         ResultSet r1 = smt.executeQuery("select * from tournois where id_url='" + id_game.get(i) + "' and status='open';");
         while (r1.next()) {
-        
-       	 Calendar date = Calendar.getInstance();
-       	 date.setTime(r1.getDate("date"));
-       		if(date.getTime().after(today.getTime())){
+      
+       	
        		nolan= false;
 	        	%>
 	        	
 	        	<li>
-	        	<a href="/lanonce/auth/displayTournois?id=<%out.println(r1.getString("id_url"));%>">
+	        	<a href="/lanonce/auth/tournois/incoming?id=<%out.println(r1.getString("id_url"));%>">
 	        	<h1>tournois :</h1>
 	        	<p>
 	        	<% 
@@ -154,7 +81,7 @@ ArrayList  id_game = new ArrayList();
 	        	%>
 	        	</p>
 	        	<div>
-	        	à : 
+	        	Ã  : 
 	        	</div>
 	        	<p>
 	        	<% 
@@ -166,7 +93,7 @@ ArrayList  id_game = new ArrayList();
 	        	<% 
        		}
         	}
-     }
+     
         con.close();
    } catch (Exception e) {
         e.printStackTrace();
@@ -174,7 +101,7 @@ ArrayList  id_game = new ArrayList();
    }
    if(nolan){
 %>
-<h1>pas de tournois à venir </h1>
+<h1>pas de tournois Ã  venir </h1>
 	<%
 	
 }

@@ -11,92 +11,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../../css/adminMenuPage.css">
+<link rel="stylesheet" type="text/css" href="../../css/adminMenuLanPage.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  height: 85px;
-}
-
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  margin-top: 10px;
-}
-
-.topnav a.active {
-  padding-top: 21px;		
-  background-color: #d6d402;
-  height: 80px;
-  color: white;
-  margin-top: 0;
-}
-
-.topnav2 {
-  overflow: hidden;
-  background-color: #ffffff;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.topnav2 a {
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  margin-top: 10px;
-  margin-left: 22px;
-}
-</style>
 </head>
 <body>
-<!-- adminMenu -->
-<div class="topnav">
-  <img src="images/logo_blanc.png" width="180px" height="80px"/>
-  <a class="active" href="/lanonce/auth/home">Home</a>
-  <a href="/lanonce/auth/profil">Profil</a>
-  <a href="/lanonce/auth/logout">Logout</a>
-  <a href=""><c:out value="Bonjour ${sessionScope.pseudo}"/></a>
-</div>
+<%@ include file="/auth/adminMenu.jsp" %>
 
-<!-- adminMenuLan -->
 <div class="topnav2">
-  <a href="lanonce/auth/help">Comment ca marche ?</a></li>
-  <a href="/lanonce/auth/create">Créer une rencontre</a></li>
-  <a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
-  <a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>
-  <a href="/lanonce/auth/history/tournois?status=open">Mes tournois</a></li>
-  <a href="#">Tournois</a></li>
-  <a href="/lanonce/auth/contactus">Contactez-nous</a></li>
+	  <a href="/lanonce/auth/history/tournois?status=open">Mes tournois à venir</a>
+	  <a href="/lanonce/auth/history/tournois?status=current">Mes tournois en cours</a>
+	  <a href="/lanonce/auth/history/tournois?status=done">Mes tournois terminés</a>
 </div>
 
-<div class="row">
-<div class="col-md-offset-2 col-md-7">
-<div class="form-group">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-      <ul class="nav navbar-nav">
-	  <li ><a href="/lanonce/auth/history/tournois?status=open">Mes tournois à venir</a></li>
-	  <li><a href="/lanonce/auth/history/tournois?status=current">Mes tournois en cours</a></li>
-	  <li><a href="#">Mes tournois terminés</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-</div>
-</div>
+
 <ul>
 <%
 ArrayList  id_game = new ArrayList();

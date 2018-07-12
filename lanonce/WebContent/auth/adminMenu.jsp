@@ -4,6 +4,7 @@
 <head>
   <title></title>
   <link rel="stylesheet" type="text/css" href="/lanonce/css/adminMenuPage.css">
+  <link rel="stylesheet" type="text/css" href="../css/footer.css">
 </head>
 <body>
 

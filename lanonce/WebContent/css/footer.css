@@ -6,9 +6,9 @@
 
 #box1 {
 	height: 300px;
-	width: 430px;
+	width: 100%;
 	background-color: #f2f2f2;
-	float: left;
+	
 }
 
 #box1 p{
@@ -18,9 +18,8 @@
 
 #box2 {
 	height: 300px;
-	width: 430px;
+	width: 100%;
 	background-color: #ebebeb;
-	float: left;
 }
 
 #box2 p{
@@ -37,9 +36,8 @@
 
 #box3 {
 	height: 300px;
-	width: 420px;
+	width: 100%;
 	background-color: #f2f2f2;
-	float: left;
 }
 
 #box3 p{
@@ -50,5 +48,10 @@
 #box3 img{
 	text-align: center;
 	margin-top: 110px;
-    margin-left: 50px;	
+    margin-left: 3%;	
 }
+
+#box3 #reseau{
+	margin-left: 15%;
+}
+

@@ -11,6 +11,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/displayLanPage.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -48,21 +49,25 @@
         out.println(e);
    }
 %>
-<h1>Nom: <%out.println(nameLan);%> </h1>
-<p>Date: <%out.println(date);%> </p> 
-<p>Name game: <%out.println(nameGame);%></p>
-<p>Lieux: <%out.println(lieux);%></p>
-<p>Description: <%out.println(description);%></p>
-<p>Info: <%out.println(info);%></p>
-<p>Nombre user: <%out.println(nb_user);%></p>
-</br>
+<div class="texte">
+	<div class="contenaire">
+		<h1>Nom: <%out.println(nameLan);%> </h1>
+		<p>Date: <%out.println(date);%> </p> 
+		<p>Name game: <%out.println(nameGame);%></p>
+		<p>Lieux: <%out.println(lieux);%></p>
+		<p>Description: <%out.println(description);%></p>
+		<p>Info: <%out.println(info);%></p>
+		<p>Nombre user: <%out.println(nb_user);%></p>
+		</br>
 <%
 if((boolean) request.getAttribute("already")){
 %>
 <form method="post" action="">
 <div class="row">
 <div class="col-md-offset-5 col-md-1">
-<input type="submit" class="btn btn-primary"></input>
+<div class="bouton">
+<input type="submit" value="JE CONFIRME" class="btn btn-primary"></input>
+</div>
 </div>
 </div>
 </form>
@@ -77,6 +82,11 @@ Vous participez déja à cette lan
 <%
 }
 %>
+
+</div>
+</div>
+
 <%@ include file="adminFooter.jsp" %>
+
 </body>
 </html>

@@ -21,8 +21,8 @@
 
 
 <div class="topnav2">
-	  <a href="#">Mes lans � venir</a>
-	  <a href="/lanonce/auth/history/lan/done">Mes lans pass�es</a>
+	  <a href="#">Mes lans à venir</a>
+	  <a href="/lanonce/auth/history/lan/done">Mes lans passées</a>
 </div>
 
 </br>
@@ -33,9 +33,8 @@ ArrayList  id_game = new ArrayList();
   
    Calendar today = Calendar.getInstance();
    boolean nolan = true;
-
    try {
-	    // Vérification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
+	    // VÃ©rification avec l'id de la session de l'utilisateur si il participe a une lan dans la base "participer_lan"
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
         Statement smt = con.createStatement();
@@ -44,14 +43,13 @@ ArrayList  id_game = new ArrayList();
         	id_game.add(r.getString("id_lan"));
         	
         }
-        // Si il participe, on accede au élément de la Lan ou il participe pour afficher les informations que l'on souhaite
+        // Si il participe, on accede au Ã©lÃ©ment de la Lan ou il participe pour afficher les informations que l'on souhaite
         for(int i = 0; i < id_game.size(); i++)
         {
           
         Statement smt1 = con.createStatement();
         ResultSet r1 = smt.executeQuery("select * from lans where id_url='" + id_game.get(i) + "';");
         while (r1.next()) {
-
         	 Calendar date = Calendar.getInstance();
         	 date.setTime( r1.getDate("date"));
         		if(date.getTime().after(today.getTime())){
@@ -93,10 +91,12 @@ ArrayList  id_game = new ArrayList();
    } catch (Exception e) {
         e.printStackTrace();
         out.println(e);
-   }// sinon pas de lan trouvé
+   }// sinon pas de lan trouvÃ©
    if(nolan){
 %>
+l
 <h1>pas de lan à venir </h1>
+
 	<%
 	
 }

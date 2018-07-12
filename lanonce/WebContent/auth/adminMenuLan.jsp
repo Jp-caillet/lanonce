@@ -40,12 +40,11 @@
 <body>
 
 <div class="topnav2">
-  <a href="/lanonce/auth/help">Comment ca marche ?</a></li>
+  <a href="/lanonce/auth/help">Aide</a></li>
   <a href="/lanonce/auth/create">Créer une rencontre</a></li>
   <a href="/lanonce/auth/searchLan">Chercher une rencontre</a></li>
   <a href="/lanonce/auth/history/lan/inComing">Mes lans</a></li>
   <a href="/lanonce/auth/history/tournois?status=open">Mes tournois</a></li>
-  <a href="#">Tournois</a></li>
   <a href="/lanonce/auth/contactus">Contactez-nous</a></li>
 </div>
 

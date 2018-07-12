@@ -52,7 +52,6 @@ ArrayList  id_game = new ArrayList();
         Statement smt1 = con.createStatement();
         ResultSet r1 = smt.executeQuery("select * from tournois where id_url='" + id_game.get(i) + "' and status='current';");
         while (r1.next()) {
-
         		nolan= false;
 	        	%>
 	        	

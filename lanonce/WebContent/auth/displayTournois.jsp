@@ -49,7 +49,8 @@
         out.println(e);
    }
 %>
-<div class="tournois">
+<div class="texte">
+	<div class="contenaire">
 	<h1>Nom du tournois: <%out.println(nameTournois);%></h1>
 	<p>Date: <%out.println(date);%></p>
 	<p>Name game: <%out.println(nameGame);%></p>
@@ -58,17 +59,16 @@
 	<p>Info: <%out.println(info);%></p>
 	<p>Nombre user: <%out.println(nb_user);%></p>
 	<p>Type de tournois: <%out.println(type);%></p>
-</div>
-<br/>
-
-
+	<br/>
 <%
 if((boolean) request.getAttribute("already")){
 %>
 <form method="post" action="">
 <div class="row">
 <div class="col-md-offset-5 col-md-1">
+<div class="bouton">
 <input type="submit" class="btn btn-primary"></input>
+</div>
 </div>
 </div>
 </form>
@@ -83,5 +83,10 @@ Vous participez déja à ce tournois
 <%
 }
 %>
+</div>
+</div>
+
+<%@ include file="adminFooter.jsp" %>
+
 </body>
 </html>

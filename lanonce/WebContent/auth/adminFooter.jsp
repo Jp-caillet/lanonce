@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- Footer -->
-<a href="/lanonce/auth/lanStep1">
+<a href="/lanonce/auth/help">
 	<div id="box1">				 
 		<p><font color="black">Aide et Information <br><br> contactez nous</p>
 	</div>

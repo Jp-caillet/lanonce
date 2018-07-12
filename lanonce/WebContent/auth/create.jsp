@@ -14,17 +14,16 @@
 	<div class="flex-container">
 		<div class="flex-right">
 			<a href="/lanonce/auth/lanStep1">
-				<img class="img1" src="../images/new.jpg"/>
+				<img class="img1" src="../images/LanVF.jpg"/>
 			</a>
 		</div>
 		<div class="flex-left">
 			<a href="/lanonce/auth/tournois">
-				<img class="img2" src="../images/createNew.jpg"/>
+				<img class="img2" src="../images/new.jpg"/>
 			</a>
 		</div>
 	</div>
 	
-    </br></br></br></br></br></br>
     <%@ include file="adminFooter.jsp" %>
 </body>
 </html>

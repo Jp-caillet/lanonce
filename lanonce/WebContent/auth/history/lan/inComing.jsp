@@ -12,6 +12,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../../../css/adminMenuLanPage.css">
+<link rel="stylesheet" type="text/css" href="../../../css/history.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title></title>
 </head>
@@ -56,32 +57,40 @@ ArrayList  id_game = new ArrayList();
         		nolan= false;
         	%>
         	
-		        	<li>
+        		<div>
+        		<div class="img" >
+    			<img src="../../../images/img/<%out.println(r1.getString("picture"));%>">
+    			</div>
+		        	<div class="recherche">
 		        	<a href="/lanonce/auth/displayLan?id=<%out.println(r1.getString("id_url"));%>">
-		        	<h1>lan :</h1>
-		        	<p>
-		        	<% 
+		        	
+		        	
+		        	<h1 class="lan"> <% 
 		        	out.println(r1.getString("namelan"));
 		        	%>
-		        	</p>
-		        	<div>
-		        	sur le jeux: 
-		        	</div>
-		        	<p>
+		        	 </h1>
+		        	 
+		        	 <h4>
+		        	sur le jeux:
 		        	<% 
 		        	out.println(r1.getString("nameGame"));
-		        	%>
-		        	</p>
-		        	<div>
-		        	le: 
-		        	</div>
-		        	<p>
+		        	%></h4>
+		        	
+		        	
+		        	 <h4>
+		        	sur le jeux:
 		        	<% 
 		        	out.println(r1.getString("date"));
-		        	%>
-		        	</p>
-		        	</a>
-		        	</li>
+		        	%></h4>
+		        	 
+		        	 </a>
+		        	</div>
+        		</div>
+        			
+		        	
+		        	
+		        	
+		        	
 		        	<% 
 		        	}
         		}
@@ -94,7 +103,6 @@ ArrayList  id_game = new ArrayList();
    }// sinon pas de lan trouvÃ©
    if(nolan){
 %>
-l
 <h1>pas de lan à venir </h1>
 
 	<%

@@ -18,7 +18,7 @@
 	POUR INVITER VOS AMIS, PARTAGER CE LIEN</h2>
 
     <center>
-    		<p style="border: 3px black solid">http://localhost:8080/lanonce/auth/displayTournois?id=<%out.print(request.getAttribute("url"));%></p>
+    		<p style="border: 3px black solid">http://109.232.232.58:8080/lanonce/auth/displayTournois?id=<%out.print(request.getAttribute("url"));%></p>
        	</br>
     		<button><a href="/lanonce/auth/home"> Terminer</a></button>
     </center>

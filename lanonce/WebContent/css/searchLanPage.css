@@ -1,19 +1,18 @@
 @charset "UTF-8";
 
 .recherche {
-	display: block;
 	border-radius: 10px;
-	background-color: #e4e4e4;
-	width: 600px;
-	heigth: 300px;
+	width: 60%;
+	display:inline-block; 
+	
+	height : 100%;
 }
 
 .recherche h1{
 	color: white;
 	text-align: center;
-	background-color: #4a7eba;
 	width: 100%;
-	border-radius: 10px;
+	margin-top : 0px;
 }
 
 .recherche h4{
@@ -42,4 +41,27 @@
 
 .baniere{
 	    margin-bottom:20px;
+}
+
+.tournois{
+	background-color: #4379a7;
+}
+
+.lan{
+	background-color: #dc002e;
+}
+
+.imgsearch{
+	width: 40%;
+	display:inline-block; 
+	
+	height : 100%;
+}
+.imgsearch img{
+	width: 100%;
+	height: 100%;
+	vertical-align: baseline;
+}
+.result{
+	height : 157px;
 }

@@ -155,38 +155,41 @@
     	    				for(var key in obj) {
     	    					if(key == 1) {
             	    				var valueObj = Object.values(obj);
+            	    				DOM += '<div class="result" >';
+            	    				DOM += '<div class="imgsearch" >';
+    	    						DOM += '<img src="../images/img/'+valueObj[0].picture+'">';
+        							DOM += "</div>";
+        							DOM += '<div class="recherche">';
+        							DOM += "<a href='/lanonce/auth/displayLan?id="+ valueObj[0].id_url +"'";
             	    				
-            	    				DOM += "<div class="+ "recherche" + ">";
     							DOM += "<tr>";
-    							DOM += "<h1> LAN </h1>";
-    							DOM += "<td><h4>Date: " + valueObj[0].date + "</h4></td>";
-    							DOM += "<td><h4>Lieux: " + valueObj[0].lieux + "</h4></td>";
-    							DOM += "<td><h4>Nom du jeux: " + valueObj[0].nameGame + "</h4></td>";
-    							DOM += "<td><h4>Picture: " + valueObj[0].picture + "</h4></td>";
+    							DOM += '<h1 class="lan"> '+valueObj[0].nameGame+' </h1>';
+    							DOM += "<td><h4> " + valueObj[0].date + "</h4></td>";
+    							DOM += "<td><h4>" + valueObj[0].lieux + "</h4></td>";
     							DOM += "</tr></br>";
-           					DOM += "<a href='/lanonce/auth/displayLan?id="+ valueObj[0].id_url +"'";
-           					DOM += "<p><button type=submit>CLIQUEZ ICI POUR PARTICIPER</button></p>";
-    							DOM += "</a>";
     							DOM += "</div>";
+    							DOM += "</div>";
+    							DOM += "</a>";
     							DOM += "</br>";
     							
     							tab = ['Location Name: ' + valueObj[0].nameGame, valueObj[0].lieux, 'Location URL']
     							tabVilles.push(tab);				
     	    					} else {
     	    						var valueObj = Object.values(obj);
-    	    						
-            	    				DOM += "<div class="+ "recherche" + ">";
+    	    						DOM += '<div class="result" >';
+    	    						DOM += '<div class="imgsearch" >';
+    	    						DOM += '<img src="../images/img/'+valueObj[0].picture+'">';
+        							DOM += "</div>";
+    	    						DOM += "<a href='/lanonce/auth/displayTournois?id="+ valueObj[0].id_url +"'";
+    	    						DOM += "<div class="+ "recherche" + ">";
     							DOM += "<tr>";
-    							DOM += "<h1> TOURNOIS </h1>";
-    							DOM += "<td><h4>Date: " + valueObj[0].date + "</h4></td>";
-    							DOM += "<td><h4>Lieux: " + valueObj[0].lieux + "</h4></td>";
-    							DOM += "<td><h4>Nom du jeux: " + valueObj[0].nameGame + "</h4></td>";
-    							DOM += "<td><h4>Picture: " + valueObj[0].picture + "</h4></td>";
+    							DOM += '<h1 class="tournois"> '+valueObj[0].nameGame+' </h1>';
+    							DOM += "<td><h4>" + valueObj[0].date + "</h4></td>";
+    							DOM += "<td><h4> " + valueObj[0].lieux + "</h4></td>";
     							DOM += "</tr></br>";
-            					DOM += "<a href='/lanonce/auth/displayTournois?id="+ valueObj[0].id_url +"'";
-            					DOM += "<p><button type=submit>CLIQUEZ ICI POUR PARTICIPER</button></p>";
-     						DOM += "</a>";
     							DOM += "</div>";
+    							DOM += "</div>";
+    							DOM += "</a>";
     							DOM += "</br>";
     							
     							tab = ['Location Name: ' + valueObj[0].nameGame, valueObj[0].lieux, 'Location URL']

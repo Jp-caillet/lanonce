@@ -13,6 +13,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../../css/adminMenuPage.css">
 <link rel="stylesheet" type="text/css" href="../../css/adminMenuLanPage.css">
+<link rel="stylesheet" type="text/css" href="../../css/history.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
@@ -56,40 +57,35 @@ ArrayList  id_game = new ArrayList();
         		nolan= false;
         		%>
         	
-	        	<li>
-	        	<a href="/lanonce/auth/displayTournois?id=<%out.println(r1.getString("id_url"));%>">
-	        	<h1>tournois :</h1>
-	        	<p>
-	        	<% 
-	        	out.println(r1.getString("nameTournois"));
-	        	%>
-	        	</p>
 	        	<div>
-	        	sur le jeux: 
+	        	<div class="img" >
+    			<img src="../../images/img/<%out.println(r1.getString("picture"));%>">
+    			</div>
+		        	<div class="recherche">
+		        	<a href="/lanonce/auth/tournois/progress?id=<%out.println(r1.getString("id_url"));%>">
+		        	
+		        	
+		        	<h1 class="tournois"> <% 
+		        	out.println(r1.getString("nametournois"));
+		        	%>
+		        	 </h1>
+		        	 
+		        	 <h4>
+		        	sur le jeux:
+		        	<% 
+		        	out.println(r1.getString("nameGame"));
+		        	%></h4>
+		        	
+		        	
+		        	 <h4>
+		        	sur le jeux:
+		        	<% 
+		        	out.println(r1.getString("date"));
+		        	%></h4>
+		        	 
+		        	 </a>
+		        	</div>
 	        	</div>
-	        	<p>
-	        	<% 
-	        	out.println(r1.getString("nameGame"));
-	        	%>
-	        	</p>
-	        	<div>
-	        	le: 
-	        	</div>
-	        	<p>
-	        	<% 
-	        	out.println(r1.getString("date"));
-	        	%>
-	        	</p>
-	        	<div>
-	        	à : 
-	        	</div>
-	        	<p>
-	        	<% 
-	        	out.println(r1.getString("lieux"));
-	        	%>
-	        	</p>
-	        	</a>
-	        	</li>
 	        	<% 
         		}
         }

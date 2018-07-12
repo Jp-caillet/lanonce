@@ -102,6 +102,20 @@ public class TournoisDisplayInprogressServlet extends HttpServlet {
 	        e.printStackTrace();
 	       
 	   }
+		System.out.println(request.getParameter("end"));
+		if(request.getParameter("end").equals("2")) {
+			 try{
+					Class.forName("com.mysql.jdbc.Driver");
+					 Connection con = DriverManager.getConnection("jdbc:mysql://mysql-lanonce.alwaysdata.net/lanonce_bdd", "lanonce", "fifou707");
+				       PreparedStatement st = (PreparedStatement) con.prepareStatement("UPDATE tournois SET status = ? WHERE id_url='"+request.getParameter("url")+"';");
+				    st.setString(1,  "done");
+				    st.executeUpdate();
+				   con.close();
+			   } catch (Exception e) {
+			        e.printStackTrace();
+			       
+			   }
+		}
 		doGet(request, response);
 	}
 

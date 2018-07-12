@@ -26,7 +26,7 @@ public class CreationTreesBeans {
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url, username, pass);
-		    PreparedStatement st = (PreparedStatement) con.prepareStatement("INSERT INTO trees(id_tournois, id_players,perdu, position, pseudo_player) VALUES(?, ?, ?, ?,?);");
+		    PreparedStatement st = (PreparedStatement) con.prepareStatement("INSERT INTO trees(id_tournois, id_players,perdu, position, pseudo_player,tour) VALUES(?, ?, ?, ?,?,0);");
 		    st.setString(1,  this.id_tournois);
 		    st.setString(2, this.id_player);
 		    st.setInt(3, this.perdu);

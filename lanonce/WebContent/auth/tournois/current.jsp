@@ -13,7 +13,7 @@
 </head>
 <body>
 <%@ include file="/auth/adminMenu.jsp" %>
-<article id="container">
+<article id="containere">
  
  <%
 
@@ -268,7 +268,7 @@ if(end != 1){
  
  %><form method="post" action="">
  
- <div>Choisissez le vainqueur du premier match</div>
+ <div>Choisissez le vainqueur entre :</div>
  
  <select name="versus">
  <%
@@ -297,7 +297,7 @@ String adversaire2 = "";
 	 k++;
  }
  %>
- 
+ <%out.print(end);%>
 </select>
 <input id="toto" name="player1" type="hidden" value="<%out.print(adversaire1);%>">
 <input id="prodId" name="player2" type="hidden" value="<%out.print(adversaire2);%>">

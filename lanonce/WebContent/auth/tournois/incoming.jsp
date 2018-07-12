@@ -9,6 +9,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
+<link rel="stylesheet" type="text/css" href="../../css/displayTournoisPage.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Display tournois</title>
 </head>
@@ -48,32 +50,17 @@
         out.println(e);
    }
 %>
-<div class="tournois">
-	<h1>Nom du tournois:</h1>
-	<h1><%out.println(nameTournois);%></h1>
-	</br>
-	<p>date : </p>
-	<h5><%out.println(date);%></h5>
+<div class="texte">
+	<div class="contenaire">
+	<h1>Nom du tournois: <%out.println(nameTournois);%></h1>
+	<p>Date: <%out.println(date);%></p>
+	<p>Name game: <%out.println(nameGame);%></p>
+	<p>Lieux: <%out.println(lieux);%></p>
+	<p>Description: <%out.println(description);%></p>
+	<p>Info: <%out.println(info);%></p>
+	<p>Nombre user: <%out.println(nb_user);%></p>
+	<p>Type de tournois: <%out.println(type);%></p>
 	<br/>
-	<p>name game:</p>
-	<h5><%out.println(nameGame);%></h5>
-	<br/>
-	<p>lieux:</p>
-	<h5><%out.println(lieux);%></h5>
-	<br/>
-	<p>description:</p>
-	<h5><%out.println(description);%></h5>
-	<br/>
-	<p>info:</p>
-	<h5><%out.println(info);%></h5>
-	<br/>
-	<p>nb user:</p>
-	<h5><%out.println(nb_user);%></h5>
-	<br/>
-	<p>type de tournois:</p>
-	<h5><%out.println(type);%></h5>
-</div>
-<br/>
 
 
 

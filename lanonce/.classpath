@@ -14,5 +14,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/jp789/Downloads/javamail1_4_5.zip" sourcepath="/Users/benede.a/Downloads/javamail1_4_5.zip"/>
+	<classpathentry kind="lib" path="C:/Users/jp789/Downloads/javax.mail-1.4.4.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
